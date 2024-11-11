@@ -1,3 +1,4 @@
+import React, { useRef, useState } from "react";
 import {
   Links,
   Meta,
@@ -6,8 +7,6 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-
-import "./tailwind.css";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -18,11 +17,23 @@ export const links: LinksFunction = () => [
   },
   {
     rel: "stylesheet",
+    href: "https://fonts.googleapis.com/icon? family=Material+Icons",
+  },
+  {
+    rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
 ];
+import { createContext } from "react";
+import Footer from "./sections/footer";
+
+export const AppContext = createContext({
+  servicesRef: null,
+  setServicesRef: () => {},
+});
 
 export function Layout({ children }: { children: React.ReactNode }) {
+
   return (
     <html lang="en">
       <head>
@@ -33,6 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <Footer />
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -41,5 +53,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  const homeRef=useRef(null)
+  const servicesRef=useRef(null)
+  const contactRef=useRef(null)
+  
+  const [exact, setExact] = useState<string>("Home");
+  const [routeRef,setRouteRef] = useState({homeRef,servicesRef,contactRef});
+
+  return <Outlet context={{routeRef,setRouteRef,exact,setExact}}/>;
 }

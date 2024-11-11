@@ -1,0 +1,204 @@
+{
+    "heroSection": {
+        "image": "",
+        "subTitle": "Mehandi Designs",
+        "title": "Celebrate Life's Moments with Beautiful Henna",
+        "description": "Experience the artistry of traditional Mehndi for your special occasions. Whether it’s a wedding, festival, or party, our talented artists create stunning, personalized designs that add a magical touch to your festivities. Book your appointment today and let us bring your vision to life!",
+        "buttons": [
+            {
+                "label": "book appointment",
+                "type": "primary"
+            }
+        ]
+    },
+    "aboutUs": {
+        "image": "",
+        "exprienceDetails": "15+Y Experiances",
+        "subTitle": "About Us",
+        "title": "Know About Heena Mehandi Art",
+        "description": "​Proin efficitur, mauris vel condimentum pulvinar, velit orci consectetur ligula, eget egestas magna mi ut arcu. Phasellus nec odio orci.",
+        "features": [
+            {
+                "isShowIcon": true,
+                "title": "Learn More About Us"
+            }
+        ],
+        "buttons": [
+            {
+                "label": "book appointment",
+                "type": "primary"
+            }
+        ]
+    },
+    "services": {
+        "subTitle": "Type of Mehandi",
+        "title": "Our Mehendi Services",
+        "gallary": [
+            {
+                "id": 1,
+                "title": "Traditional Design",
+                "img": "hand-mehandi-image1.png"
+            },
+            {
+                "id": 2,
+                "title": "Arabic Design",
+                "img": "hand-mehandi-image2.png"
+            },
+            {
+                "id": 3,
+                "title": "Bridal Mehndi",
+                "img": "hand-mehandi-image3.png"
+            },
+            {
+                "id": 4,
+                "title": "Bridal Mehndi",
+                "img": "hand-mehandi-image4.png"
+            },
+            {
+                "id": 5,
+                "title": "Bridal Mehndi",
+                "img": "hand-mehandi-image5.png"
+            },
+            {
+                "id": 6,
+                "title": "Bridal Mehndi",
+                "img": "hand-mehandi-image6.png"
+            },
+            {
+                "id": 7,
+                "title": "Bridal Mehndi",
+                "img": "hand-mehandi-image7.png"
+            }
+        ]
+    },
+    "navbar": {
+        "logo": "logo-light.png",
+        "links": [
+            {
+                "label": "Home",
+                "url": "/",
+                "childContent": [
+                    "Welcome to our website"
+                ]
+            },
+            {
+                "label": "About",
+                "url": "/about",
+                "childContent": [
+                    "Blog With No Sidebar",
+                    "Blog Left Sidebar",
+                    "Blog Right Sidebar",
+                    "Blog Left – Right Sidebar"
+                ]
+            },
+            {
+                "label": "Services",
+                "url": "/Services",
+                "childContent": [
+                    "Page With No Sidebar",
+                    "Page Left Sidebar",
+                    "Page Right Sidebar",
+                    "Page Right Sidebar",
+                    "Testimonials"
+                ]
+            },
+            {
+                "label": "Portfolio",
+                "url": "/portfolio",
+                "childContent": [
+                    "Get in touch with us"
+                ]
+            },
+            {
+                "label": "Appointment",
+                "url": "/appointment",
+                "childContent": [
+                    "Get in touch with us"
+                ]
+            },
+            {
+                "label": "Contact",
+                "url": "/contact",
+                "childContent": [
+                    "Get in touch with us"
+                ]
+            }
+        ],
+        "contact": {
+            "question": "Need Help Now? Call Us!",
+            "phone": "1234567890"
+        },
+        "buttons": [
+            {
+                "label": "Buy Now"
+            },
+            {
+                "label": "Book Appointment"
+            }
+        ]
+    },
+    "whyChooseUs": {
+        "subTitle": "Why We’re Best?",
+        "title": "Why Choose Us",
+        "features": [
+            {
+                "title": "Discover New",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+                "image": "why-choose-us-feature-image.png"
+            },
+            {
+                "title": "Discover New",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+                "image": "why-choose-us-feature-image.png"
+            },
+            {
+                "title": "Discover New",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+                "image": "why-choose-us-feature-image.png"
+            },
+            {
+                "title": "Discover New",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+                "image": "why-choose-us-feature-image.png"
+            },
+            {
+                "title": "Discover New",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+                "image": "why-choose-us-feature-image.png"
+            },
+            {
+                "title": "Discover New",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+                "image": "why-choose-us-feature-image.png"
+            }
+        ]
+    },
+    "protfolio": {
+        "subTitle": "Art Gallery",
+        "title": "See Our Portfolio",
+        "features": [
+            {
+                "image": ""
+            },
+            {
+                "image": ""
+            },
+            {
+                "image": ""
+            },
+            {
+                "image": ""
+            },
+            {
+                "image": ""
+            },
+            {
+                "image": ""
+            }
+        ]
+    },
+    "makeAnAppoinment": {
+        "subTitle": "R S V P",
+        "title": "Make Appointment"
+    }
+}

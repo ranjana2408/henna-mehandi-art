@@ -48,6 +48,7 @@ function handleBotRequest(
   return new Promise((resolve, reject) => {
     let shellRendered = false;
     const { pipe, abort } = renderToPipeableStream(
+      // eslint-disable-next-line react/react-in-jsx-scope
       <RemixServer
         context={remixContext}
         url={request.url}
@@ -60,6 +61,7 @@ function handleBotRequest(
           const stream = createReadableStreamFromReadable(body);
 
           responseHeaders.set("Content-Type", "text/html");
+          responseHeaders.set("Cache-Control", "public, max-age=3600"); // Set cache control
 
           resolve(
             new Response(stream, {
@@ -98,6 +100,7 @@ function handleBrowserRequest(
   return new Promise((resolve, reject) => {
     let shellRendered = false;
     const { pipe, abort } = renderToPipeableStream(
+      // eslint-disable-next-line react/react-in-jsx-scope
       <RemixServer
         context={remixContext}
         url={request.url}
@@ -110,6 +113,15 @@ function handleBrowserRequest(
           const stream = createReadableStreamFromReadable(body);
 
           responseHeaders.set("Content-Type", "text/html");
+
+          // Ensure images are properly handled on the server side
+          responseHeaders.set("Cache-Control", "public, max-age=31536000"); // Cache images for a year
+
+          // Check if the request is for an image and set the appropriate Content-Type
+          const isImageRequest = request.url.match(/\.(jpg|jpeg|png|gif|svg)$/i);
+          if (isImageRequest) {
+            responseHeaders.set("Content-Type", "image/jpeg"); // Adjust based on the image type
+          }
 
           resolve(
             new Response(stream, {
