@@ -16,7 +16,7 @@ export default function TopNavbar() {
           "&:hover": {
             backgroundColor: grey[900],
           },
-          padding: "20px 80px",
+          padding: "10px 80px",
           "@media (min-width:319px) and (max-width:425px)": {
             padding: "10px 20px",
           },

@@ -1,34 +1,24 @@
 {
     "heroSection": {
-        "image": "",
+        "image": "hero-image-two.png",
         "subTitle": "Mehandi Designs",
-        "title": "Celebrate Life's Moments with Beautiful Henna",
-        "description": "Experience the artistry of traditional Mehndi for your special occasions. Whether it’s a wedding, festival, or party, our talented artists create stunning, personalized designs that add a magical touch to your festivities. Book your appointment today and let us bring your vision to life!",
-        "buttons": [
-            {
-                "label": "book appointment",
-                "type": "primary"
-            }
-        ]
+        "title": "Celebrate Life with Henna",
+        "description": "Enhance your special occasions with our stunning Mehndi designs! Whether it’s a wedding, festival, or party, our talented artists are here to create personalized artwork that adds a magical touch to your celebrations.",
+        "button": {
+            "label": "Book An Appointment",
+            "type": "primary"
+        }
     },
     "aboutUs": {
-        "image": "",
+        "image": "about-us-image.png",
         "exprienceDetails": "15+Y Experiances",
         "subTitle": "About Us",
-        "title": "Know About Heena Mehandi Art",
-        "description": "​Proin efficitur, mauris vel condimentum pulvinar, velit orci consectetur ligula, eget egestas magna mi ut arcu. Phasellus nec odio orci.",
-        "features": [
-            {
-                "isShowIcon": true,
-                "title": "Learn More About Us"
-            }
-        ],
-        "buttons": [
-            {
-                "label": "book appointment",
-                "type": "primary"
-            }
-        ]
+        "title": "Best Mehandi Artist",
+        "description": "Our skilled artists specialize in intricate designs that reflect your personality and style, whether it’s for weddings, festivals, or personal celebrations. We use high-quality, natural henna to ensure a safe and beautiful experience for our clients. At Henna Mehandi Art, we believe that Mehndi is not just body art; it’s a celebration of culture, love, and joy. We work closely with each client to create custom designs that tell their unique story",
+        "button": {
+            "label": "Learn More",
+            "type": "primary"
+        }
     },
     "services": {
         "subTitle": "Type of Mehandi",
@@ -51,22 +41,22 @@
             },
             {
                 "id": 4,
-                "title": "Bridal Mehndi",
+                "title": "Western Mehndi",
                 "img": "hand-mehandi-image4.png"
             },
             {
                 "id": 5,
-                "title": "Bridal Mehndi",
+                "title": "Gothic Mehndi",
                 "img": "hand-mehandi-image5.png"
             },
             {
                 "id": 6,
-                "title": "Bridal Mehndi",
+                "title": "Rajasthani Mehndi",
                 "img": "hand-mehandi-image6.png"
             },
             {
                 "id": 7,
-                "title": "Bridal Mehndi",
+                "title": "Simple Mehndi",
                 "img": "hand-mehandi-image7.png"
             }
         ]
@@ -140,36 +130,25 @@
     "whyChooseUs": {
         "subTitle": "Why We’re Best?",
         "title": "Why Choose Us",
+        "image": "make-appintment-left-banner.png",
+        "isImageRight": true,
+        "description": "Our team of highly skilled artists brings years of experience in creating stunning mehndi designs",
         "features": [
             {
-                "title": "Discover New",
-                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                "image": "why-choose-us-feature-image.png"
+                "title": "Expert Artists:",
+                "description": "Our talented mehndi artists have years of experience and a deep understanding of intricate designs, ensuring beautiful, personalized artwork."
             },
             {
-                "title": "Discover New",
-                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                "image": "why-choose-us-feature-image.png"
+                "title": "Custom Designs:",
+                "description": "We offer custom mehndi designs tailored to your preferences, whether traditional, modern, or fusion styles."
             },
             {
-                "title": "Discover New",
-                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                "image": "why-choose-us-feature-image.png"
+                "title": "High-Quality Ingredients",
+                "description": "We use natural, skin-safe henna that ensures rich color and safe application, free from harmful chemicals."
             },
             {
-                "title": "Discover New",
-                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                "image": "why-choose-us-feature-image.png"
-            },
-            {
-                "title": "Discover New",
-                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                "image": "why-choose-us-feature-image.png"
-            },
-            {
-                "title": "Discover New",
-                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                "image": "why-choose-us-feature-image.png"
+                "title": "Quick Drying:",
+                "description": "Our application techniques promote faster drying times, so you can enjoy your designs without the long wait."
             }
         ]
     },
@@ -196,9 +175,5 @@
                 "image": ""
             }
         ]
-    },
-    "makeAnAppoinment": {
-        "subTitle": "R S V P",
-        "title": "Make Appointment"
     }
 }

@@ -44,7 +44,7 @@ const Footer = () => {
           </Grid>
         </Grid>
         <Typography color="black" variant="body2" align="center" sx={{ mt: 3 }}>
-          © {new Date().getFullYear()} © 2021 Henna Mehandi Art WP. All rights reserved
+          © {new Date().getFullYear()} Henna Mehandi Art WP. All rights reserved
         </Typography>
       </Container>
     </Box>

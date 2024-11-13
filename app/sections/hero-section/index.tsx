@@ -1,34 +1,42 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from "react";
 import FeaturesBlock from "~/blocks/features";
-import data from '../../../utils/data.json'
-import { Box } from '@mui/material';
-import { useOutletContext } from '@remix-run/react';
+import data from "../../../utils/data.json";
+import { useOutletContext } from "@remix-run/react";
+import { Box } from "@mui/material";
 
-interface OutletContext {
-  routeRef: {
-    homeRef: null;
-    servicesRef: null;
-    contactRef: null;
-  };
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  setRouteRef:any,
-  exact: string;
-}
-
-export default function HeroSection() {
-  const ref=useRef(null)
-  const { setRouteRef } = useOutletContext<OutletContext>();
+const HeroSection = () => {
+  const { setRouteRef, } = useOutletContext<OutletContext>();
+  const ref = useRef(null);
 
   useEffect(() => {
     if (ref?.current) {
-      setRouteRef({ homeRef: ref });
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      setRouteRef((prevRefs: any) => ({ ...prevRefs, homeRef: ref }));
     }
-  }, [ref]);
+  }, []);
 
   return (
     <Box ref={ref}>
-       <FeaturesBlock {...data?.heroSection}/>
+      <FeaturesBlock
+        style={{
+          "& .MuiBox-root img": {
+            marginLeft: "160px",
+          },
+          "@media (min-width:319px) and (max-width:1024px)": {
+            "& .MuiBox-root img": {
+              marginLeft: "0px",
+            },
+          },
+        }}
+        height="38"
+        isImageRight
+        showTobBorder
+        bgColor="#FDE2E4"
+        {...data?.heroSection}
+        showForm
+      />
     </Box>
-   
-  )
-}
+  );
+};
+
+export default HeroSection;

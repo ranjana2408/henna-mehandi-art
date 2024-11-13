@@ -1,5 +1,5 @@
 // MehndiGallery.js
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import {
   Box,
   Button,
@@ -16,9 +16,10 @@ interface OutletContext {
     homeRef: null;
     servicesRef: null;
     contactRef: null;
+    aboutRef: null;
   };
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  setRouteRef:any,
+  setRouteRef: any;
   exact: string;
 }
 
@@ -29,7 +30,7 @@ const Services = () => {
   const isMediumScreen = useMediaQuery(
     "(min-width:425px) and (max-width:768px)"
   );
-  const { setRouteRef, exact } = useOutletContext<OutletContext>();
+  const { setRouteRef } = useOutletContext<OutletContext>();
   const ref = useRef(null);
 
   // Determine number of columns based on screen size
@@ -37,9 +38,13 @@ const Services = () => {
 
   useEffect(() => {
     if (ref?.current) {
-      setRouteRef({ servicesRef: ref });
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      setRouteRef((prevRefs: any) => ({
+        ...prevRefs,
+        servicesRef: ref,
+      }));
     }
-  }, [ref]);
+  }, []);
 
   return (
     <Box
@@ -49,17 +54,13 @@ const Services = () => {
         justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
-        marginTop: "100px",
-        paddingTop: exact === "Services" ? "170px" : "0px",
-        "@media (min-width:319px) and (max-width:425px)": {
-          marginTop: "219px",
-        },
-        "@media (min-width:425px) and (max-width:768px)": {
-          marginTop: "265px",
+        marginTop: "200px",
+        "@media (min-width:768px) and (max-width:1024px)": {
+          marginTop: "300px !important",
         },
       }}
     >
-      <TitleSection {...data?.services} />
+      <TitleSection  {...data?.services} />
       <ImageList cols={cols}>
         {data.services.gallary?.map((image) => (
           <ImageListItem
@@ -69,7 +70,7 @@ const Services = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              padding: "7px",
+              padding: "10px",
             }}
           >
             <img
@@ -77,6 +78,7 @@ const Services = () => {
               src={image.img}
               loading="lazy"
               style={{
+                
                 width: "288px",
                 height: "300px",
               }}

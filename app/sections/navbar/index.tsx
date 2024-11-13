@@ -15,10 +15,12 @@ import { useOutletContext } from "@remix-run/react";
 
 interface OutletContext {
   routeRef: {
-    homeRef: null;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    servicesRef: any;
-    contactRef: null;
+    homeRef: React.RefObject<HTMLDivElement>;
+    aboutRef: React.RefObject<HTMLDivElement>;
+    servicesRef: React.RefObject<HTMLDivElement>;
+    portfolioRef: React.RefObject<HTMLDivElement>;
+    contactRef: React.RefObject<HTMLDivElement>;
+    appointmentRef: React.RefObject<HTMLDivElement>;
   };
   exact: string;
   setExact: (arg: string) => void;
@@ -40,28 +42,58 @@ const Navbar: React.FC = () => {
   const handleClick = (type: string) => {
     setExact(type);
     switch (type) {
+      case "Home":
+        return routeRef?.homeRef?.current?.scrollIntoView({
+          behavior: "smooth",
+        });
+
+      case "About":
+        return routeRef?.aboutRef?.current?.scrollIntoView({
+          behavior: "smooth",
+        });
       case "Services":
         return routeRef?.servicesRef?.current?.scrollIntoView({
           behavior: "smooth",
         });
-      case "Home":
-        return routeRef?.homeRef?.current?.scrollIntoView({
+      case "Porfolio":
+        return routeRef?.portfolioRef?.current?.scrollIntoView({
+          behavior: "smooth",
+        });
+      case "Appointment":
+        return routeRef?.appointmentRef?.current?.scrollIntoView({
+          behavior: "smooth",
+        });
+      case "Contact":
+        setExact(type);
+        return routeRef?.contactRef?.current?.scrollIntoView({
           behavior: "smooth",
         });
     }
   };
 
   return (
-    <AppBar elevation={0} sx={{ backgroundColor: "transparent" }}>
+    <AppBar elevation={0} sx={{ backgroundColor: "white" }}>
       <TopNavbar />
-      <Box sx={{ backgroundColor: "white" }}>
+      <Box sx={{ display: isMobile ? "none" : "flex", alignSelf: "center" }}>
+        <img
+          src={data?.navbar?.logo}
+          alt="Logo"
+          style={{
+            width: isMobile ? "100px" : "150px",
+            height: "auto",
+            paddingBottom: "26px",
+            marginTop: "10px",
+          }}
+        />
+      </Box>
+      <Box sx={{ backgroundColor: "white", borderTop: "1px solid #FDE2E4" }}>
         <Box position="static" sx={navStyle}>
           <Box
             sx={{
               ...navItemsStyle,
-              display: "flex",
-              justifyItems: "center",
-              alignItems: "center",
+              display: isMobile ? "flex" : "block",
+              justifyItems: isMobile ? "center" : "start",
+              alignItems: isMobile ? "center" : "start",
             }}
           >
             <Box
@@ -84,11 +116,20 @@ const Navbar: React.FC = () => {
                   onClick={() => setShowMenu(!showMenu)}
                 />
               </Box>
-              <img
-                src={data?.navbar?.logo}
-                alt="Logo"
-                style={{ width: isMobile ? "100px" : "150px", height: "auto" }}
-              />
+              <Box sx={{ display: isMobile ? "block" : "none" }}>
+                <img
+                  src={data?.navbar?.logo}
+                  alt="Logo"
+                  style={{
+                    width: isMobile ? "100px" : "150px",
+                    height: "auto",
+                    display: "flex",
+                    alignSelf: "center",
+                    paddingBottom: "26px",
+                    marginTop: "10px",
+                  }}
+                />
+              </Box>
             </Box>
             <List
               sx={{
@@ -107,6 +148,10 @@ const Navbar: React.FC = () => {
                     sx={{
                       color: `${exact === label ? "#F72585" : "black"}`,
                       cursor: "pointer",
+                      "& .MuiTypography-root": {
+                        fontWeight: "600 !important",
+                        fontFamily: "Open Sans",
+                      },
                     }}
                     primary={label}
                   />
@@ -123,7 +168,7 @@ const Navbar: React.FC = () => {
                   background: "white",
                   boxSizing: "border-box",
                   width: "100%",
-                  top: "55px",
+                  top: "65px",
                   height: showMenu ? "calc(100% - 255px)" : "0px", // Adjust height based on showMenu
                   overflow: "hidden", // Prevent overflow when hidden
                   transition: "height 0.3s ease", // Smooth transition
@@ -162,7 +207,10 @@ const Navbar: React.FC = () => {
                       sx={{
                         color: `${exact === label ? "white" : "black"}`,
                         cursor: "pointer",
-                        fontWeight: 700,
+                        "& .MuiTypography-root": {
+                          fontWeight: "600 !important",
+                          fontFamily: "Open Sans",
+                        },
                       }}
                       primary={label}
                     />
@@ -183,7 +231,7 @@ export default Navbar;
 const styles = {
   navStyle: {
     backgroundColor: "white",
-    padding: "10px 70px",
+    padding: "10px 0px",
     maxWidth: "1440px",
     margin: "auto",
     "@media (min-width:319px) and (max-width:425px)": {
@@ -192,9 +240,6 @@ const styles = {
     "@media (min-width:425px) and (max-width:768px)": {
       padding: "5px 40px",
       paddingLeft: "20px",
-    },
-    "@media (min-width:769px) and (max-width:1024px)": {
-      padding: "5px 60px",
     },
   },
   navItemsStyle: {
@@ -224,6 +269,7 @@ const styles = {
     height: "max-content",
     "@media (min-width:319px) and (max-width:767px)": {
       display: "block",
+      padding: "10px",
     },
     display: "none",
   },
