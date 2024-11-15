@@ -1,8 +1,9 @@
 // MehndiGallery.js
 import React from "react";
-import { Box, Button, ImageList, ImageListItem } from "@mui/material";
+import { Box,  ImageList, ImageListItem } from "@mui/material";
 import data from "../../../utils/data.json";
-import TitleSection from "~/blocks/title-section";
+import TitleSection from "~/blocks/title-block";
+import MyStyledButton from "~/component/my-styled-button";
 
 const mehndiImages = [
   { id: 1, title: "Traditional Design", img: "hand-mehandi-image1.png" },
@@ -40,7 +41,7 @@ const PortFolio = () => {
               src={image.img}
               loading="lazy"
             />
-            <Button
+            <MyStyledButton
               sx={{
                 backgroundColor: "#F72585",
                 color: "white",
@@ -51,7 +52,7 @@ const PortFolio = () => {
               }}
             >
               View Details
-            </Button>
+            </MyStyledButton>
           </ImageListItem>
         ))}
       </ImageList>

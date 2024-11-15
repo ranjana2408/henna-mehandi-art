@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {  useRef, useState } from "react";
 import {
   Links,
   Meta,
@@ -17,15 +17,19 @@ export const links: LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/icon? family=Material+Icons",
+    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
   },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Lora&display=swap"
+  }
 ];
 
-import Footer from "./sections/footer";
+import Footer from "./shared/footer";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

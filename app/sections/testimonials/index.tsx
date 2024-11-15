@@ -1,90 +1,15 @@
-import React from "react";
-import FeaturesBlock from "~/blocks/features";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   ImageList,
   ImageListItem,
+  Slide,
   Typography,
   useMediaQuery,
 } from "@mui/material";
-
-const testimonials = [
-  {
-    subTitle: "Testimonials",
-    title: "Words From Clients",
-    name: "Riya Sharma",
-    img: "/sam-sptimas.png",
-    designation: "Mehndi for Engagement",
-    isImageRight: true,
-    description:
-      "Orcinteger faucibus odio cursus facilisi sitenim egestas ele imperdiet etiam situ eltrices vestibulum orcinteger faucibus odio cursus facilisi sitenim egestas elementum imperdiet etiam situ eltrices vestibulum sit.",
-    button: {
-      label: "View All Testimonials",
-    },
-  },
-  {
-    subTitle: "Testimonials",
-    title: "Words From Clients",
-    name: "Sofia Malik",
-    img: "/tatania-septimas.png",
-    designation: "Bridal Mehndi Client",
-    isImageRight: true,
-    description:
-      "Orcinteger faucibus odio cursus facilisi sitenim egestas ele imperdiet etiam situ eltrices vestibulum orcinteger faucibus odio cursus facilisi sitenim egestas elementum imperdiet etiam situ eltrices vestibulum sit.",
-    button: {
-      label: "View All Testimonials",
-    },
-  },
-  {
-    subTitle: "Testimonials",
-    title: "Words From Clients",
-    name: "Nadia Khan",
-    img: "/tatania-septimas.png",
-    designation: "Mehndi for Wedding Guest",
-    isImageRight: true,
-    description:
-      "Orcinteger faucibus odio cursus facilisi sitenim egestas ele imperdiet etiam situ eltrices vestibulum orcinteger faucibus odio cursus facilisi sitenim egestas elementum imperdiet etiam situ eltrices vestibulum sit.",
-    button: {
-      label: "View All Testimonials",
-    },
-  },
-  {
-    subTitle: "Testimonials",
-    title: "Words From Clients",
-    isImageRight: true,
-    name: "Aisha Patel",
-    img: "/tatania-septimas.png",
-    designation: "Henna Party Host",
-    description:
-      "Orcinteger faucibus odio cursus facilisi sitenim egestas ele imperdiet etiam situ eltrices vestibulum orcinteger faucibus odio cursus facilisi sitenim egestas elementum imperdiet etiam situ eltrices vestibulum sit.",
-    button: {
-      label: "View All Testimonials",
-    },
-  },
-];
-
-const itemData = [
-  {
-    id: 1,
-    title: "Traditional Design",
-    img: "hand-mehandi-image1.png",
-  },
-  {
-    id: 2,
-    title: "Arabic Design",
-    img: "hand-mehandi-image2.png",
-  },
-  {
-    id: 3,
-    title: "Bridal Mehndi",
-    img: "hand-mehandi-image3.png",
-  },
-  {
-    id: 4,
-    title: "Bridal Mehndi",
-    img: "hand-mehandi-image4.png",
-  },
-];
+import data from "../../../utils/data.json";
+import MyStyledButton from "~/component/my-styled-button";
+import TitleSection from "~/blocks/title-block";
 
 export default function ClientTestimonials() {
   const isMobile = useMediaQuery("(min-width:319px) and (max-width:767px)");
@@ -100,120 +25,204 @@ export default function ClientTestimonials() {
   }) => {
     return (
       <Box
-        sx={{ display: "flex", alignItems: "center",gap:'20px' }}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: isMobile ? "column" : "row",
+          gap: "20px",
+          marginTop: "20px",
+        }}
       >
-        <img src={img} height={60} width={60} />
+        <img style={{ borderRadius: "50%" }} src={img} height={60} width={60} />
         <Box>
-          <Typography color="white">{name}</Typography>
-          <Typography color="white">{designation}</Typography>
+          <Typography
+            sx={{ fontSize: "26px", fontFamily: "Lora Open Sans" }}
+            color="white"
+          >
+            {name}
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: "14px",
+              fontFamily: "Open Sans",
+              fontWeight: "700",
+            }}
+            color="#FDE2E4"
+          >
+            {designation}
+          </Typography>
         </Box>
       </Box>
     );
   };
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(
+        (prevIndex: number) =>
+          (prevIndex + 1) % data?.clientSection?.testimonials?.length
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [data?.clientSection?.testimonials?.length]);
+
+  const clientItems = data?.clientSection?.testimonials[currentIndex];
 
   return (
     <Box
       sx={{
         display: "flex",
         maxWidth: "1440px",
+        justifyContent: "center",
         mx: "auto",
+        marginLeft: "0px",
         my: "60px",
+        position: "relative",
+        top: "1088px",
         "@media (min-width:319px) and (max-width:768px)": {
           display: "block",
+          top: "3201px",
+        },
+        "@media(max-width:1440px)": {
+          marginLeft: "auto",
         },
       }}
     >
       <Box
         sx={{
           display: "flex",
-          width: "50%",
-          overflowX: "scroll",
-          scrollbarWidth: "none", // For Firefox
-          msOverflowStyle: "none", // For Internet Explorer and Edge
-          "&::-webkit-scrollbar": {
-            display: "none", // For Chrome, Safari, and Opera
-          },
-          "@media (min-width:319px) and (max-width:620px)": {
-            width: "100%",
-          },
-          "@media (min-width:620px) and (max-width:767px)": {
-            width: "100%",
+          width: "100%",
+          "@media (min-width:319px) and (max-width:768px)": {
+            display: "block",
+            justifyContent: "center",
+            alignItems: "center",
           },
         }}
       >
-        {testimonials?.map((item) => (
-          <FeaturesBlock
-            key={item.title}
-            style={{
-              marginTop: "150px",
-              paddingLeft: "10px",
-              "@media (min-width:319px) and (max-width:620px)": {
-                marginTop: "0px !important",
-                paddingLeft: "20px",
-              },
-              "@media (min-width:620px) and (max-width:767px)": {
-                marginLeft: "100px !important",
-                paddingLeft: "20px",
-              },
-            }}
-            height="30"
-            featuresBoxStyele={{
-              maringTop: "0px",
-              backgroundColor: "#222222",
-              boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
-              paddingBottom: "100px",
-              width: "900px",
-              "@media (min-width:319px) and (max-width:767px)": {
-                paddingLeft: "10px !important",
-                width: "365px",
-              },
-            }}
-            bgColor="white"
-            {...item}
-            clientDetails={
-              <ClientDestails
-                name={item?.name}
-                designation={item?.designation}
-                img={item?.img}
-              />
-            }
-          />
-        ))}
-      </Box>
-      <Box
-        sx={{
-          width: "45%",
-          "@media (min-width:319px) and (max-width:767px)": {
-            width: "100%",
-          },
-        }}
-      >
-        <ImageList
+        <Box
+          key={clientItems?.title}
           sx={{
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-            boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
-            padding: "10px",
-            "&::-webkit-scrollbar": {
-              display: "none",
+            backgroundColor: "#222222",
+            py: "110px",
+            paddingBottom:'50px',
+            paddingLeft: "150px",
+            paddingRight: "100px",
+            width: "60%",
+            "@media (min-width:319px) and (max-width:768px)": {
+              width: "100%",
+              paddingLeft: "10px",
+              textAlign: "center",
+              paddingRight: "10px",
+              py: "50px",
             },
           }}
-          cols={2}
         >
-          {itemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                src={item.img}
-                alt={item.title}
-                style={{
-                  width: isMobile ? "200px" : "350px",
-                  height: isMobile ? "200px" : "350px",
-                }}
-                loading="lazy"
+          <Slide
+            timeout={500}
+            direction={"left"}
+            in={true}
+            appear={true}
+            easing={{ enter: "ease-in", exit: "ease-out" }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "5px",
+                "@media (min-width:319px) and (max-width:768px)": {
+                  justifyContent: "center",
+                  alignItems: "center",
+                },
+              }}
+            >
+              <TitleSection
+                color="#FDE2E4"
+                title={clientItems?.title}
+                subTitle={clientItems?.subTitle}
+                featuresBoxStyele={{ backgroundColor: "#222222" }}
               />
-            </ImageListItem>
-          ))}
-        </ImageList>
+              <Box sx={{ display: "flex", gap: "5px", marginTop: "30px" }}>
+                {[
+                  "/icons/star-icon.svg",
+                  "/icons/star-icon.svg",
+                  "/icons/star-icon.svg",
+                  "/icons/star-icon.svg",
+                  "/icons/star-icon.svg",
+                ].map((item) => (
+                  <img key={item} src={item} height={20} width={20} />
+                ))}
+              </Box>
+              <Typography
+                sx={{
+                  fontSize: "24px",
+                  "@media (min-width:319px) and (max-width:768px)": {
+                    fontSize: "18px",
+                  },
+                  fontFamily: "Open Sans",
+                  fontWeight: "400",
+                  color: "white",
+                  paddingBottom: "12px",
+                  paddingTop: "20px",
+                }}
+              >
+                {clientItems?.description}
+              </Typography>
+              <ClientDestails
+                designation={clientItems?.designation}
+                name={clientItems?.name}
+                img={clientItems?.img}
+              />
+              <MyStyledButton
+                isIcon
+                sx={{
+                  marginTop: "40px",
+                  "@media (min-width:319px) and (max-width:768px)": {
+                    width: "100%",
+                  },
+                  mx: "20px",
+                }}
+              >
+                {clientItems?.button?.label}
+              </MyStyledButton>
+            </Box>
+          </Slide>
+        </Box>
+        <Box
+          sx={{
+            width: "30%",
+            "@media (min-width:319px) and (max-width:768px)": {
+              width: "100%",
+            },
+          }}
+        >
+          <ImageList cols={2} sx={{ overflow: "visible" }}>
+            {data?.clientSection?.gallary?.map((item) => (
+              <ImageListItem key={item.img}>
+                <Box sx={{"& :nth-child(0)":{
+                  maxHeight:'37px !important',
+                  marginBottom:'40px'
+                },"& :nth-child(3)":{
+                  maxHeight:'237px',
+                  marginBottom:'40px'
+                }
+                }}>
+                  <img
+                    src={item.img}
+                    alt="gallary-image"
+                    style={{
+                      width: isMobile ? "150px" : "300px",
+                      height:  isMobile? "150px": "350px",
+                    }}
+                    loading="lazy"
+                  />
+                </Box>
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Box>
       </Box>
     </Box>
   );

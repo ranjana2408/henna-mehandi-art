@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import data from "../../../utils/data.json";
-import FeaturesBlock from "~/blocks/features";
+import SectionContainer from "~/container/section-container";
 import { useOutletContext } from "@remix-run/react";
 import { Box } from "@mui/material";
 
@@ -17,26 +17,36 @@ const AboutUs = () => {
 
   return (
     <Box ref={ref}>
-      <FeaturesBlock
+      <SectionContainer
+        isImageLeft
         style={{
-          marginTop: "150px",
+          marginTop: "0px",
+          "& .MuiBox-root img": {
+            top: "160px",
+            position: 'relative',
+          },
           "@media (min-width:319px) and (max-width:620px)": {
-            marginTop: "280px !important",
+            marginTop: "240px !important",
             paddingLeft: "10px !important",
+            "& .MuiBox-root img": {
+              marginTop: "10px",
+            },
           },
         }}
-        height="32"
+        height="52"
         featuresBoxStyele={{
-          maringTop: "150px",
+          width: "100%",
           backgroundColor: "#F8F8F8",
+          paddingTop: "185px",
           boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
-          paddingBottom: "100px",
+          paddingBottom: "150px",
           "@media (min-width:319px) and (max-width:767px)": {
             paddingLeft: "20px !important",
           },
         }}
         bgColor="white"
-        {...data?.aboutUs}      />
+        {...data?.aboutUs}
+      />
     </Box>
   );
 };

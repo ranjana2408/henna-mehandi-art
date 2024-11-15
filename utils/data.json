@@ -1,68 +1,180 @@
 {
-    "heroSection": {
-        "image": "hero-image-two.png",
-        "subTitle": "Mehandi Designs",
-        "title": "Celebrate Life with Henna",
-        "description": "Enhance your special occasions with our stunning Mehndi designs! Whether it’s a wedding, festival, or party, our talented artists are here to create personalized artwork that adds a magical touch to your celebrations.",
+    "homeHeroSection": {
+        "image": "hero-image.png",
+        "title": "Transform Your special moments with Mehndi artistry.",
+        "subTitle": "",
+        "description": "Experience the artistry of traditional henna with a modern touch.",
         "button": {
-            "label": "Book An Appointment",
+            "label": "Book Now",
             "type": "primary"
         }
+    },
+    "aboutHeroSection": {
+        "image": "hero-image.png",
+        "title": "AboutUs",
+        "subTitle": "",
+        "description": ""
+    },
+    "makeUsSpecial": {
+        "subTitle": "",
+        "title": "Here to make your occasions special",
+        "description": "From bridal parties to festival gatherings, each art is customized according to each client's needs and preferences. Quality and attention to detail are absolute commitments to giving every one of these henna applications a last impression."
     },
     "aboutUs": {
-        "image": "about-us-image.png",
+        "image": "about-us.jpeg",
         "exprienceDetails": "15+Y Experiances",
-        "subTitle": "About Us",
-        "title": "Best Mehandi Artist",
-        "description": "Our skilled artists specialize in intricate designs that reflect your personality and style, whether it’s for weddings, festivals, or personal celebrations. We use high-quality, natural henna to ensure a safe and beautiful experience for our clients. At Henna Mehandi Art, we believe that Mehndi is not just body art; it’s a celebration of culture, love, and joy. We work closely with each client to create custom designs that tell their unique story",
+        "imageBg": "about-us-bg.png",
+        "subTitle": "welcome to",
+        "title": "About The Artist",
+        "description": "Janki is a professional mehndi artist, based in Ahmedabad who takes immense pride in being part of this ancient artwork of henna, with 10 years of experience, specializing in the rich cultural heritage of mehndi art.",
+        "sortDescription": "Her expertise spans from traditional mehndi to western style, covering a broader range of design patterns and styles.",
         "button": {
-            "label": "Learn More",
+            "label": "view all services",
             "type": "primary"
         }
     },
-    "services": {
-        "subTitle": "Type of Mehandi",
-        "title": "Our Mehendi Services",
+    "memories": {
+        "subTitle": "SPECIALS",
+        "title": "We’re Here to Make Your Day Memorable",
+        "description": "Orcinteger faucibus odio cursus facilisi sitenim egestas ele imperdiet etiam situ eltrices vestibulum sit. Orcinteger faucibus odio cursus facilisi sitenim egestas arcu elementum imperdiet etiam situ eltrices vestibulum sit.",
         "gallary": [
             {
+                "img": "memory-gallary.jpg"
+            },
+            {
+                "img": "memory-gallary-two.jpg"
+            }
+        ]
+    },
+    "services": {
+        "subTitle": "our services",
+        "title": "What We Can Do for You",
+        "description": "Our specialized front hand, back hand, full hand mehndi designs, where traditional circular patterns meet innovative artistic elements.",
+        "button": {
+            "label": "View Details",
+            "type": "primary"
+        },
+        "items": [
+            {
                 "id": 1,
-                "title": "Traditional Design",
-                "img": "hand-mehandi-image1.png"
+                "title": "Bridal Mehndi",
+                "description": "Wonderful henna designs that tell the essence of your love story.",
+                "img": "bridal-mehandi.jpeg",
+                "points": [
+                    "Full bridal mehndi ceremony coordination",
+                    "Customized design consultations",
+                    "Complete hands, arms, and feet coverage",
+                    "Traditional to modern pattern options",
+                    "Complimentary touch-ups",
+                    "Duration: 2-3 hours"
+                ]
             },
             {
                 "id": 2,
-                "title": "Arabic Design",
-                "img": "hand-mehandi-image2.png"
+                "title": "Engagement Mehandi",
+                "description": "connect individuals with the divine or seek blessings.",
+                "img": "engament-mehandi.jpeg",
+                "points": [
+                    "Full bridal mehndi ceremony coordination",
+                    "Customized design consultations",
+                    "Complete hands, arms, and feet coverage",
+                    "Traditional to modern pattern options",
+                    "Complimentary touch-ups",
+                    "Duration: 2-3 hours"
+                ]
             },
             {
                 "id": 3,
-                "title": "Bridal Mehndi",
-                "img": "hand-mehandi-image3.png"
+                "title": "Party Mehandi",
+                "description": "incorporates diverse styles, including floral and artistic motif",
+                "img": "party-mehandi.jpeg",
+                "points": [
+                    "Emblems & motifs",
+                    "Portraits in henna",
+                    "Duration: 15-30 minutes"
+                ]
             },
             {
                 "id": 4,
-                "title": "Western Mehndi",
-                "img": "hand-mehandi-image4.png"
+                "title": "Simple Mehndi Designs",
+                "description": "Simple and minimal henna designs perfect for parties or everyday elegance.",
+                "img": "simple-mehandi.jpeg",
+                "points": [
+                    "Easy mehndi designs",
+                    "Quick application",
+                    "Modern minimalist patterns"
+                ]
             },
             {
                 "id": 5,
-                "title": "Gothic Mehndi",
-                "img": "hand-mehandi-image5.png"
+                "title": "Festival Mehndi",
+                "description": "Whether it's for Diwali, Eid, or any other special occasion, my artistry will help you make a lasting impression.",
+                "img": "festival-mehandi.jpeg",
+                "points": [
+                    "Diwali mehndi",
+                    "Eid designs",
+                    "Teej patterns",
+                    "Karva Chauth special",
+                    "Raksha Bandhan",
+                    "Duration: 30 minutes - 1 hour"
+                ]
             },
             {
                 "id": 6,
-                "title": "Rajasthani Mehndi",
-                "img": "hand-mehandi-image6.png"
+                "title": "Mehndi Tattoo Art",
+                "description": "Custom henna-inspired temporary tattoos. Perfect for music parties, or everyday self-expression.",
+                "img": "mehandi-tatto-art.jpeg",
+                "points": [
+                    "Indo-Arabic fusion designs",
+                    "Temporary mehndi tattoos",
+                    "Custom symbol creation",
+                    "Geometric patterns",
+                    "Minimalist designs",
+                    "Duration: 15-30 minutes"
+                ]
             },
             {
                 "id": 7,
-                "title": "Simple Mehndi",
-                "img": "hand-mehandi-image7.png"
+                "title": "Sider Mehndi Design",
+                "description": "Elevate your mehndi ceremony with.",
+                "img": "sider-mehandi.jpeg",
+                "points": [
+                    "Coordinated family designs",
+                    "Group booking discounts",
+                    "Special occasion packages",
+                    "Custom pattern creation",
+                    "Duration: 30-120 minutes "
+                ]
+            },
+            {
+                "id": 8,
+                "title": "Arabic Mehendi Design",
+                "description": "Arabic henna art, with intricate symmetry and rich symbolism creating mesmerizing designs.",
+                "img": "arabic-mehandi.jpeg",
+                "points": [
+                    "Flowing geometric patterns",
+                    "Delicate floral arrangements",
+                    "Traditional Gulf-style motifs",
+                    "Contemporary Arabic fusion designs",
+                    "Intricate lacework patterns",
+                    "Duration: 15-30 minutes"
+                ]
+            },
+            {
+                "id": 9,
+                "title": "Character Mehndi Design",
+                "description": "Whimsical illustrations, mythical creatures, or iconic pop culture figures, breathing work of art.",
+                "img": "character-mehandi-art.jpeg",
+                "points": [
+                    "Emblems & motifs",
+                    "Portraits in henna",
+                    "Duration: 15-30 minutes"
+                ]
             }
         ]
     },
     "navbar": {
-        "logo": "logo-light.png",
+        "logo": "logo.png",
         "links": [
             {
                 "label": "Home",
@@ -83,7 +195,7 @@
             },
             {
                 "label": "Services",
-                "url": "/Services",
+                "url": "",
                 "childContent": [
                     "Page With No Sidebar",
                     "Page Left Sidebar",
@@ -93,22 +205,15 @@
                 ]
             },
             {
-                "label": "Portfolio",
-                "url": "/portfolio",
-                "childContent": [
-                    "Get in touch with us"
-                ]
-            },
-            {
                 "label": "Appointment",
-                "url": "/appointment",
+                "url": "",
                 "childContent": [
                     "Get in touch with us"
                 ]
             },
             {
                 "label": "Contact",
-                "url": "/contact",
+                "url": "",
                 "childContent": [
                     "Get in touch with us"
                 ]
@@ -128,27 +233,83 @@
         ]
     },
     "whyChooseUs": {
-        "subTitle": "Why We’re Best?",
-        "title": "Why Choose Us",
-        "image": "make-appintment-left-banner.png",
+        "subTitle": "why us",
+        "title": "What Makes Us Special?",
+        "image": "why-choose-us.png",
         "isImageRight": true,
-        "description": "Our team of highly skilled artists brings years of experience in creating stunning mehndi designs",
+        "description": "Transform your imagination into wearable art with our unique mehndi designs.",
         "features": [
             {
-                "title": "Expert Artists:",
-                "description": "Our talented mehndi artists have years of experience and a deep understanding of intricate designs, ensuring beautiful, personalized artwork."
+                "title": "Full hand coverage"
             },
             {
-                "title": "Custom Designs:",
-                "description": "We offer custom mehndi designs tailored to your preferences, whether traditional, modern, or fusion styles."
+                "title": "Intricate finger designs"
             },
             {
-                "title": "High-Quality Ingredients",
-                "description": "We use natural, skin-safe henna that ensures rich color and safe application, free from harmful chemicals."
+                "title": "Wrist extensions"
             },
             {
-                "title": "Quick Drying:",
-                "description": "Our application techniques promote faster drying times, so you can enjoy your designs without the long wait."
+                "title": "Traditional motifs"
+            },
+            {
+                "title": "Extended arm designs"
+            },
+            {
+                "title": "Feet and ankle patterns"
+            }
+        ]
+    },
+    "clientSection": {
+        "testimonials": [
+            {
+                "subTitle": "Testimonials",
+                "title": "Our Happy Customers",
+                "name": "Priya S.",
+                "img": "/client-image.jpg",
+                "designation": "Super Model",
+                "isImageRight": true,
+                "description": "While hiring a professional henna artist I came across Janki, her portfolio is amazing as she creates stunning and fine designs with perfection which increased the extravaganza of my Diwali festival. Highly recommend!",
+                "button": {
+                    "label": "View All Testimonials"
+                }
+            },
+            {
+                "subTitle": "Testimonials",
+                "title": "Our Happy Customers",
+                "name": "Tina K.",
+                "img": "/tatania-septimas.png",
+                "designation": "Bridal Mehndi Client",
+                "isImageRight": true,
+                "description": "Every bride deserves perfection, and so I searched for someone who can do it perfectly. Janki really showcased the aesthetics of the bridal henna and I was the queen at my wedding!",
+                "button": {
+                    "label": "View All Testimonials"
+                }
+            },
+            {
+                "subTitle": "Testimonials",
+                "title": "Our Happy Customers",
+                "name": "Neha H.",
+                "img": "/tatania-septimas.png",
+                "designation": "Mehndi for Wedding Guest",
+                "isImageRight": true,
+                "description": "Never will I ever look for another henna artist again, Janki has set the benchmark. And it’s not just her skills but her charm that makes the whole experience so nice. The pleasant attitude and her passion for things made my life so easy.",
+                "button": {
+                    "label": "View All Testimonials"
+                }
+            }
+        ],
+        "gallary": [
+            {
+                "img": "client-gallary-one.jpeg"
+            },
+            {
+                "img": "client-gallary-two.jpeg"
+            },
+            {
+                "img": "client-gallary-three.jpeg"
+            },
+            {
+                "img": "client-gallary-four.jpeg"
             }
         ]
     },

@@ -1,31 +1,17 @@
 import React from "react";
 import type { MetaFunction } from "@remix-run/node";
-import HeroSection from "~/sections/hero-section";
-import Services from "~/sections/services";
-import Navbar from "~/sections/navbar";
-import AboutUs from "~/sections/about-us";
-import WhyChooseUs from "~/sections/why-choose-us";
-import ClientTestimonials from "~/sections/testimonials";
+import HomePage from "~/layout/homePage";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Henna Mehandi Arts WP" },
+    { title: "Janki's Mehndi: Stunning Henna Designs for Your Special Day" },
     {
       description:
-        "Discover the art of mehndi with our stunning designs and expert tips. From bridal henna to intricate patterns for every occasion, explore our gallery and tutorials to create beautiful body art that celebrates tradition and creativity.",
+        "Discover the beauty of Janki's Mehndi! Explore intricate henna designs perfect for weddings, festivals, and special occasions. Let Janki create unforgettable mehndi art that reflects your unique style. Book your appointment today!",
     },
   ];
 };
 
 export default function Index() {
-  return (
-    <>
-      <Navbar />
-      <HeroSection />
-      <AboutUs />
-      <WhyChooseUs />
-      <Services />
-      <ClientTestimonials />
-    </>
-  );
+  return <HomePage/>
 }
