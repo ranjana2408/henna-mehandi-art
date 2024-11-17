@@ -4,7 +4,6 @@ import {
   Box,
   MenuItem,
   Select,
-  TextareaAutosize,
   TextField,
   Typography,
 } from "@mui/material";
@@ -67,25 +66,28 @@ function AppointmentForm() {
               required
               sx={formColum}
             />
-            <TextareaAutosize
-              aria-label="minimum height"
-              minRows={3}
-              autoComplete="off"
-              name="notes"
-              placeholder="Aditional Notes"
-              required
+            <TextField
+              multiline
+              variant="outlined"
+              fullWidth
+              placeholder="Notes..."
+              minRows={1}
+              maxRows={6}
               sx={{
                 ...formColum,
-                borderColor: "grey",
-                padding: "3.9px 14px",
-                borderRadius: "3px",
+                overflow: "hidden", // Hide scrollbar
+                "& .MuiOutlinedInput-root": {
+                  "& textarea": {
+                    overflow: "hidden", // Hide scrollbar for textarea
+                  },
+                },
               }}
             />
             <Box sx={formColum}>
               <MyStyledButton
                 sx={{
                   ...buttonStyle,
-                  "@media (min-width:319px) and (max-width:426px)": {
+                  "@media (min-width:319px) and (max-width:1024px)": {
                     display: "flex",
                     alignItems: "center !important",
                     justifyContent: "center !important",
@@ -123,17 +125,17 @@ const styles = {
     boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
     "@media (min-width:319px) and (max-width:426px)": {
       width: "90%",
-      bottom: "-364px",
+      bottom: "-270px",
       marginLeft: "20px",
     },
     "@media (min-width:425px) and (max-width:768px)": {
-      width: "90%",
       marginLeft: "10px",
     },
     "@media (min-width:768px) and (max-width:1024px)": {
-      width: "55rem",
+      width: "90%",
       bottom: "-128px",
-      marginLeft: "-54px",
+      mx:'5%',
+      marginLeft:'2%'
     },
   },
   fomrContainerStyle: {
@@ -163,11 +165,11 @@ const styles = {
   },
   formColum: {
     flex: "1 1 100px !important",
-    "@media (min-width:319px) and (max-width:426px)": {
-      flex: "1 1 114px !important",
+    "@media (min-width:319px) and (max-width:768px)": {
+      flex: "1 1 144px !important",
     },
-    "@media (min-width:768px) and (max-width:1023px)": {
-      flex: "1 1 250px !important",
+    "@media (min-width:768px) and (max-width:1024px)": {
+      flex: "1 1 20px !important",
     },
   },
 };

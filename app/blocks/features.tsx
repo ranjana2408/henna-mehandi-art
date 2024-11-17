@@ -10,18 +10,18 @@ image?:string;
   features?: { isShowImage?: boolean; title: string }[];
   isImageLeft?: boolean;
   button?: { label?: string };
-  featuresBoxStyele?: any;
+  featuresBoxStyle?: any;
   outerContainerStyle?:object;
   title: string;
   subTitle: string;
-  showForm:boolean;
+  showForm?:boolean;
   style?:object;
   bgColor?:string;
   height?:string;
 }
 
 const Features: React.FC<FeaturesBlockProps> = (props) => {
-  const { description, features, isImageLeft, button, featuresBoxStyele, } =
+  const { description, features, isImageLeft, button, featuresBoxStyle, } =
     props;
 
   const { featuresStyle } = styles;
@@ -34,7 +34,8 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
       appear={true}
       easing={{ enter: "ease-in", exit: "ease-out" }}
     >
-      <Box sx={{ ...featuresStyle, ...featuresBoxStyele }}>
+    
+      <Box sx={{ ...featuresStyle, ...featuresBoxStyle }}>
         <TitleSection {...props} />
         <Typography
           sx={{
@@ -46,7 +47,7 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
               fontSize: "14px",
             },
             color:
-              featuresBoxStyele?.backgroundColor === "#222222"
+              featuresBoxStyle?.backgroundColor === "#222222"
                 ? "white"
                 : "#222222",
             paddingBottom: "12px",
@@ -112,8 +113,9 @@ export default Features;
 
 const styles = {
   featuresStyle: {
-    px: "80px",
+    pl: "80px",
     paddingTop: "137px",
+    paddingRight:'54px',
     width: "50%",
     "@media (min-width:319px) and (max-width:426px)": {
       width: "100%",
@@ -129,6 +131,7 @@ const styles = {
     },
     "@media (min-width:768px) and (max-width:1024px)": {
       padding: "60px",
+      paddingLeft: "10px",
       paddingTop: "20px",
     },
     display: "flex",

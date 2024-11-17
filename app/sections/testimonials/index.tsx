@@ -75,16 +75,18 @@ export default function ClientTestimonials() {
     <Box
       sx={{
         display: "flex",
-        maxWidth: "1440px",
+        maxWidth: "1582px",
         justifyContent: "center",
         mx: "auto",
-        marginLeft: "0px",
         my: "60px",
         position: "relative",
-        top: "1088px",
+        top: "488px",
         "@media (min-width:319px) and (max-width:768px)": {
           display: "block",
-          top: "3201px",
+          top: "284rem",
+        },
+        "@media (min-width:768px) and (max-width:1024px)": {
+          top: "33rem",
         },
         "@media(max-width:1440px)": {
           marginLeft: "auto",
@@ -100,6 +102,9 @@ export default function ClientTestimonials() {
             justifyContent: "center",
             alignItems: "center",
           },
+          "@media (min-width:768px) and (max-width:1024px)": {
+            display: "block",
+          },
         }}
       >
         <Box
@@ -107,7 +112,7 @@ export default function ClientTestimonials() {
           sx={{
             backgroundColor: "#222222",
             py: "110px",
-            paddingBottom:'50px',
+            paddingBottom: "50px",
             paddingLeft: "150px",
             paddingRight: "100px",
             width: "60%",
@@ -117,6 +122,9 @@ export default function ClientTestimonials() {
               textAlign: "center",
               paddingRight: "10px",
               py: "50px",
+            },
+            "@media (min-width:319px) and (max-width:1024px)": {
+              width: "100%",
             },
           }}
         >
@@ -142,7 +150,7 @@ export default function ClientTestimonials() {
                 color="#FDE2E4"
                 title={clientItems?.title}
                 subTitle={clientItems?.subTitle}
-                featuresBoxStyele={{ backgroundColor: "#222222" }}
+                featuresBoxStyle={{ backgroundColor: "#222222" }}
               />
               <Box sx={{ display: "flex", gap: "5px", marginTop: "30px" }}>
                 {[
@@ -192,8 +200,8 @@ export default function ClientTestimonials() {
         </Box>
         <Box
           sx={{
-            width: "30%",
-            "@media (min-width:319px) and (max-width:768px)": {
+            width: "40%",
+            "@media (min-width:319px) and (max-width:1024px)": {
               width: "100%",
             },
           }}
@@ -201,20 +209,25 @@ export default function ClientTestimonials() {
           <ImageList cols={2} sx={{ overflow: "visible" }}>
             {data?.clientSection?.gallary?.map((item) => (
               <ImageListItem key={item.img}>
-                <Box sx={{"& :nth-child(0)":{
-                  maxHeight:'37px !important',
-                  marginBottom:'40px'
-                },"& :nth-child(3)":{
-                  maxHeight:'237px',
-                  marginBottom:'40px'
-                }
-                }}>
+                <Box
+                  sx={{
+                    "& :nth-child(0)": {
+                      maxHeight: "37px !important",
+                      marginBottom: "40px",
+                    },
+                    "& :nth-child(3)": {
+                      maxHeight: "237px",
+                      marginBottom: "40px",
+                    },
+                  }}
+                >
                   <img
                     src={item.img}
                     alt="gallary-image"
                     style={{
-                      width: isMobile ? "150px" : "300px",
-                      height:  isMobile? "150px": "350px",
+                      height: "350px",
+                      width: "100%",
+                      maxWidth: "100%",
                     }}
                     loading="lazy"
                   />

@@ -6,9 +6,6 @@ export default function BottomFooter() {
   
   const styles = {
     appBarStyle: {
-      "@media (min-width:319px) and (max-width:767px)": {
-        display: "none",
-      },
       display: "flex",
       backgroundColor: grey[900],
       color: "white",
@@ -16,8 +13,9 @@ export default function BottomFooter() {
         backgroundColor: grey[900],
       },
       padding: "10px 182px",
-      "@media (min-width:319px) and (max-width:425px)": {
+      "@media (min-width:319px) and (max-width:426px)": {
         padding: "10px 20px",
+        flexDirection: 'column-reverse'
       },
       "@media (min-width:425px) and (max-width:768px)": {
         padding: "10px 40px",

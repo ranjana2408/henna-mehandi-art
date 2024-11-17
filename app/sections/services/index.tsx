@@ -26,16 +26,14 @@ interface OutletContext {
 
 const Services = () => {
   const isSmallScreen = useMediaQuery(
-    "(min-width:319px) and (max-width:425px)"
+    "(min-width:319px) and (max-width:767px)"
   );
-  const isMediumScreen = useMediaQuery(
-    "(min-width:426px) and (max-width:768px)"
-  );
+ 
   const { setRouteRef } = useOutletContext<OutletContext>();
   const ref = useRef(null);
 
   // Determine number of columns based on screen size
-  const cols = isSmallScreen ? 1 : isMediumScreen ? 2 : 3;
+  const cols = isSmallScreen ? 1  : 3;
 
   useEffect(() => {
     if (ref?.current) {
@@ -87,7 +85,7 @@ const Services = () => {
           alignItems: "center",
           alignSelf: "center",
           backgroundColor: "#F8F8F8",
-          height: "36rem",
+          height: "72rem",
           position: "relative",
           top: "154px",
           bottom: "0px",
@@ -108,7 +106,7 @@ const Services = () => {
             <Box key={image.id} sx={{ maxHeight: "800px" }}>
               <ImageListItem
                 sx={{
-                  boxShadow: "0 0px 0px rgba(0, 0, 0, 0.2)",
+                  boxShadow: "0 0px 0px rgba(0, 0, 0, 5%)",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -121,8 +119,9 @@ const Services = () => {
                   src={image.img}
                   loading="lazy"
                   style={{
-                    width: isSmallScreen?"294px":"320px",
-                    height:isSmallScreen?"294px": "388px",
+                    height:"388px",
+                    width:'440px',
+                    maxWidth:'100%'
                   }}
                 />
               </ImageListItem>

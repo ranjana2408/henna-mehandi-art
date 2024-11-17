@@ -16,10 +16,10 @@ const Footer = () => {
           backgroundImage: "url(/pattern-footer.png)",
           backgroundSize: "cover",
           position: "relative",
-          top: "1080px",
+          top: "508px",
           "@media (min-width:319px) and (max-width:768px)": {
           display: "block",
-          top: "3171px",
+          top: "283rem",
         },
         }}
       >

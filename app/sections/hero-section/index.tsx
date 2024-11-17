@@ -17,9 +17,8 @@ interface HeroSectionProps {
   button?: { label?: string };
   isHomeHero?: boolean;
 }
- 
 
-const HeroSection: React.FC<HeroSectionProps>= (props) => {
+const HeroSection: React.FC<HeroSectionProps> = (props) => {
   const { setRouteRef } = useOutletContext<OutletContext>();
   const ref = useRef(null);
 
@@ -39,16 +38,26 @@ const HeroSection: React.FC<HeroSectionProps>= (props) => {
             maxWidth: "1005px !important",
             maxHeight: "96%",
           },
-          "@media (min-width:319px) and (max-width:1024px)": {
+          "@media (min-width:319px) and (max-width:426px)": {
             "& .MuiBox-root img": {
               marginLeft: "0px",
               maxWidth: "100% !important",
               maxHeight: "auto",
             },
           },
+          "@media (min-width:426px) and (max-width:768px)": {
+            "& .MuiBox-root img": {
+              maxWidth: "722px",
+            },
+          },
+        }}
+        featuresBoxStyle={{
+          "@media (min-width:768px) and (max-width:1024px)": {
+            marginTop: "-35px",
+          },
         }}
         height="48"
-        isHomeHero
+        isHeroHome
         showTobBorder
         bgColor="#FDE2E4"
         {...props}

@@ -19,8 +19,9 @@ interface SectionContainerProps {
   style?: any;
   outerContainerStyle?: object;
   button?: { label?: string };
-  featuresBoxStyele?: any;
-  isHomeHero?: boolean;
+  featuresBoxStyle?: any;
+  isHeroHome?: boolean;
+  outerImageContainerStyle?:object;
 }
 
 const SectionContainer: React.FC<SectionContainerProps> = (props) => {
@@ -32,6 +33,7 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
     image,
     style,
     outerContainerStyle,
+    outerImageContainerStyle
   } = props;
 
   const {
@@ -54,8 +56,8 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
           marginTop: "90px",
           paddingLeft: "0px !important",
         },
-        "@media (min-width:620px) and (max-width:767px)": {
-          paddingLeft: "20px",
+        "@media (min-width:768px) and (max-width:1024px)": {
+          paddingLeft: "32px",
         },
         ...style,
       }}
@@ -68,7 +70,7 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
           ...outerContainerStyle,
         }}
       >
-        <Features {...props}/>
+        <Features {...props} />
         {image && (
           <Slide
             timeout={2000}
@@ -91,6 +93,7 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
                   top: "200px",
                   right: "70px",
                 },
+                ...outerImageContainerStyle
               }}
             >
               <img
@@ -142,7 +145,7 @@ const styles = {
     maxWidth: "1440px",
     margin: "auto",
     position: "relative",
-    "@media (min-width:319px) and (max-width:619px)": {
+    "@media (min-width:319px) and (max-width:767px)": {
       flexDirection: "column-reverse",
       justifyContent: "center",
       alignItmes: "center",
