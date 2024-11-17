@@ -1,16 +1,16 @@
 import React from "react";
 import { AppBar, Box, Typography } from "@mui/material";
-import { grey } from "@mui/material/colors";
+
 
 export default function BottomFooter() {
   
   const styles = {
     appBarStyle: {
       display: "flex",
-      backgroundColor: grey[900],
+      backgroundColor: '#212121',
       color: "white",
       "&:hover": {
-        backgroundColor: grey[900],
+        backgroundColor: '#212121',
       },
       padding: "10px 182px",
       "@media (min-width:319px) and (max-width:426px)": {
@@ -33,7 +33,7 @@ export default function BottomFooter() {
   };
 
   return (
-    <Box sx={{ backgroundColor: grey[900] }}>
+    <Box sx={{ backgroundColor: '#212121' }}>
       <AppBar sx={styles.appBarStyle} position="static">
         <Box
           sx={{
