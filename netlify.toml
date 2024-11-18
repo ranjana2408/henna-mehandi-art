@@ -5,6 +5,12 @@ publish = "public"
 [dev]
 command = "npm run dev"
 framework = "remix"
+
+[package]
+directory = "/"
+
+[publish]
+directory = "/public"
  
 # Set immutable caching for static files, because they have fingerprinted filenames
  
