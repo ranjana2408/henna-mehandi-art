@@ -28,7 +28,7 @@ COPY --from=builder /app/package.json ./
 COPY --from=builder /app/node_modules ./node_modules
 
 # Expose the port the app runs on
-EXPOSE 5173
+EXPOSE 3000
 
 # Command to run the application
 CMD ["npm", "start"]
