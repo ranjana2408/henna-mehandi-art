@@ -5,7 +5,7 @@ publish = "public"
 [dev]
 command = "npm start"
 port = 3000
-framework = "vite"
+framework = "remix"
  
 # Set immutable caching for static files, because they have fingerprinted filenames
  
