@@ -3,7 +3,7 @@ command = "remix vite:build"
 publish = "public"
  
 [dev]
-command = "npm run dev"
+command = "remix vite:dev"
 port = 5173
 framework = "remix"
  
