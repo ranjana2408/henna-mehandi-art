@@ -127,11 +127,11 @@ const styles = {
       paddingTop: "20px",
     },
     "@media (min-width:620px) and (max-width:1024px)": {
-      paddingLeft: "10px",
+      paddingLeft: "32px",
     },
     "@media (min-width:768px) and (max-width:1024px)": {
       padding: "60px",
-      paddingLeft: "10px",
+      paddingLeft: "32px",
       paddingTop: "20px",
     },
     display: "flex",

@@ -51,12 +51,12 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
         backgroundColor: bgColor,
         paddingLeft: "173px",
         height: `${Number(height)}rem`,
-        "@media (min-width:319px) and (max-width:620px)": {
+        "@media (min-width:319px) and (max-width:767px)": {
           height: `${Number(height) + 2}rem`,
           marginTop: "90px",
           paddingLeft: "0px !important",
         },
-        "@media (min-width:768px) and (max-width:1024px)": {
+        "@media (min-width:767px) and (max-width:1024px)": {
           paddingLeft: "32px",
         },
         ...style,

@@ -86,7 +86,7 @@ export default function ClientTestimonials() {
           top: "284rem",
         },
         "@media (min-width:768px) and (max-width:1024px)": {
-          top: "33rem",
+          top: "100rem",
         },
         "@media(max-width:1440px)": {
           marginLeft: "auto",

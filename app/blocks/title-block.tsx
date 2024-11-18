@@ -42,11 +42,11 @@ export default function TitleSection({
           },
           "@media (min-width:425px) and (max-width:767px)": {
             fontSize: isHeroHome ? "42px !important" : "28px !important",
-            lineHeight: "40px",
+            lineHeight: "50px",
           },
           "@media (min-width:768px) and (max-width:1024px)": {
             fontSize: isHeroHome ? "48px !important" : "28px !important",
-            lineHeight: "40px",
+            lineHeight: "57px",
           },
           fontFamily: "Courgette",
           textOverflow: "ellipsis",

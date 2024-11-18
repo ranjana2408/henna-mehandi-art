@@ -21,6 +21,10 @@ const Footer = () => {
           display: "block",
           top: "283rem",
         },
+        "@media (min-width:768px) and (max-width:1024px)": {
+          display: "block",
+          top: "90rem",
+        },
         }}
       >
         <Container sx={{ maxWidth: "1110px !important" }}>

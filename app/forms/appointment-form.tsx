@@ -1,12 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Form, useOutletContext } from "@remix-run/react";
-import {
-  Box,
-  MenuItem,
-  Select,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, MenuItem, Select, TextField, Typography } from "@mui/material";
 import { buttonStyle } from "mui/mui-styles";
 import MyStyledButton from "~/component/my-styled-button";
 
@@ -83,7 +77,14 @@ function AppointmentForm() {
                 },
               }}
             />
-            <Box sx={formColum}>
+            <Box
+              sx={{
+                ...formColum,
+                "@media (min-width:319px) and (max-width:768px)": {
+                  flex: "1 1 100% !important",
+                },
+              }}
+            >
               <MyStyledButton
                 sx={{
                   ...buttonStyle,
@@ -93,7 +94,7 @@ function AppointmentForm() {
                     justifyContent: "center !important",
                     alignSelf: "center !important",
                     padding: "10px",
-                    width: "100%",
+                    width: "100% ",
                     fontSize: "14px !important",
                     transition: "bounce",
                   },
@@ -118,24 +119,23 @@ const styles = {
     backgroundColor: "white",
     opacity: "0.9",
     position: "absolute",
-    width: "60rem",
-    bottom: "-74px",
     zIndex: "999",
-    marginLeft: "70px",
+    width: "95%",
+    maxWidth:'1050px',
+    marginTop:'-360px',
+    mx:'auto',
+    marginLeft:'5%',
     boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
-    "@media (min-width:319px) and (max-width:426px)": {
-      width: "90%",
-      bottom: "-270px",
-      marginLeft: "20px",
-    },
-    "@media (min-width:425px) and (max-width:768px)": {
-      marginLeft: "10px",
+    "@media (min-width:375px) and (max-width:767px)": {
+     marginTop:'-217px',
+      width:'96%',
+      mx: '2%',
     },
     "@media (min-width:768px) and (max-width:1024px)": {
-      width: "90%",
-      bottom: "-128px",
-      mx:'5%',
-      marginLeft:'2%'
+      width:'90%',
+      mx:'2% !important',
+      marginTop:'-473px',
+      maxWidth:'100%',
     },
   },
   fomrContainerStyle: {
@@ -156,20 +156,25 @@ const styles = {
   },
   formRow: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
+    flexWrap:'wrap',
     gap: "5px",
+    width:'100%',
     "@media (min-width:319px) and (max-width:1023px)": {
       flexWrap: "wrap",
     },
   },
   formColum: {
-    flex: "1 1 100px !important",
-    "@media (min-width:319px) and (max-width:768px)": {
-      flex: "1 1 144px !important",
+    flex: "1 1 10% !important",
+    "@media (min-width:319px) and (max-width:414px)": {
+      flex: "1 1 38% !important",
+    },
+    "@media (min-width:414px) and (max-width:767px)": {
+      flex: "1 1 40% !important",
     },
     "@media (min-width:768px) and (max-width:1024px)": {
-      flex: "1 1 20px !important",
+      flex: "1 1 20% !important",
     },
   },
 };

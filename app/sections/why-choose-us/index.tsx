@@ -17,7 +17,7 @@ export default function WhyChooseUs() {
           },
           "@media (min-width:319px) and (max-width:1024px)": {
             marginTop: "20px !important",
-            height: "41rem",
+            height: "43rem !important",
             "& .MuiBox-root img": {
               maxWidth: "98%!important",
               mx: "10px",
@@ -28,6 +28,9 @@ export default function WhyChooseUs() {
             "& .MuiBox-root": {
               top: "20px !important",
             },
+          },
+          "@media (min-width:768px) and (max-width:1024px)": {
+            height:'61rem'
           },
         }}
         featuresBoxStyle={{

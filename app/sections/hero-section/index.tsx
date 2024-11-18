@@ -45,15 +45,29 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
               maxHeight: "auto",
             },
           },
-          "@media (min-width:426px) and (max-width:768px)": {
+          "@media (min-width:426px) and (max-width:767px)": {
+            height: "68rem !important",
             "& .MuiBox-root img": {
-              maxWidth: "722px",
+              maxWidth: "722px !important",
             },
+          },
+          "@media (min-width:768px) and (max-width:1024px)": {
+            height: "43rem !important",
+            "& .MuiBox-root img": {
+              maxWidth: "1005px !important",
+              maxHeight: "86%",
+            },
+            marginTop: "239px",
           },
         }}
         featuresBoxStyle={{
+          "@media (min-width:620px) and (max-width:767px)": {
+            width: "100%",
+            paddingTop: "7px !important",
+          },
           "@media (min-width:768px) and (max-width:1024px)": {
             marginTop: "-35px",
+            paddingTop: "165px !important",
           },
         }}
         height="48"
