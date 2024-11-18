@@ -1,22 +1,8 @@
 [build]
-command = "npm run build"
-publish = "public"
- 
-[dev]
-command = "npm run dev"
-framework = "remix"
+  publish = "build"
+  command = "npm run build"
 
-[package]
-directory = "/"
-
-[publish]
-directory = "/public"
- 
-# Set immutable caching for static files, because they have fingerprinted filenames
- 
-[[headers]]
-for = "/build/*"
- 
-[headers.values]
- 
-"Cache-Control" = "public, max-age=31560000, immutable"
+[[redirects]]
+  from = "/*"
+  to = "/index"
+  status = 200
