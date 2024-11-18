@@ -1,10 +1,10 @@
 [build]
-command = "npm run build"
+command = "remix vite:build"
 publish = "public"
  
 [dev]
-command = "npm start"
-port = 3000
+command = "npm run dev"
+port = 5173
 framework = "remix"
  
 # Set immutable caching for static files, because they have fingerprinted filenames
