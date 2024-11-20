@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {  useRef, useState } from "react";
 import {
   Links,
   Meta,
@@ -7,11 +7,6 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-import { CacheProvider } from '@emotion/react'; // Import CacheProvider from Emotion
-import createCache from '@emotion/cache'; // Create cache from Emotion
-
-// Create a custom Emotion cache instance
-const cache = createCache({ key: 'css' }); // You can pass a key to identify the cache
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -36,7 +31,6 @@ export const links: LinksFunction = () => [
 
 import Footer from "./shared/footer";
 
-// Layout component that wraps children in an HTML structure
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -72,10 +66,5 @@ export default function App() {
     contactRef,
   });
 
-  return (
-    // Wrap your app with CacheProvider to apply Emotion cache
-    <CacheProvider value={cache}>
-      <Outlet context={{ routeRef, setRouteRef, exact, setExact }} />
-    </CacheProvider>
-  );
+  return <Outlet context={{ routeRef, setRouteRef, exact, setExact }} />;
 }
