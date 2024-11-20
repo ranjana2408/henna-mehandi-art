@@ -13,5 +13,5 @@ export const meta: MetaFunction = () => {
 };
 
 export default function AboutUs() {
-  return <AboutUsPage/>
+  return <AboutUsPage isAboutPage={true}/>
 }

@@ -1,19 +1,25 @@
 {
     "homeHeroSection": {
-        "image": "hero-image.png",
+        "image": "hero-new-mehandi.png",
         "title": "Transform Your Special Moments With Mehndi Artistry.",
         "subTitle": "",
         "description": "Experience the artistry of traditional henna with a modern touch.",
         "button": {
             "label": "Book Now",
             "type": "primary"
-        }
+        },
+        "showForm":true,
+         "height":"48"
     },
     "aboutHeroSection": {
-        "image": "hero-image.png",
+        "image": "hero-new-mehandi.png",
         "title": "AboutUs",
         "subTitle": "",
-        "description": ""
+        "description": "",
+        "showBreadCrumbs":true,
+        "showForm":false,
+         "height":"35",
+         "isAboutSection":true
     },
     "makeUsSpecial": {
         "subTitle": "",

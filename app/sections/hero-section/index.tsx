@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import SectionContainer from "~/container/section-container";
 import { useOutletContext } from "@remix-run/react";
 import { Box } from "@mui/material";
+import BreadcrumbsComponent from "~/component/breadcrumbs";
 
 interface HeroSectionProps {
   image?: string;
@@ -16,6 +17,8 @@ interface HeroSectionProps {
   outerContainerStyle?: object;
   button?: { label?: string };
   isHomeHero?: boolean;
+  showBreadCrumbs?: boolean;
+  isAboutSection?: boolean;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = (props) => {
@@ -33,12 +36,13 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
     <Box ref={ref}>
       <SectionContainer
         style={{
-          marginTop: "226px",
+          marginTop: props?.isAboutSection ? "185px" : "226px",
           "& .MuiBox-root img": {
             maxWidth: "1005px !important",
             maxHeight: "96%",
           },
           "@media (min-width:319px) and (max-width:426px)": {
+            height: "61rem !important",
             "& .MuiBox-root img": {
               marginLeft: "0px",
               maxWidth: "100% !important",
@@ -48,11 +52,12 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
           "@media (min-width:426px) and (max-width:767px)": {
             height: "68rem !important",
             "& .MuiBox-root img": {
-              maxWidth: "722px !important",
+              maxWidth: "100% !important",
             },
           },
           "@media (min-width:768px) and (max-width:1024px)": {
-            height: "43rem !important",
+            height: "52rem !important",
+            paddingLeft: "0px !important",
             "& .MuiBox-root img": {
               maxWidth: "1005px !important",
               maxHeight: "86%",
@@ -61,6 +66,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
           },
         }}
         featuresBoxStyle={{
+          minHeight: "200px",
           "@media (min-width:620px) and (max-width:767px)": {
             width: "100%",
             paddingTop: "7px !important",
@@ -70,13 +76,23 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             paddingTop: "165px !important",
           },
         }}
-        height="48"
+        outerImageContainerStyle={{
+          paddingTop: props?.isAboutSection ? "0px" : "185px",
+          "@media (min-width:374px) and (max-width:768px)": {
+            paddingTop: "0px !important",
+            display: "flex",
+            alignSelft: "center",
+            justifySelf: "center",
+            width: "100%",
+          },
+        }}
         isHeroHome
         showTobBorder
         bgColor="#FDE2E4"
         {...props}
-        showForm
       />
+
+      {props?.showBreadCrumbs && <BreadcrumbsComponent />}
     </Box>
   );
 };

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { Box, Slide } from "@mui/material";
-import AppointmentForm from "~/forms/appointment-form";
+import AppointmentForm from "~/container/appointment-form";
 import { useOutletContext } from "@remix-run/react";
 import Features from "~/blocks/features";
 
@@ -21,7 +21,10 @@ interface SectionContainerProps {
   button?: { label?: string };
   featuresBoxStyle?: any;
   isHeroHome?: boolean;
-  outerImageContainerStyle?:object;
+  outerImageContainerStyle?: object;
+  showBreadCrumbs?: boolean;
+  whyChooseUs?: boolean;
+  isAboutPage?:boolean;
 }
 
 const SectionContainer: React.FC<SectionContainerProps> = (props) => {
@@ -33,14 +36,11 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
     image,
     style,
     outerContainerStyle,
-    outerImageContainerStyle
+    outerImageContainerStyle,
   } = props;
 
-  const {
-    featureContainerStyle,
-    featuresMainStyle,
-    imageContainerStyle,
-  } = styles;
+  const { featureContainerStyle, featuresMainStyle, imageContainerStyle } =
+    styles;
 
   const { exact } = useOutletContext<OutletContext>();
 
@@ -56,7 +56,7 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
           marginTop: "90px",
           paddingLeft: "0px !important",
         },
-        "@media (min-width:767px) and (max-width:1024px)": {
+        "@media (min-width:768px) and (max-width:1024px)": {
           paddingLeft: "32px",
         },
         ...style,
@@ -93,7 +93,7 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
                   top: "200px",
                   right: "70px",
                 },
-                ...outerImageContainerStyle
+                ...outerImageContainerStyle,
               }}
             >
               <img
@@ -158,5 +158,4 @@ const styles = {
   imageContainerStyle: {
     width: "50%",
   },
-
 };

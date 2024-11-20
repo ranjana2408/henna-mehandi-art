@@ -45,15 +45,15 @@ const AboutUs = () => {
           boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
           paddingBottom: "150px",
           "@media (min-width:319px) and (max-width:767px)": {
-            paddingLeft: "10px !important",
+            paddingLeft: "32px !important",
             marginTop: "180px",
             py: "50px !important",
           },
           "@media (min-width:768px) and (max-width:1024px)": {
             paddingLeft: "30px !important",
-            marginTop: "130px",
+            marginTop: "0px",
             py: "70px !important",
-            maxWidth:'500px'
+            maxWidth:'400px'
           },
         }}
         bgColor="white"

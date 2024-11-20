@@ -13,7 +13,7 @@ export default function HomePage() {
       <Navbar />
       <HeroSection {...data?.homeHeroSection} />
       <AboutUs />
-      <WhyChooseUs />
+      <WhyChooseUs  />
       <Services />
       <ClientTestimonials />
     </>

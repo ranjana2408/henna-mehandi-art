@@ -8,6 +8,7 @@ interface TitleSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   featuresBoxStyle?: any;
   isHeroHome?: boolean;
+  isAboutUs?:boolean;
 }
 
 export default function TitleSection({
@@ -16,6 +17,7 @@ export default function TitleSection({
   featuresBoxStyle,
   isHeroHome,
   color,
+  isAboutUs
 }: TitleSectionProps) {
   return (
     <>
@@ -24,7 +26,8 @@ export default function TitleSection({
           fontFamily: "Open Sans",
           fontSize: "14px",
           fontWeight: "600",
-          textTransform:'uppercase'
+          textTransform:'uppercase',
+          textAlign:isAboutUs?'center':'start',
         }}
         color={color ? color : "#F72585"}
       >
@@ -36,6 +39,7 @@ export default function TitleSection({
           fontSize: isHeroHome ? "74px !important" : "64px !important",
           lineHeight: "1.059em",
           textTransform:'captilized',
+          textAlign:isAboutUs?'center':'start',
           "@media (min-width:319px) and (max-width:425px)": {
             fontSize: isHeroHome ? "42px !important" : "28px !important",
             lineHeight: "40px",

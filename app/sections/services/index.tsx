@@ -149,6 +149,7 @@ const Services = () => {
                   wordSpacing: "1px",
                   textAlign: "center",
                   marginTop: "20px",
+                  maxWidth:'440px'
                 }}
               >
                 {image.description}

@@ -24,3 +24,8 @@ export const mehndiData = [
       image: 'path/to/minimal-mehndi.jpg',
     },
   ];
+
+ export enum ROUTES {
+    HOME = '/home',
+    ABOUT = '/about'
+}
