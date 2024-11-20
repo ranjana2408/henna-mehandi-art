@@ -44,7 +44,7 @@ export default function WhyChooseUs({
           position: "relative",
           paddinRight: "54px !important",
           width: isAboutPage ? "100% !important" : "50%",
-          background:isAboutPage?'#F8F8F8':'none',
+          background: isAboutPage ? "#F8F8F8" : "none",
           py: isAboutPage ? "50px" : "",
           "@media (min-width:319px) and (max-width:1024px)": {
             paddingTop: "20px",
@@ -63,7 +63,9 @@ export default function WhyChooseUs({
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           justifyContent: isAboutPage ? "center" : "start",
-          flexDirection: isAboutPage ? "column-reverse !important" : "row",
+          flexDirection: isAboutPage
+            ? "column-reverse !important"
+            : "row-reverse",
           "@media (min-width:319px) and (max-width:1024px)": {
             backgroundSize: "340px",
             flexDirection: "column-reverse !important",
@@ -77,7 +79,7 @@ export default function WhyChooseUs({
             height: "512px !important",
             width: "734px !important",
             maxWidth: "734px !important",
-            maxHeight: "325px !important",
+            maxHeight: "466px  !important",
           },
           "@media(min-width:319px) and (max-width:768px)": {
             height: "323px !important",

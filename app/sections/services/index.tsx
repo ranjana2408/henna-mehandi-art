@@ -54,7 +54,7 @@ const Services = () => {
         flexDirection: "column",
         alignItems: "center",
         alignSelf: "center",
-        marginTop: "20px",
+        marginTop: "80px",
         "@media (min-width:319px) and (max-width:1024px)": {
           marginTop: "60px !important",
         },
