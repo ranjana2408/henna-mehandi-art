@@ -4,11 +4,11 @@ import SectionContainer from "~/container/section-container";
 import { useOutletContext } from "@remix-run/react";
 import { Box, useMediaQuery } from "@mui/material";
 
-const AboutUs = () => {
+const AboutUs = ({ isAbout }: any) => {
   const { setRouteRef } = useOutletContext<OutletContext>();
   const ref = useRef(null);
-  const isSmallLaptop= useMediaQuery(
-    "(min-width:768px) and (max-width:1024px)"
+  const isSmallLaptop = useMediaQuery(
+    "(min-width:375px) and (max-width:1024px)"
   );
 
   useEffect(() => {
@@ -25,19 +25,19 @@ const AboutUs = () => {
         style={{
           marginTop: "0px",
           "& .MuiBox-root img": {
-            top: "180px",
+            top: isAbout ? "15px" : "180px",
             position: "relative",
           },
           "@media (min-width:319px) and (max-width:620px)": {
-            marginTop: "140px !important",
+            marginTop: isSmallLaptop ? "-2px" : "140px !important",
             paddingLeft: "0px !important",
             "& .MuiBox-root img": {
               marginTop: "10px",
-              paddingLeft:'10px'
+              paddingLeft: "10px",
             },
           },
         }}
-        height={isSmallLaptop?'38':"52"}
+        height={isSmallLaptop  ? "38" : "52"}
         featuresBoxStyle={{
           width: "100%",
           backgroundColor: "#F8F8F8",
@@ -46,14 +46,14 @@ const AboutUs = () => {
           paddingBottom: "150px",
           "@media (min-width:319px) and (max-width:767px)": {
             paddingLeft: "32px !important",
-            marginTop: "180px",
+            marginTop: isAbout ? "37px" : "180px",
             py: "50px !important",
           },
           "@media (min-width:768px) and (max-width:1024px)": {
             paddingLeft: "30px !important",
             marginTop: "0px",
             py: "70px !important",
-            maxWidth:'400px'
+            maxWidth: "400px",
           },
         }}
         bgColor="white"

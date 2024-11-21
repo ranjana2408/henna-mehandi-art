@@ -10,7 +10,7 @@ export default function AboutUsPage({isAboutPage}:{isAboutPage:boolean}) {
     <>
       <Navbar />
       <HeroSection {...data?.aboutHeroSection} />
-      <AboutUs />
+      <AboutUs isAbout/>
       <WhyChooseUs isAboutPage={isAboutPage}/>
     </>
   );

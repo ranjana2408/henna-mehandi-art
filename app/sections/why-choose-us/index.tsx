@@ -20,6 +20,7 @@ export default function WhyChooseUs({
           backgroundColor: "white",
           "@media (min-width:319px) and (max-width:1024px)": {
             marginTop: "20px !important",
+            height: isAboutPage ? "53rem !important" : "",
             "& .MuiBox-root img": {
               maxWidth: "98%!important",
               mx: "10px",
@@ -82,8 +83,13 @@ export default function WhyChooseUs({
             maxHeight: "466px  !important",
           },
           "@media(min-width:319px) and (max-width:768px)": {
+            "& img": {
+              height: isAboutPage ? "315px !important" : "",
+              width: isAboutPage ? "340px !important" : "",
+            },
             height: "323px !important",
             width: "606px !important",
+            paddingLeft: isAboutPage ? "0px" : "0px",
           },
           "@media (min-width:425px) and (max-width:1024px)": {
             width: "100%",

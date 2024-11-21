@@ -8,9 +8,7 @@ const BreadcrumbsComponent = () => {
   const navigate = useNavigate();
   const { pathname }: any = useLocation();
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleClick = (url: string) => {
-    // You can modify the path based on your application's routing
     navigate(url);
   };
 
@@ -23,7 +21,7 @@ const BreadcrumbsComponent = () => {
         top: "425px",
         left: "255px",
         "@media (min-width: 375px) and (max-width: 1024px)":{
-            top: "445px",
+            top: "551px",
             left: "32px",
         }
       }}
