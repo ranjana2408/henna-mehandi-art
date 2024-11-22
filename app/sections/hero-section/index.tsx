@@ -42,7 +42,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             maxHeight: "96%",
           },
           "@media (min-width:319px) and (max-width:426px)": {
-            height: props?.isAboutSection ? "34rem" : "61rem !important",
+            height: props?.isAboutSection ? "38rem" : "61rem !important",
             "& .MuiBox-root img": {
               marginLeft: "0px",
               maxWidth: "100% !important",
@@ -56,7 +56,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             },
           },
           "@media (min-width:768px) and (max-width:1024px)": {
-            height: props?.isAboutSection ? "52rem" : "68rem !important",
+            height: props?.isAboutSection ? "36rem" : "68rem !important",
             paddingLeft: "0px !important",
             "& .MuiBox-root img": {
               maxWidth: "1005px !important",
@@ -83,8 +83,10 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             display: "flex",
             alignSelft: "center",
             justifySelf: "center",
-            width: "100%",
           },
+          "@media(min-width:768) and (max-width:768px)":{
+            width: "50%",
+          }
         }}
         isHeroHome
         showTobBorder

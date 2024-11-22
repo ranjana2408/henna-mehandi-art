@@ -29,7 +29,7 @@ const Footer = () => {
           top: pathname === "/about" ? "400px" : "583px",
           "@media (min-width:319px) and (max-width:767px)": {
             display: "block",
-            top: pathname === "/about" ? "24rem" : "292rem",
+            top: pathname === "/about" ? "28rem" : "292rem",
           },
           "@media (min-width:768px) and (max-width:1024px)": {
             display: "block", 
@@ -112,7 +112,7 @@ const Footer = () => {
               alignItems: "center",
               paddingTop: "80px",
               "@media (min-width:319px) and (max-width:768px)": {
-                paddingTop: "120px",
+                paddingTop: "151px",
               },
             }}
           >
@@ -230,20 +230,20 @@ const styles = {
     zIndex: "999",
     width: "60%",
     marginTop: "-195px",
-    maxWidth: "60%",
-    mx: "20%",
+    maxWidth: "45%",
+    mx: "25%",
     boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
     "@media (min-width:375px) and (max-width:767px)": {
       marginTop: "-217px",
       width: "90%",
-      maxWidth: "90%",
-      mx: "5%",
+      maxWidth: "65%",
+      mx: "10%",
     },
     "@media (min-width:768px) and (max-width:1024px)": {
       width: "90%",
       mx: "5% !important",
       marginTop: "-164px",
-      maxWidth: "100%",
+      maxWidth: "75%",
     },
   },
   formStyle: {

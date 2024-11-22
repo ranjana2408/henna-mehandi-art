@@ -26,8 +26,10 @@ export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Lora&display=swap"
-  }
+  },
 ];
+
+import '../mui/mui.css'
 
 import Footer from "./shared/footer";
 

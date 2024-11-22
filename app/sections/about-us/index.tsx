@@ -4,7 +4,7 @@ import SectionContainer from "~/container/section-container";
 import { useOutletContext } from "@remix-run/react";
 import { Box, useMediaQuery } from "@mui/material";
 
-const AboutUs = ({ isAbout }: any) => {
+const AboutUs = ({ isAbout }: { isAbout: boolean }) => {
   const { setRouteRef } = useOutletContext<OutletContext>();
   const ref = useRef(null);
   const isSmallLaptop = useMediaQuery(
@@ -24,20 +24,12 @@ const AboutUs = ({ isAbout }: any) => {
         isImageLeft
         style={{
           marginTop: "0px",
-          "& .MuiBox-root img": {
-            top: isAbout ? "15px" : "180px",
-            position: "relative",
-          },
           "@media (min-width:319px) and (max-width:620px)": {
             marginTop: isSmallLaptop ? "-2px" : "140px !important",
             paddingLeft: "0px !important",
-            "& .MuiBox-root img": {
-              marginTop: "10px",
-              paddingLeft: "10px",
-            },
           },
         }}
-        height={isSmallLaptop  ? "38" : "52"}
+        height={isSmallLaptop ? "38" : "52"}
         featuresBoxStyle={{
           width: "100%",
           backgroundColor: "#F8F8F8",
@@ -54,6 +46,20 @@ const AboutUs = ({ isAbout }: any) => {
             marginTop: "0px",
             py: "70px !important",
             maxWidth: "400px",
+          },
+        }}
+        outerImageContainerStyle={{
+          "& img": {
+            top: "180px",
+            position: "relative",
+          },
+          "@media (min-width:375px) and (max-width:768px)": {
+            "& img": {
+              marginTop: "10px",
+              paddingLeft: "10px",
+              top: isAbout ? "15px" : "180px",
+              position: "relative",
+            },
           },
         }}
         bgColor="white"

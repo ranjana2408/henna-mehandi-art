@@ -33,7 +33,7 @@ export default function WhyChooseUs({
             },
           },
           "@media (min-width:425px) and (max-width:767px)": {
-            height: "46rem !important",
+            height: isAboutPage ? "53rem !important" : "46rem !important",
           },
           "@media (min-width:768px) and (max-width:1024px)": {
             height: "54rem !important",
@@ -85,11 +85,12 @@ export default function WhyChooseUs({
           "@media(min-width:319px) and (max-width:768px)": {
             "& img": {
               height: isAboutPage ? "315px !important" : "",
-              width: isAboutPage ? "340px !important" : "",
+              width: isAboutPage ? "100% !important" : "",
             },
             height: "323px !important",
             width: "606px !important",
             paddingLeft: isAboutPage ? "0px" : "0px",
+            paddingRight: isAboutPage ? "10px" : "0px",
           },
           "@media (min-width:425px) and (max-width:1024px)": {
             width: "100%",

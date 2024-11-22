@@ -9,6 +9,14 @@ export const meta: MetaFunction = () => {
       description:
         "Discover the beauty of Janki's Mehndi! Explore intricate henna designs perfect for weddings, festivals, and special occasions. Let Janki create unforgettable mehndi art that reflects your unique style. Book your appointment today!",
     },
+   { 'og:title': "" },
+    {'og:description': ""},
+    {'og:url': ""}, 
+    {'og:type': ""},
+    {'twitter:card': ""}, 
+    {'twitter:title': ""}, 
+    {'twitter:description': ""}, 
+    {'twitter:image': ""}, 
   ];
 };
 

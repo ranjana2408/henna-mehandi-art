@@ -21,8 +21,8 @@ const BreadcrumbsComponent = () => {
         top: "425px",
         left: "255px",
         "@media (min-width: 375px) and (max-width: 1024px)":{
-            top: "551px",
-            left: "32px",
+            top: "629px",
+            left: "22px",
         }
       }}
     >

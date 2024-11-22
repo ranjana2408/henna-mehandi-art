@@ -53,7 +53,7 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
             fontFamily: "Open Sans",
             fontWeight: "400",
             paddingTop: "24px",
-            testAlign:isAboutUs?'center':'start',
+            textAlign:isAboutUs?'center':'start',
             "@media (min-width:319px) and (max-width:620px)": {
               fontSize: "14px",
             },
