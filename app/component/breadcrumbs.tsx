@@ -2,11 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import { ROUTES } from "utils/constants";
-import { useLocation } from "@remix-run/react";
+import { useLocation  } from "@remix-run/react";
 
 const BreadcrumbsComponent = () => {
   const navigate = useNavigate();
-  const { pathname }: any = useLocation();
+  const { pathname } = useLocation();
 
   const handleClick = (url: string) => {
     navigate(url);
@@ -20,9 +20,12 @@ const BreadcrumbsComponent = () => {
         position: "absolute",
         top: "425px",
         left: "255px",
-        "@media (min-width: 375px) and (max-width: 1024px)":{
+        "@media (min-width: 375px) and (max-width: 768px)":{
             top: "629px",
             left: "22px",
+        },
+        "@media (min-width:768px) and (max-width:1024px)":{
+          left: "22px",
         }
       }}
     >
@@ -39,9 +42,10 @@ const BreadcrumbsComponent = () => {
           {item.split("/")[1]}{" "}
           {index < Object.values(ROUTES).length - 1 && " >"}
         </Typography>
-      ))}
+      ))} 
     </Box>
   );
 };
 
 export default BreadcrumbsComponent;
+

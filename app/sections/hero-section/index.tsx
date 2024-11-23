@@ -41,7 +41,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             maxWidth: "1005px !important",
             maxHeight: "96%",
           },
-          "@media (min-width:319px) and (max-width:426px)": {
+          "@media (min-width:375px) and (max-width:426px)": {
             height: props?.isAboutSection ? "38rem" : "61rem !important",
             "& .MuiBox-root img": {
               marginLeft: "0px",
@@ -67,6 +67,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
         }}
         featuresBoxStyle={{
           minHeight: "200px",
+          position: props?.isAboutSection ? "relative" : "",
           "@media (min-width:620px) and (max-width:767px)": {
             width: "100%",
             paddingTop: "7px !important",
@@ -84,9 +85,9 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             alignSelft: "center",
             justifySelf: "center",
           },
-          "@media(min-width:768) and (max-width:768px)":{
+          "@media(min-width:768) and (max-width:768px)": {
             width: "50%",
-          }
+          },
         }}
         isHeroHome
         showTobBorder

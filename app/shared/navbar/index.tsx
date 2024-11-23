@@ -12,7 +12,6 @@ import TopNavbar from "./top-navbar";
 import data from "../../../utils/data.json";
 import { Link, useOutletContext } from "@remix-run/react";
 import MyStyledButton from "~/component/my-styled-button";
-
 interface OutletContext {
   routeRef: {
     homeRef: React.RefObject<HTMLDivElement>;
@@ -27,7 +26,7 @@ interface OutletContext {
 }
 
 const Navbar: React.FC = () => {
-  const isMobile = useMediaQuery("(min-width:319px) and (max-width:767px)");
+  const isMobile = useMediaQuery("(min-width:375px) and (max-width:767px)");
   const [showMenu, setShowMenu] = useState(false);
   const { routeRef, setExact, exact } = useOutletContext<OutletContext>();
 
@@ -251,7 +250,7 @@ const styles = {
     backgroundColor: "white",
     maxWidth: "1440px",
     margin: "auto",
-    "@media (min-width:319px) and (max-width:425px)": {
+    "@media (min-width:375px) and (max-width:425px)": {
       padding: "5px 20px",
     },
     "@media (min-width:425px) and (max-width:768px)": {
@@ -265,7 +264,7 @@ const styles = {
   navListStyle: {
     display: "flex",
     marginLeft: "200px",
-    "@media (min-width:319px) and (max-width:768px)": {
+    "@media (min-width:375px) and (max-width:768px)": {
       marginLeft: "-18px",
     },
     "@media (min-width:768px) and (max-width:1024px)": {
@@ -274,7 +273,7 @@ const styles = {
     flexWrap: "nowrap",
   },
   navMenuIconStyle: {
-    "@media (min-width:319px) and (max-width:767px)": {
+    "@media (min-width:375px) and (max-width:767px)": {
       display: "block",
     },
     display: "none",

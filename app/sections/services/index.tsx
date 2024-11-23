@@ -26,7 +26,7 @@ interface OutletContext {
 
 const Services = () => {
   const isSmallScreen = useMediaQuery(
-    "(min-width:319px) and (max-width:767px)"
+    "(min-width:375px) and (max-width:767px)"
   );
  
   const { setRouteRef } = useOutletContext<OutletContext>();
@@ -55,7 +55,7 @@ const Services = () => {
         alignItems: "center",
         alignSelf: "center",
         marginTop: "80px",
-        "@media (min-width:319px) and (max-width:1024px)": {
+        "@media (min-width:375px) and (max-width:1024px)": {
           marginTop: "60px !important",
         },
       }}
@@ -89,7 +89,7 @@ const Services = () => {
           position: "relative",
           top: "154px",
           bottom: "0px",
-          "@media (min-width:319px) and (max-width:1024px)": {
+          "@media (min-width:375px) and (max-width:1024px)": {
             height: "min-content",
           },
         }}
@@ -132,7 +132,7 @@ const Services = () => {
                   fontWeight: "400",
                   lineHeight: "1.154em",
                   textAlign: "center",
-                  "@media (min-width:319px) and (max-width:1024px)": {
+                  "@media (min-width:375px) and (max-width:1024px)": {
                     fontSize: "20px",
                   },
                 }}
@@ -193,7 +193,7 @@ const Services = () => {
               fontWeight: "400",
               lineHeight: "1.154em",
               textAlign: "center",
-              "@media (min-width:319px) and (max-width:1024px)": {
+              "@media (min-width:375px) and (max-width:1024px)": {
                 fontSize: "20px",
               },
             }}
@@ -224,7 +224,7 @@ const Services = () => {
             height: "max-content",
             width: "max-content",
             // bottom: "50px",
-            "@media (min-width:319px) and (max-width:1023px)": {
+            "@media (min-width:375px) and (max-width:1023px)": {
               fontSize: "10px !important",
             },
           }}

@@ -121,7 +121,7 @@ function handleBrowserRequest(
           // Check if the request is for an image and set the appropriate Content-Type
           const isImageRequest = request.url.match(/\.(jpg|jpeg|png|gif|svg)$/i);
           if (isImageRequest) {
-            responseHeaders.set("Content-Type", "image/jpeg"); // Adjust based on the image type
+            responseHeaders.set("Content-Type", "image/png"); // Adjust based on the image type
           }
 
           resolve(

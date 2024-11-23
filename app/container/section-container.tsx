@@ -51,7 +51,7 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
         backgroundColor: bgColor,
         paddingLeft: "173px",
         height: `${Number(height)}rem`,
-        "@media (min-width:319px) and (max-width:767px)": {
+        "@media (min-width:375px) and (max-width:767px)": {
           height: `${Number(height) + 2}rem`,
           marginTop: "90px",
           paddingLeft: "0px !important",
@@ -84,7 +84,7 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
                 ...imageContainerStyle,
                 right: isImageLeft ? 0 : "",
                 left: isImageLeft ? "" : "50px",
-                "@media (min-width:319px) and (max-width:619px)": {
+                "@media (min-width:375px) and (max-width:619px)": {
                   position: "relative",
                   width: "100%",
                   left: isImageLeft ? "" : "0",
@@ -145,7 +145,7 @@ const styles = {
     maxWidth: "1440px",
     margin: "auto",
     position: "relative",
-    "@media (min-width:319px) and (max-width:767px)": {
+    "@media (min-width:375px) and (max-width:767px)": {
       flexDirection: "column-reverse",
       justifyContent: "center",
       alignItmes: "center",

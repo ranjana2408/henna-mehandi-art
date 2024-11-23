@@ -54,7 +54,7 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
             fontWeight: "400",
             paddingTop: "24px",
             textAlign:isAboutUs?'center':'start',
-            "@media (min-width:319px) and (max-width:620px)": {
+            "@media (min-width:375px) and (max-width:620px)": {
               fontSize: "14px",
             },
             color:
@@ -89,7 +89,7 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
                   gap: "10px",
                   alignItems: "center",
                   flex: isAboutUs ? "1 1 calc(50% - 10px)" : "1 1 100%", 
-                  "@media (min-width:319px) and (max-width:767px)": {
+                  "@media (min-width:375px) and (max-width:767px)": {
                     flex:  "1 1 100%", 
                   },
                 }}
@@ -107,7 +107,7 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
                     fontStyle: "normal",
                     fontFamily: "Lora, Open Sans", // Ensure proper font stack
                     lineHeight: "1.154em",
-                    "@media (min-width: 319px) and (max-width: 620px)": {
+                    "@media (min-width: 375px) and (max-width: 620px)": {
                       fontSize: "20px",
                     },
                   }}
@@ -122,7 +122,7 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
         {button && (
           <MyStyledButton
             sx={{
-              "@media (min-width:319px) and (max-width:620px)": {
+              "@media (min-width:375px) and (max-width:620px)": {
                 padding: "10px",
                 px: "15px",
                 fontSize: "14px !important",
@@ -146,7 +146,7 @@ const styles = {
     paddingTop: "137px",
     paddingRight: "54px",
     width: "50%",
-    "@media (min-width:319px) and (max-width:426px)": {
+    "@media (min-width:375px) and (max-width:426px)": {
       width: "100%",
       padding: "20px",
     },

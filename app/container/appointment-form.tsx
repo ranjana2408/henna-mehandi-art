@@ -81,7 +81,7 @@ function AppointmentForm() {
             <Box
               sx={{
                 ...formColum,
-                "@media (min-width:319px) and (max-width:768px)": {
+                "@media (min-width:375px) and (max-width:768px)": {
                   flex: "1 1 100% !important",
                 },
               }}
@@ -89,7 +89,7 @@ function AppointmentForm() {
               <MyStyledButton
                 sx={{
                   ...buttonStyle,
-                  "@media (min-width:319px) and (max-width:1024px)": {
+                  "@media (min-width:375px) and (max-width:1024px)": {
                     display: "flex",
                     alignItems: "center !important",
                     justifyContent: "center !important",
@@ -142,7 +142,7 @@ const styles = {
   fomrContainerStyle: {
     gap: "20px",
     alignItems: "center",
-    "@media (min-width:319px) and (max-width:1023px)": {
+    "@media (min-width:375px) and (max-width:1023px)": {
       display: "block",
     },
     display: "flex",
@@ -162,13 +162,13 @@ const styles = {
     flexWrap:'wrap',
     gap: "5px",
     width:'100%',
-    "@media (min-width:319px) and (max-width:1023px)": {
+    "@media (min-width:375px) and (max-width:1023px)": {
       flexWrap: "wrap",
     },
   },
   formColum: {
     flex: "1 1 10% !important",
-    "@media (min-width:319px) and (max-width:414px)": {
+    "@media (min-width:375px) and (max-width:414px)": {
       flex: "1 1 38% !important",
     },
     "@media (min-width:414px) and (max-width:767px)": {

@@ -27,7 +27,7 @@ const Footer = () => {
           backgroundSize: "cover",
           position: "relative",
           top: pathname === "/about" ? "400px" : "583px",
-          "@media (min-width:319px) and (max-width:767px)": {
+          "@media (min-width:375px) and (max-width:767px)": {
             display: "block",
             top: pathname === "/about" ? "28rem" : "292rem",
           },
@@ -75,7 +75,7 @@ const Footer = () => {
                   sx={{
                     ...formColum,
                     flex: "1 1 25% !important",
-                    "@media (min-width:319px) and (max-width:768px)": {
+                    "@media (min-width:375px) and (max-width:768px)": {
                       flex: "1 1 100% !important",
                     },
                   }}
@@ -83,7 +83,7 @@ const Footer = () => {
                   <MyStyledButton
                     sx={{
                       ...buttonStyle,
-                      "@media (min-width:319px) and (max-width:1024px)": {
+                      "@media (min-width:375px) and (max-width:1024px)": {
                         display: "flex",
                         alignItems: "center !important",
                         justifyContent: "center !important",
@@ -111,7 +111,7 @@ const Footer = () => {
               justifyContent: "center",
               alignItems: "center",
               paddingTop: "80px",
-              "@media (min-width:319px) and (max-width:768px)": {
+              "@media (min-width:375px) and (max-width:768px)": {
                 paddingTop: "151px",
               },
             }}
@@ -236,8 +236,8 @@ const styles = {
     "@media (min-width:375px) and (max-width:767px)": {
       marginTop: "-217px",
       width: "90%",
-      maxWidth: "65%",
-      mx: "10%",
+      maxWidth: "90%",
+      mx: "5%",
     },
     "@media (min-width:768px) and (max-width:1024px)": {
       width: "90%",

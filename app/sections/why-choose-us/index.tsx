@@ -18,7 +18,7 @@ export default function WhyChooseUs({
           marginBottom: isAboutPage ? "-275px" : "",
           height: isAboutPage ? "61rem !important" : "",
           backgroundColor: "white",
-          "@media (min-width:319px) and (max-width:1024px)": {
+          "@media (min-width:375px) and (max-width:1024px)": {
             marginTop: "20px !important",
             height: isAboutPage ? "53rem !important" : "",
             "& .MuiBox-root img": {
@@ -47,7 +47,7 @@ export default function WhyChooseUs({
           width: isAboutPage ? "100% !important" : "50%",
           background: isAboutPage ? "#F8F8F8" : "none",
           py: isAboutPage ? "50px" : "",
-          "@media (min-width:319px) and (max-width:1024px)": {
+          "@media (min-width:375px) and (max-width:1024px)": {
             paddingTop: "20px",
           },
           "@media (min-width:425px) and (max-width:1024px)": {
@@ -67,7 +67,7 @@ export default function WhyChooseUs({
           flexDirection: isAboutPage
             ? "column-reverse !important"
             : "row-reverse",
-          "@media (min-width:319px) and (max-width:1024px)": {
+          "@media (min-width:375px) and (max-width:1024px)": {
             backgroundSize: "340px",
             flexDirection: "column-reverse !important",
           },
@@ -82,7 +82,7 @@ export default function WhyChooseUs({
             maxWidth: "734px !important",
             maxHeight: "466px  !important",
           },
-          "@media(min-width:319px) and (max-width:768px)": {
+          "@media(min-width:375px) and (max-width:768px)": {
             "& img": {
               height: isAboutPage ? "315px !important" : "",
               width: isAboutPage ? "100% !important" : "",

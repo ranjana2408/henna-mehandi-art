@@ -40,7 +40,7 @@ export default function TitleSection({
           lineHeight: "1.059em",
           textTransform:'captilized',
           textAlign:isAboutUs?'center':'start',
-          "@media (min-width:319px) and (max-width:425px)": {
+          "@media (min-width:375px) and (max-width:425px)": {
             fontSize: isHeroHome ? "42px !important" : "28px !important",
             lineHeight: "40px",
           },
