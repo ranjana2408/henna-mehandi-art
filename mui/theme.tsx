@@ -12,7 +12,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Courgette","Mulish"',
+    fontFamily: '"Lora, Open Sans","Mulish"',
     h3: {
       fontFamily: "Mulish",
       fontWeight: 900,
@@ -22,7 +22,7 @@ const theme = createTheme({
       fontSize:'12px !important'
     },
     h6: {
-      fontFamily: "Courgette",
+      fontFamily: "Lora, Open Sans",
       fontWeight: 400,
       fontSize:'20px',
       color:'#EC5598'

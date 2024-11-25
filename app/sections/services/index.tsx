@@ -56,7 +56,7 @@ const Services = () => {
         alignSelf: "center",
         marginTop: "80px",
         "@media (min-width:375px) and (max-width:1024px)": {
-          marginTop: "60px !important",
+          marginTop: "35px !important",
         },
       }}
     >

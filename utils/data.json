@@ -35,7 +35,7 @@
         "description": "Janki is a professional mehndi artist, based in Ahmedabad who takes immense pride in being part of this ancient artwork of henna, with 10 years of experience, specializing in the rich cultural heritage of mehndi art.",
         "sortDescription": "Her expertise spans from traditional mehndi to western style, covering a broader range of design patterns and styles.",
         "button": {
-            "label": "view all services",
+            "label": "Book Now",
             "type": "primary"
         }
     },
@@ -57,7 +57,7 @@
         "title": "What We Can Do for You",
         "description": "Our specialized front hand, back hand, full hand mehndi designs, where traditional circular patterns meet innovative artistic elements.",
         "button": {
-            "label": "View Details",
+            "label": "View All Services",
             "type": "primary"
         },
         "items": [

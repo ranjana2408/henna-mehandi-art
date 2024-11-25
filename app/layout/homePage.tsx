@@ -12,7 +12,7 @@ export default function HomePage() {
     <>
       <Navbar />
       <HeroSection {...data?.homeHeroSection} />
-      <AboutUs />
+      <AboutUs isAboutPage={false} />
       <WhyChooseUs  />
       <Services />
       <ClientTestimonials />

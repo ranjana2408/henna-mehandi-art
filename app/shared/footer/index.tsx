@@ -143,6 +143,9 @@ const Footer = () => {
               marginTop: "30px",
               paddingTop: "30px",
               paddingBottom: "40px",
+              "@media (min-width:375px) and (max-width:767px)": {
+                paddingBottom: "108px",
+              }
             }}
           >
             <Grid item xs={12} sm={6} md={4}>

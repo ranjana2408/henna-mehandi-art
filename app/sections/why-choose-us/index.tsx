@@ -19,21 +19,14 @@ export default function WhyChooseUs({
           height: isAboutPage ? "61rem !important" : "",
           backgroundColor: "white",
           "@media (min-width:375px) and (max-width:1024px)": {
-            marginTop: "20px !important",
+            marginTop: "185px!important",
             height: isAboutPage ? "53rem !important" : "",
-            "& .MuiBox-root img": {
-              maxWidth: "98%!important",
-              mx: "10px",
-              maxHeight: "100%",
-            },
           },
           "@media (min-width:426px) and (max-width:768px)": {
             "& .MuiBox-root": {
               top: "20px !important",
             },
-          },
-          "@media (min-width:425px) and (max-width:767px)": {
-            height: isAboutPage ? "53rem !important" : "46rem !important",
+            height: isAboutPage ? "53rem !important" : "50rem !important",
           },
           "@media (min-width:768px) and (max-width:1024px)": {
             height: "54rem !important",
@@ -84,13 +77,13 @@ export default function WhyChooseUs({
           },
           "@media(min-width:375px) and (max-width:768px)": {
             "& img": {
-              height: isAboutPage ? "315px !important" : "",
-              width: isAboutPage ? "100% !important" : "",
+              height: "323px !important",
+              width:   "100% !important" ,
+              px:'10px !important',
+              maxWidth: "100%!important",
             },
             height: "323px !important",
-            width: "606px !important",
-            paddingLeft: isAboutPage ? "0px" : "0px",
-            paddingRight: isAboutPage ? "10px" : "0px",
+            width: "100% !important",
           },
           "@media (min-width:425px) and (max-width:1024px)": {
             width: "100%",

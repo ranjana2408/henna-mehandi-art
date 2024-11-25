@@ -28,6 +28,10 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
             marginTop: isSmallLaptop ? "-2px" : "140px !important",
             paddingLeft: "0px !important",
           },
+          "@media (min-width:425px) and (max-width:768px)": {
+            marginTop: "0px !important",
+            height:'48rem !important'
+          },
         }}
         height={isSmallLaptop ? "38" : "52"}
         featuresBoxStyle={{
@@ -41,6 +45,9 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
             marginTop: isAboutPage ? "37px" : "180px",
             py: "50px !important",
           },
+          "@media (min-width:425px) and (max-width:768px)": {
+            marginTop: "255px !important",
+          },
           "@media (min-width:768px) and (max-width:1024px)": {
             paddingLeft: "30px !important",
             marginTop: "0px",
@@ -49,24 +56,24 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
           },
         }}
         outerImageContainerStyle={{
-          position:isAboutPage?'relative':'',
+          position: isAboutPage ? "relative" : "",
           "& img": {
-            position: isAboutPage?"absolute":'relative',
+            position: isAboutPage ? "absolute" : "relative",
             top: "180px",
-            bottom: isAboutPage?'-405px !important':'',
+            bottom: isAboutPage ? "-405px !important" : "",
           },
           "@media (min-width:375px) and (max-width:768px)": {
+            width: "100%",
             "& img": {
               marginTop: "10px",
               paddingLeft: "10px",
-              top: isAboutPage ? "15px" : "180px",
+              top: isAboutPage ? "15px" : "198px",
               position: "relative",
             },
           },
-          "@media (min-width:768px) and (max-width:1024px)": {
+          "@media (min-width:425px) and (max-width:768px)": {
             "& img": {
-              top: isAboutPage ? "105px" : "180px",
-             
+              top: "239px",
             },
           },
         }}

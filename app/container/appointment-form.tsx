@@ -128,14 +128,14 @@ const styles = {
     marginLeft:'5%',
     boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
     "@media (min-width:375px) and (max-width:767px)": {
-     marginTop:'-217px',
+     marginTop:'-244px',
       width:'96%',
       mx: '2%',
     },
     "@media (min-width:768px) and (max-width:1024px)": {
       width:'90%',
       mx:'2% !important',
-      marginTop:'-473px',
+      marginTop:'-223px',
       maxWidth:'100%',
     },
   },

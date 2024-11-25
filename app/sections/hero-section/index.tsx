@@ -42,7 +42,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             maxHeight: "96%",
           },
           "@media (min-width:375px) and (max-width:426px)": {
-            height: props?.isAboutSection ? "38rem" : "61rem !important",
+            height: props?.isAboutSection ? "38rem" : "66rem !important",
             "& .MuiBox-root img": {
               marginLeft: "0px",
               maxWidth: "100% !important",
@@ -85,8 +85,10 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             alignSelft: "center",
             justifySelf: "center",
           },
-          "@media(min-width:768) and (max-width:768px)": {
-            width: "50%",
+          "@media (min-width:619px) and (max-width:768px)": {
+           width:'100%',
+           position:'relative',
+           left:'10% !important'
           },
         }}
         isHeroHome

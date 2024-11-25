@@ -42,7 +42,7 @@ export default function TitleSection({
           textAlign:isAboutUs?'center':'start',
           "@media (min-width:375px) and (max-width:425px)": {
             fontSize: isHeroHome ? "42px !important" : "28px !important",
-            lineHeight: "40px",
+            lineHeight: "50px",
           },
           "@media (min-width:425px) and (max-width:767px)": {
             fontSize: isHeroHome ? "42px !important" : "28px !important",
@@ -52,7 +52,7 @@ export default function TitleSection({
             fontSize: isHeroHome ? "48px !important" : "28px !important",
             lineHeight: "57px",
           },
-          fontFamily: "Courgette",
+          fontFamily: "Lora, Open Sans",
           textOverflow: "ellipsis",
           color:
             featuresBoxStyle?.backgroundColor === "#222222"

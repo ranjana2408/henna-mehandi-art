@@ -87,7 +87,7 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
                 "@media (min-width:375px) and (max-width:619px)": {
                   position: "relative",
                   width: "100%",
-                  left: isImageLeft ? "" : "0",
+                  left: isImageLeft ? "" : "0%",
                 },
                 "@media (min-width:767px) and (max-width:1024px)": {
                   top: "200px",
