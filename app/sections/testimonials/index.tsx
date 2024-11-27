@@ -5,15 +5,12 @@ import {
   ImageListItem,
   Slide,
   Typography,
-  useMediaQuery,
 } from "@mui/material";
 import data from "../../../utils/data.json";
 import MyStyledButton from "~/component/my-styled-button";
 import TitleSection from "~/blocks/title-block";
 
 export default function ClientTestimonials() {
-  const isMobile = useMediaQuery("(min-width:375px) and (max-width:767px)");
-
   const ClientDestails = ({
     img,
     name,
@@ -28,9 +25,12 @@ export default function ClientTestimonials() {
         sx={{
           display: "flex",
           alignItems: "center",
-          flexDirection: isMobile ? "column" : "row",
+          flexDirection: "row",
           gap: "20px",
           marginTop: "20px",
+          "(min-width:375px) and (max-width:767px)": {
+            flexDirection: "column",
+          },
         }}
       >
         <img style={{ borderRadius: "50%" }} src={img} height={60} width={60} />
@@ -79,8 +79,7 @@ export default function ClientTestimonials() {
         justifyContent: "center",
         mx: "auto",
         my: "60px",
-        position: "relative",
-        top: "488px",
+        marginTop: "525px",
         "@media (min-width:375px) and (max-width:768px)": {
           display: "block",
           top: "284rem",
@@ -150,7 +149,7 @@ export default function ClientTestimonials() {
                 color="#FDE2E4"
                 title={clientItems?.title}
                 subTitle={clientItems?.subTitle}
-                featuresBoxStyle={{ backgroundColor: "#222222" }}
+                outerFeatContainerStyle={{ backgroundColor: "#222222" }}
               />
               <Box sx={{ display: "flex", gap: "5px", marginTop: "30px" }}>
                 {[
@@ -209,18 +208,7 @@ export default function ClientTestimonials() {
           <ImageList cols={2} sx={{ overflow: "visible" }}>
             {data?.clientSection?.gallary?.map((item) => (
               <ImageListItem key={item.img}>
-                <Box
-                  sx={{
-                    "& :nth-child(0)": {
-                      maxHeight: "37px !important",
-                      marginBottom: "40px",
-                    },
-                    "& :nth-child(3)": {
-                      maxHeight: "237px",
-                      marginBottom: "40px",
-                    },
-                  }}
-                >
+                <Box>
                   <img
                     src={item.img}
                     alt="gallary-image"

@@ -16,10 +16,10 @@ interface SectionContainerProps {
   showForm?: boolean;
   isImageLeft?: boolean;
   height?: string;
-  style?: any;
+  outerMainContainerStyle?: any;
   outerContainerStyle?: object;
   button?: { label?: string };
-  featuresBoxStyle?: any;
+  outerFeatContainerStyle?: any;
   isHeroHome?: boolean;
   outerImageContainerStyle?: object;
   showBreadCrumbs?: boolean;
@@ -32,14 +32,13 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
     bgColor,
     showForm,
     isImageLeft,
-    height,
     image,
-    style,
+    outerMainContainerStyle,
     outerContainerStyle,
     outerImageContainerStyle,
   } = props;
 
-  const { featureContainerStyle, featuresMainStyle, imageContainerStyle } =
+  const { containerStyle, mainContainerStyle, imageContainerStyle } =
     styles;
 
   const { exact } = useOutletContext<OutletContext>();
@@ -47,26 +46,24 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
   return (
     <Box
       sx={{
-        ...featuresMainStyle,
+        ...mainContainerStyle,
         backgroundColor: bgColor,
         paddingLeft: "173px",
-        height: `${Number(height)}rem`,
         "@media (min-width:375px) and (max-width:767px)": {
-          height: `${Number(height) + 2}rem`,
           marginTop: "90px",
           paddingLeft: "0px !important",
         },
         "@media (min-width:768px) and (max-width:1024px)": {
           paddingLeft: "32px",
         },
-        ...style,
+        ...outerMainContainerStyle,
       }}
     >
       <Box
         sx={{
           overflow: "hidden",
           flexDirection: isImageLeft ? "row-reverse" : "row",
-          ...featureContainerStyle,
+          ...containerStyle,
           ...outerContainerStyle,
         }}
       >
@@ -133,7 +130,7 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
 export default SectionContainer;
 
 const styles = {
-  featuresMainStyle: {
+  mainContainerStyle: {
     position: "relative",
     marginTop: "240px",
     overFlow: "hidden !important",
@@ -141,7 +138,7 @@ const styles = {
       marginTop: "80px",
     },
   },
-  featureContainerStyle: {
+  containerStyle: {
     maxWidth: "1440px",
     margin: "auto",
     position: "relative",

@@ -1,5 +1,4 @@
-// MehndiGallery.js
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import {
   Box,
   ImageList,
@@ -10,7 +9,7 @@ import {
 import data from "../../../utils/data.json";
 import TitleSection from "~/blocks/title-block";
 import { useOutletContext } from "@remix-run/react";
-// import MyStyledButton from "~/component/my-styled-button";
+import MyStyledButton from "~/component/my-styled-button";
 
 interface OutletContext {
   routeRef: {
@@ -28,12 +27,13 @@ const Services = () => {
   const isSmallScreen = useMediaQuery(
     "(min-width:375px) and (max-width:767px)"
   );
- 
+
   const { setRouteRef } = useOutletContext<OutletContext>();
   const ref = useRef(null);
+  const [showFeatures,setShowFeatures]=useState(0)
 
   // Determine number of columns based on screen size
-  const cols = isSmallScreen ? 1  : 3;
+  const cols = isSmallScreen ? 1 : 3;
 
   useEffect(() => {
     if (ref?.current) {
@@ -54,7 +54,8 @@ const Services = () => {
         flexDirection: "column",
         alignItems: "center",
         alignSelf: "center",
-        marginTop: "80px",
+        marginTop: "90px",
+        position: "relative",
         "@media (min-width:375px) and (max-width:1024px)": {
           marginTop: "35px !important",
         },
@@ -102,7 +103,7 @@ const Services = () => {
           }}
           cols={cols}
         >
-          {data.services.items?.map((image) => (
+          {data.services.items?.map((image,index) => (
             <Box key={image.id} sx={{ maxHeight: "800px" }}>
               <ImageListItem
                 sx={{
@@ -119,11 +120,43 @@ const Services = () => {
                   src={image.img}
                   loading="lazy"
                   style={{
-                    height:"388px",
-                    width:'440px',
-                    maxWidth:'100%'
+                    height: "388px",
+                    width: "440px",
+                    maxWidth: "100%",
                   }}
+                  onMouseOver={()=>setShowFeatures(index)}
+                  onMouseLeave={()=>setShowFeatures(index)}
                 />
+                {showFeatures===index && (
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      top: "0",
+                      left: "0",
+                      width: "100%",
+                      height: "100%",
+                      backgroundColor: "rgba(0, 0, 0, 0.7)", // Adjust background opacity
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      color: "white", // Adjust text color
+                      transition: "opacity 0.3s ease-in-out",
+                      opacity: showFeatures ? 1 : 0,
+                    }}
+                  >
+                    <Typography variant="h5" sx={{ marginBottom: "10px" }}>
+                      Features
+                    </Typography>
+                    <ul>
+                      {image.points.map((feature) => (
+                        <li key={feature} style={{ marginBottom: "5px" }}>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </Box>
+                )}
               </ImageListItem>
               <Typography
                 sx={{
@@ -149,7 +182,7 @@ const Services = () => {
                   wordSpacing: "1px",
                   textAlign: "center",
                   marginTop: "20px",
-                  maxWidth:'440px'
+                  maxWidth: "440px",
                 }}
               >
                 {image.description}
@@ -157,81 +190,24 @@ const Services = () => {
             </Box>
           ))}
         </ImageList>
-        {/* <Box
-          sx={{
-            maxHeight: "800px",
-            display: "flex",
-            justifyContent: "center",
-            flexDirection:'column',
-            alignItems: "center",
-          }}
-        >
-          <ImageListItem
-            sx={{
-              boxShadow: "0 0px 0px rgba(0, 0, 0, 0.2)",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              padding: "10px",
-              position: "relative",
-            }}
-          >
-            <img
-              alt={lastItem.title}
-              src={lastItem.img}
-              loading="lazy"
-              style={{
-                width: "320px",
-                height: "388px",
-              }}
-            />
-          </ImageListItem>
-          <Typography
-            sx={{
-              fontFamily: "Lora",
-              fontSize: "26px",
-              fontWeight: "400",
-              lineHeight: "1.154em",
-              textAlign: "center",
-              "@media (min-width:375px) and (max-width:1024px)": {
-                fontSize: "20px",
-              },
-            }}
-          >
-            {lastItem.title}
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Open Sans",
-              fontSize: "16px",
-              fontWeight: "400",
-              lineHeight: "1.563em",
-              letterSpacing: "0.5px",
-              wordSpacing: "1px",
-              textAlign: "center",
-              marginTop: "20px",
-            }}
-          >
-            {lastItem.description}
-          </Typography>
-        </Box> */}
-        {/* <MyStyledButton
-          isIcon
-          sx={{
-            marginTop: "20px",
-            backgroundColor: "#F72585",
-            color: "white",
-            height: "max-content",
-            width: "max-content",
-            // bottom: "50px",
-            "@media (min-width:375px) and (max-width:1023px)": {
-              fontSize: "10px !important",
-            },
-          }}
-        >
-          {data?.services?.button?.label}
-        </MyStyledButton> */}
       </Box>
+      <MyStyledButton
+        isIcon
+        sx={{
+          marginTop: "20px",
+          backgroundColor: "#F72585",
+          color: "white",
+          height: "max-content",
+          width: "max-content",
+          position: "absolute",
+          bottom: "-513px",
+          "@media (min-width:375px) and (max-width:1023px)": {
+            fontSize: "10px !important",
+          },
+        }}
+      >
+        {data?.services?.button?.label}
+      </MyStyledButton>
     </Box>
   );
 };

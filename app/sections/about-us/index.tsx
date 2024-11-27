@@ -4,7 +4,7 @@ import SectionContainer from "~/container/section-container";
 import { useOutletContext } from "@remix-run/react";
 import { Box, useMediaQuery } from "@mui/material";
 
-const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
+const AboutUs = () => {
   const { setRouteRef } = useOutletContext<OutletContext>();
   const ref = useRef(null);
   const isSmallLaptop = useMediaQuery(
@@ -22,31 +22,28 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
     <Box ref={ref}>
       <SectionContainer
         isImageLeft
-        style={{
+        outerMainContainerStyle={{
           marginTop: "0px",
+          height: "34rem !important",
           "@media (min-width:375px) and (max-width:620px)": {
             marginTop: isSmallLaptop ? "-2px" : "140px !important",
             paddingLeft: "0px !important",
           },
           "@media (min-width:425px) and (max-width:768px)": {
             marginTop: "0px !important",
-            height:'48rem !important'
+            height: "48rem !important",
           },
         }}
-        height={isSmallLaptop ? "38" : "52"}
-        featuresBoxStyle={{
+        outerFeatContainerStyle={{
           width: "100%",
           backgroundColor: "#F8F8F8",
-          paddingTop: "185px",
+          paddingTop: "250px",
+          paddingBottom:'100px',
           boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
-          paddingBottom: "150px",
           "@media (min-width:375px) and (max-width:767px)": {
             paddingLeft: "32px !important",
-            marginTop: isAboutPage ? "37px" : "180px",
-            py: "50px !important",
-          },
-          "@media (min-width:425px) and (max-width:768px)": {
-            marginTop: "255px !important",
+            py: "30px !important",
+            marginTop:'20px'
           },
           "@media (min-width:768px) and (max-width:1024px)": {
             paddingLeft: "30px !important",
@@ -56,26 +53,7 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
           },
         }}
         outerImageContainerStyle={{
-          position: isAboutPage ? "relative" : "",
-          "& img": {
-            position: isAboutPage ? "absolute" : "relative",
-            top: "180px",
-            bottom: isAboutPage ? "-405px !important" : "",
-          },
-          "@media (min-width:375px) and (max-width:768px)": {
-            width: "100%",
-            "& img": {
-              marginTop: "10px",
-              paddingLeft: "10px",
-              top: isAboutPage ? "15px" : "198px",
-              position: "relative",
-            },
-          },
-          "@media (min-width:425px) and (max-width:768px)": {
-            "& img": {
-              top: "239px",
-            },
-          },
+         marginTop:'250px',
         }}
         bgColor="white"
         {...data?.aboutUs}

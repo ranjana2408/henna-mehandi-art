@@ -10,12 +10,11 @@ interface FeaturesBlockProps {
   features?: { isShowImage?: boolean; title: string }[];
   isImageLeft?: boolean;
   button?: { label?: string };
-  featuresBoxStyle?: any;
-  outerContainerStyle?: object;
+  outerFeatContainerStyle?: any;
   title: string;
   subTitle: string;
   showForm?: boolean;
-  style?: object;
+  outerMainContainer?: object;
   bgColor?: string;
   height?: string;
   whyChooseUs?: boolean;
@@ -28,13 +27,14 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
     features,
     isImageLeft,
     button,
-    featuresBoxStyle,
+    outerFeatContainerStyle,
     whyChooseUs,
     isAboutPage,
   } = props;
 
-  const { featuresStyle } = styles;
+  const { featContainerStyle } = styles;
   const isAboutUs=Boolean(isAboutPage&&whyChooseUs)
+
   return (
     <Slide
       timeout={2000}
@@ -43,9 +43,7 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
       appear={true}
       easing={{ enter: "ease-in", exit: "ease-out" }}
     >
-      
-      <Box sx={{ ...featuresStyle, ...featuresBoxStyle }}>
-      
+      <Box sx={{ ...featContainerStyle, ...outerFeatContainerStyle }}>
         <TitleSection {...props} isAboutUs={isAboutUs}/>
         <Typography
           sx={{
@@ -58,7 +56,7 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
               fontSize: "14px",
             },
             color:
-              featuresBoxStyle?.backgroundColor === "#222222"
+              outerFeatContainerStyle?.backgroundColor === "#222222"
                 ? "white"
                 : "#222222",
             paddingBottom: "12px",
@@ -118,7 +116,6 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
             ))}
           </Box>
         </Box>
-
         {button && (
           <MyStyledButton
             sx={{
@@ -141,7 +138,7 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
 export default Features;
 
 const styles = {
-  featuresStyle: {
+  featContainerStyle: {
     pl: "80px",
     paddingTop: "137px",
     paddingRight: "54px",

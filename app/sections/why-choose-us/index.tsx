@@ -12,14 +12,13 @@ export default function WhyChooseUs({
       <SectionContainer
         isImageLeft
         whyChooseUs
-        style={{
-          marginTop: isAboutPage ? "-228px" : "-120px",
+        outerMainContainerStyle={{
+          marginTop: "200px",
           paddingLeft: "0px",
-          marginBottom: isAboutPage ? "-275px" : "",
           height: isAboutPage ? "61rem !important" : "",
           backgroundColor: "white",
           "@media (min-width:375px) and (max-width:1024px)": {
-            marginTop: "185px!important",
+            marginTop: "150px!important",
             height: isAboutPage ? "53rem !important" : "",
           },
           "@media (min-width:426px) and (max-width:768px)": {
@@ -33,11 +32,12 @@ export default function WhyChooseUs({
             px: "32px !important",
           },
         }}
-        featuresBoxStyle={{
+        outerFeatContainerStyle={{
           paddingTop: "0px",
           position: "relative",
           paddinRight: "54px !important",
-          width: isAboutPage ? "100% !important" : "50%",
+          paddingLeft:'40px',
+          width: isAboutPage ? "100% !important" : "55%",
           background: isAboutPage ? "#F8F8F8" : "none",
           py: isAboutPage ? "50px" : "",
           "@media (min-width:375px) and (max-width:1024px)": {
@@ -78,8 +78,8 @@ export default function WhyChooseUs({
           "@media(min-width:375px) and (max-width:768px)": {
             "& img": {
               height: "323px !important",
-              width:   "100% !important" ,
-              px:'10px !important',
+              width: "100% !important",
+              px: "10px !important",
               maxWidth: "100%!important",
             },
             height: "323px !important",
@@ -92,7 +92,6 @@ export default function WhyChooseUs({
             "& img": { maxWidth: "100%" },
           },
         }}
-        height="38"
         bgColor="white"
         isAboutPage={isAboutPage}
         {...data?.whyChooseUs}

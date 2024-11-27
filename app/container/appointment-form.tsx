@@ -22,8 +22,8 @@ function AppointmentForm() {
   return (
     <Box ref={ref} sx={fromMainStyle}>
       <Box sx={fomrContainerStyle}>
-        <Typography variant="h6">Book Mehandi Schedule</Typography>
-        <Typography sx={{ maxWidth: "74%" }}>
+        <Typography variant="h6" sx={{fontFamily:'"Lora, Open Sans", Mulish',fontSize:'26px'}}>Book Mehandi Schedule</Typography>
+        <Typography sx={{ maxWidth: "74%",fontFamily:'"Lora, Open Sans", Mulish' }}>
           Elevate your special occasion with the art of henna. We’ll be back in
           touch within 24 hours to confirm your booking and to detail next steps
           needed.
@@ -49,7 +49,7 @@ function AppointmentForm() {
               autoComplete="off"
               name="date"
               placeholder="Date"
-              type="datetime"
+              type="date"
               required
               sx={formColum}
             />
@@ -63,7 +63,6 @@ function AppointmentForm() {
             />
             <TextField
               multiline
-              variant="outlined"
               fullWidth
               placeholder="Notes..."
               minRows={1}
@@ -167,6 +166,12 @@ const styles = {
     },
   },
   formColum: {
+   '& .MuiOutlinedInput-root': {
+          border: '1px #F72585 !important', 
+    },
+    '& .MuiOutlinedInput-root::placeholder': {
+          fontFamily: '', 
+    },
     flex: "1 1 10% !important",
     "@media (min-width:375px) and (max-width:414px)": {
       flex: "1 1 38% !important",

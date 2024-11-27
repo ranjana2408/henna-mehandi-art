@@ -24,15 +24,15 @@ const Footer = () => {
           py: 6,
           mt: "auto",
           backgroundImage: "url(/pattern-footer.png)",
-          backgroundSize: "cover",
-          position: "relative",
-          top: pathname === "/about" ? "400px" : "583px",
+          backgroundSize: "auto",
+          marginTop: "212px",
+          position:'relative',
           "@media (min-width:375px) and (max-width:767px)": {
             display: "block",
             top: pathname === "/about" ? "28rem" : "292rem",
           },
           "@media (min-width:768px) and (max-width:1024px)": {
-            display: "block", 
+            display: "block",
             top: pathname === "/about" ? "28rem" : "97rem",
           },
         }}
@@ -145,7 +145,7 @@ const Footer = () => {
               paddingBottom: "40px",
               "@media (min-width:375px) and (max-width:767px)": {
                 paddingBottom: "108px",
-              }
+              },
             }}
           >
             <Grid item xs={12} sm={6} md={4}>

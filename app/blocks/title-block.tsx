@@ -5,8 +5,7 @@ interface TitleSectionProps {
   subTitle: string;
   title: string;
   color?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  featuresBoxStyle?: any;
+  outerFeatContainerStyle?: {backgroundColor:string};
   isHeroHome?: boolean;
   isAboutUs?:boolean;
 }
@@ -14,7 +13,7 @@ interface TitleSectionProps {
 export default function TitleSection({
   subTitle,
   title,
-  featuresBoxStyle,
+  outerFeatContainerStyle,
   isHeroHome,
   color,
   isAboutUs
@@ -55,7 +54,7 @@ export default function TitleSection({
           fontFamily: "Lora, Open Sans",
           textOverflow: "ellipsis",
           color:
-            featuresBoxStyle?.backgroundColor === "#222222"
+          outerFeatContainerStyle?.backgroundColor === "#222222"
               ? "white"
               : "#222222",
         }}
