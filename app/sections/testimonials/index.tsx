@@ -81,11 +81,11 @@ export default function ClientTestimonials() {
         my: "60px",
         marginTop: "525px",
         "@media (min-width:375px) and (max-width:768px)": {
+          marginTop: "4720px",
           display: "block",
-          top: "284rem",
         },
         "@media (min-width:768px) and (max-width:1024px)": {
-          top: "100rem",
+          marginTop: "1666px",
         },
         "@media(max-width:1440px)": {
           marginLeft: "auto",

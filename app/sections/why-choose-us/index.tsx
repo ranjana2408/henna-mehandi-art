@@ -13,15 +13,15 @@ export default function WhyChooseUs({
         isImageLeft
         whyChooseUs
         outerMainContainerStyle={{
-          marginTop: "200px",
+          marginTop: isAboutPage ? "70px" : "200px",
           paddingLeft: "0px",
           height: isAboutPage ? "61rem !important" : "",
           backgroundColor: "white",
           "@media (min-width:375px) and (max-width:1024px)": {
-            marginTop: "150px!important",
+            marginTop: "278px !important",
             height: isAboutPage ? "53rem !important" : "",
           },
-          "@media (min-width:426px) and (max-width:768px)": {
+          "@media (min-width:425px) and (max-width:768px)": {
             "& .MuiBox-root": {
               top: "20px !important",
             },
@@ -33,18 +33,16 @@ export default function WhyChooseUs({
           },
         }}
         outerFeatContainerStyle={{
-          paddingTop: "0px",
           position: "relative",
           paddinRight: "54px !important",
-          paddingLeft:'40px',
+          paddingLeft: "40px",
           width: isAboutPage ? "100% !important" : "55%",
           background: isAboutPage ? "#F8F8F8" : "none",
-          py: isAboutPage ? "50px" : "",
-          "@media (min-width:375px) and (max-width:1024px)": {
-            paddingTop: "20px",
-          },
-          "@media (min-width:425px) and (max-width:1024px)": {
+          paddingBottom: isAboutPage ? "50px" : "",
+          paddingTop: isAboutPage ? "238px !important" : "0px",
+          "@media (min-width:375px) and (max-width:768px)": {
             width: "100%",
+            paddingTop: "20px",
           },
         }}
         outerContainerStyle={{
@@ -64,16 +62,19 @@ export default function WhyChooseUs({
             backgroundSize: "340px",
             flexDirection: "column-reverse !important",
           },
+           
         }}
         outerImageContainerStyle={{
           width: isAboutPage ? "100% !important" : "50%",
           paddingLeft: isAboutPage ? "120px" : "0px",
           paddingTop: isAboutPage ? "0px" : "0px",
+          position: isAboutPage ? "absolute" : "relative",
+          bottom: isAboutPage ? "581px" : "0",
           "& img": {
-            height: "512px !important",
+            height: isAboutPage ? "466px !important" : "512px !important",
             width: "734px !important",
             maxWidth: "734px !important",
-            maxHeight: "466px  !important",
+            maxHeight: isAboutPage ? "600px" : "466px  !important",
           },
           "@media(min-width:375px) and (max-width:768px)": {
             "& img": {
@@ -85,11 +86,13 @@ export default function WhyChooseUs({
             height: "323px !important",
             width: "100% !important",
           },
-          "@media (min-width:425px) and (max-width:1024px)": {
-            width: "100%",
-          },
           "@media (min-width:768px) and (max-width:1024px)": {
-            "& img": { maxWidth: "100%" },
+            "& img": {
+              width: "1020px !important",
+              maxWidth: "1020px !important",
+               },
+              top:"0px !important",
+            right:'0px !important'
           },
         }}
         bgColor="white"

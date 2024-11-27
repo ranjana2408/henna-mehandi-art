@@ -25,15 +25,15 @@ const Footer = () => {
           mt: "auto",
           backgroundImage: "url(/pattern-footer.png)",
           backgroundSize: "auto",
-          marginTop: "212px",
+          marginTop:pathname === "/about" ?'100px': "212px",
           position:'relative',
           "@media (min-width:375px) and (max-width:767px)": {
             display: "block",
-            top: pathname === "/about" ? "28rem" : "292rem",
+            marginTop:pathname === "/about" ?'70px': "212px",
           },
           "@media (min-width:768px) and (max-width:1024px)": {
             display: "block",
-            top: pathname === "/about" ? "28rem" : "97rem",
+            marginTop:pathname === "/about" ?'70px': "212px",
           },
         }}
       >
