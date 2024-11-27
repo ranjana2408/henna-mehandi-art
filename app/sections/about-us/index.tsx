@@ -41,6 +41,7 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
             paddingLeft: "30px !important",
             marginTop: "0px",
             py: "70px !important",
+            paddingTop:'130px',
             maxWidth: "493px",
           },
         }}
@@ -49,8 +50,11 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
           "@media (min-width:375px) and (max-width:425px)": {
             marginTop:'185px !important'
           },
+          "@media (min-width:425px) and (max-width:768px)": {
+            marginTop:'151px !important'
+          },
           "@media (min-width:768px) and (max-width:1024px)":{
-             marginTop:'104px !important'
+             marginTop:'161px !important'
           }
         }}
         bgColor="white"

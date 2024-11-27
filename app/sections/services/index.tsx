@@ -57,7 +57,7 @@ const Services = () => {
         marginTop: "90px",
         position: "relative",
         "@media (min-width:375px) and (max-width:1024px)": {
-          marginTop: "35px !important",
+          marginTop: "10px !important",
         },
       }}
     >
@@ -201,8 +201,12 @@ const Services = () => {
           width: "max-content",
           position: "absolute",
           bottom: "-513px",
-          "@media (min-width:375px) and (max-width:768px)": {
+          "@media (min-width:375px) and (max-width:425px)": {
             bottom:"-4688px",
+            fontSize: "10px !important",
+          },
+          "@media (min-width:425px) and (max-width:768px)": {
+            bottom:"-4621px",
             fontSize: "10px !important",
           },
           "@media (min-width:768px) and (max-width:1024px)": {

@@ -81,7 +81,7 @@ export default function ClientTestimonials() {
         my: "60px",
         marginTop: "525px",
         "@media (min-width:375px) and (max-width:768px)": {
-          marginTop: "4720px",
+          marginTop: "4654px",
           display: "block",
         },
         "@media (min-width:768px) and (max-width:1024px)": {

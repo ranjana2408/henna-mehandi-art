@@ -45,7 +45,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             height: props?.isAboutSection ? "42rem" : "68rem !important",
           },
           "@media (min-width:768px) and (max-width:1024px)": {
-            height: props?.isAboutSection ? "36rem" : "68rem !important",
+            height: props?.isAboutSection ? "36rem" : "38rem !important",
             paddingLeft: "0px !important",
             marginTop: "239px",
           },
@@ -59,7 +59,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
           },
           "@media (min-width:768px) and (max-width:1024px)": {
             marginTop: "-35px",
-            paddingTop: "165px !important",
+            paddingTop: "110px !important",
           },
         }}
         outerImageContainerStyle={{
@@ -90,6 +90,10 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             maxHeight: "86%",
           },
           },
+          "@media (min-width:768px) and (max-width:1024px)":{
+            paddingTop:'100px !important',
+            paddingLeft:'0px !important'
+          }
         }}
         isHeroHome
         showTobBorder

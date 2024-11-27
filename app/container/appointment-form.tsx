@@ -131,10 +131,13 @@ const styles = {
       width:'96%',
       mx: '2%',
     },
-    "@media (min-width:768px) and (max-width:1024px)": {
+    "@media (min-width:768px) and (max-width:919px)": {
+      marginTop:'-500px',
+     },
+    "@media (min-width:919px) and (max-width:1024px)": {
       width:'90%',
       mx:'2% !important',
-      marginTop:'-223px',
+      marginTop:'-466px',
       maxWidth:'100%',
     },
   },

@@ -17,18 +17,17 @@ export default function WhyChooseUs({
           paddingLeft: "0px",
           height: isAboutPage ? "61rem !important" : "",
           backgroundColor: "white",
-          "@media (min-width:375px) and (max-width:1024px)": {
+          "@media (min-width:375px) and (max-width:425px)": {
             marginTop: "278px !important",
             height: isAboutPage ? "53rem !important" : "",
           },
-          "@media (min-width:425px) and (max-width:768px)": {
-            "& .MuiBox-root": {
-              top: "20px !important",
-            },
+          "@media (min-width:425px) and (max-width:767px)": {
+            marginTop: "300px !important",
             height: isAboutPage ? "53rem !important" : "50rem !important",
           },
           "@media (min-width:768px) and (max-width:1024px)": {
             height: "54rem !important",
+            marginTop: "0px !important",
             px: "32px !important",
           },
         }}
