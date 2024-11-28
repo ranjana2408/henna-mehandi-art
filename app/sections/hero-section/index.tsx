@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import SectionContainer from "~/container/section-container";
 import { useOutletContext } from "@remix-run/react";
 import { Box } from "@mui/material";
-import BreadcrumbsComponent from "~/component/breadcrumbs";
 
 interface HeroSectionProps {
   image?: string;
@@ -41,18 +40,29 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
           "@media (min-width:375px) and (max-width:426px)": {
             height: props?.isAboutSection ? "38rem" : "66rem !important",
           },
-          "@media (min-width:426px) and (max-width:767px)": {
+          "@media (min-width:426px) and (max-width:551px)": {
             height: props?.isAboutSection ? "42rem" : "68rem !important",
           },
+          "@media (min-width:551px) and (max-width:767px)": {
+            height: props?.isAboutSection ? "42rem" : "78rem !important",
+          },
           "@media (min-width:768px) and (max-width:1024px)": {
-            height: props?.isAboutSection ? "36rem" : "38rem !important",
+            height: props?.isAboutSection ? "36rem" : "45rem !important",
             paddingLeft: "0px !important",
             marginTop: "239px",
+          },
+        }}
+        outerContainerStyle={{
+          "@media (min-width:375px) and (max-width:767px)": {
+            flexDirection: props.isAboutSection ? "column !important" : "column-reverse",
           },
         }}
         outerFeatContainerStyle={{
           minHeight: "200px",
           position: props?.isAboutSection ? "relative" : "",
+          "@media (min-width:375px) and (max-width:767px)":{
+            flexDirection:props?.isAboutSection? "row !important":'column',
+          },
           "@media (min-width:620px) and (max-width:767px)": {
             width: "100%",
             paddingTop: "7px !important",
@@ -69,26 +79,17 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             maxWidth: "1005px !important",
             maxHeight: "96%",
           },
-          "@media (min-width:374px) and (max-width:619px)": {
+          "@media (min-width:374px) and (max-width:768px)": {
             paddingTop: "0px !important",
-            display: "flex",
             paddingLeft:'0px',
-            alignSelft: "center",
-            justifySelf: "center",
+            maxWidth:'768px',
+            mx:'auto',
+            left:'none',
             "& img": {
-              marginLeft: "0px",
-              maxWidth: "100% !important",
+              maxWidth: "768px !important",
               maxHeight: "auto",
+              width:'100%',
             },
-          },
-          "@media (min-width:619px) and (max-width:768px)": {
-           width:'100%',
-           position:'relative',
-           left:'10% !important',
-           "& img": {
-            maxWidth: "1005px !important",
-            maxHeight: "86%",
-          },
           },
           "@media (min-width:768px) and (max-width:1024px)":{
             paddingTop:'100px !important',
@@ -100,8 +101,6 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
         bgColor="#FDE2E4"
         {...props}
       />
-
-      {props?.showBreadCrumbs && <BreadcrumbsComponent />}
     </Box>
   );
 };

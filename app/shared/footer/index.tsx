@@ -243,10 +243,10 @@ const styles = {
       mx: "5%",
     },
     "@media (min-width:768px) and (max-width:1024px)": {
-      width: "90%",
-      mx: "5% !important",
+      width: "80%",
+      mx: "10% !important",
       marginTop: "-164px",
-      maxWidth: "75%",
+      maxWidth: "100%",
     },
   },
   formStyle: {

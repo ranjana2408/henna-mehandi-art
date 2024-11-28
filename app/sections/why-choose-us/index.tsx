@@ -21,8 +21,16 @@ export default function WhyChooseUs({
             marginTop: "278px !important",
             height: isAboutPage ? "53rem !important" : "",
           },
-          "@media (min-width:425px) and (max-width:767px)": {
-            marginTop: "300px !important",
+          "@media (min-width:424px) and (max-width:481px)": {
+            marginTop:'300px !important',
+            height: isAboutPage ? "53rem !important" : "50rem !important",
+          },
+          "@media (min-width:481px) and (max-width:586px)": {
+            marginTop:'360px !important',
+            height: isAboutPage ? "53rem !important" : "50rem !important",
+          },
+          "@media (min-width:586px) and (max-width:768px)": {
+            marginTop:'400px !important',
             height: isAboutPage ? "53rem !important" : "50rem !important",
           },
           "@media (min-width:768px) and (max-width:1024px)": {

@@ -30,7 +30,7 @@ const Services = () => {
 
   const { setRouteRef } = useOutletContext<OutletContext>();
   const ref = useRef(null);
-  const [showFeatures,setShowFeatures]=useState(0)
+  const [showFeatures, setShowFeatures] = useState<number | null>(0);
 
   // Determine number of columns based on screen size
   const cols = isSmallScreen ? 1 : 3;
@@ -56,8 +56,11 @@ const Services = () => {
         alignSelf: "center",
         marginTop: "90px",
         position: "relative",
-        "@media (min-width:375px) and (max-width:1024px)": {
+        "@media (min-width:375px) and (max-width:768px)": {
           marginTop: "10px !important",
+        },
+        "@media (min-width:768px) and (max-width:1024px)": {
+          marginTop: "40px !important",
         },
       }}
     >
@@ -103,7 +106,7 @@ const Services = () => {
           }}
           cols={cols}
         >
-          {data.services.items?.map((image,index) => (
+          {data.services.items?.map((image, index) => (
             <Box key={image.id} sx={{ maxHeight: "800px" }}>
               <ImageListItem
                 sx={{
@@ -114,6 +117,9 @@ const Services = () => {
                   padding: "10px",
                   position: "relative",
                 }}
+                onMouseEnter={() => {
+                  setShowFeatures(index)}}
+                onMouseLeave={() => setShowFeatures(null)}
               >
                 <img
                   alt={image.title}
@@ -124,17 +130,17 @@ const Services = () => {
                     width: "440px",
                     maxWidth: "100%",
                   }}
-                  onMouseOver={()=>setShowFeatures(index)}
-                  onMouseLeave={()=>setShowFeatures(index)}
                 />
-                {showFeatures===index && (
+                {showFeatures === index && (
                   <Box
                     sx={{
                       position: "absolute",
-                      top: "0",
-                      left: "0",
-                      width: "100%",
-                      height: "100%",
+                      top: "10px",
+                      left: "10px",
+                      right:"0",
+                      bottom:"10px",
+                      width: "calc(100% - 20px)",
+                      height: "calc(100% - 20px)",
                       backgroundColor: "rgba(0, 0, 0, 0.7)", // Adjust background opacity
                       display: "flex",
                       flexDirection: "column",
@@ -145,12 +151,12 @@ const Services = () => {
                       opacity: showFeatures ? 1 : 0,
                     }}
                   >
-                    <Typography variant="h5" sx={{ marginBottom: "10px" }}>
+                    <Typography variant="h5" sx={{ marginBottom: "10px",fontSize:'25px !important' }}>
                       Features
                     </Typography>
                     <ul>
                       {image.points.map((feature) => (
-                        <li key={feature} style={{ marginBottom: "5px" }}>
+                        <li key={feature} style={{ marginBottom: "5px",fontSize:'20px' }}>
                           {feature}
                         </li>
                       ))}
@@ -202,15 +208,18 @@ const Services = () => {
           position: "absolute",
           bottom: "-513px",
           "@media (min-width:375px) and (max-width:425px)": {
-            bottom:"-4688px",
+            bottom:"-4632px",
             fontSize: "10px !important",
           },
-          "@media (min-width:425px) and (max-width:768px)": {
+          "@media (min-width:424px) and (max-width:507px)": {
+            bottom:"-4645px",
+          },
+          "@media (min-width:507px) and (max-width:768px)": {
             bottom:"-4621px",
             fontSize: "10px !important",
           },
           "@media (min-width:768px) and (max-width:1024px)": {
-            bottom:"-1652px",
+            bottom:"-1683px",
           },
         }}
       >

@@ -17,16 +17,7 @@ const BreadcrumbsComponent = () => {
       sx={{
         display: "flex",
         gap: "15px",
-        position: "absolute",
-        top: "425px",
-        left: "255px",
-        "@media (min-width: 375px) and (max-width: 768px)":{
-            top: "629px",
-            left: "22px",
-        },
-        "@media (min-width:768px) and (max-width:1024px)":{
-          left: "22px",
-        }
+        marginTop:'100px'
       }}
     >
       {Object.values(ROUTES).map((item, index) => (

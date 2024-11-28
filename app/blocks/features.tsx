@@ -3,6 +3,7 @@ import React from "react";
 import { Box, Slide, Typography } from "@mui/material";
 import TitleSection from "../blocks/title-block";
 import MyStyledButton from "~/component/my-styled-button";
+import BreadcrumbsComponent from "~/component/breadcrumbs";
 
 interface FeaturesBlockProps {
   image?: string;
@@ -19,6 +20,7 @@ interface FeaturesBlockProps {
   height?: string;
   whyChooseUs?: boolean;
   isAboutPage?: boolean;
+  showBreadCrumbs?:boolean;
 }
 
 const Features: React.FC<FeaturesBlockProps> = (props) => {
@@ -30,6 +32,7 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
     outerFeatContainerStyle,
     whyChooseUs,
     isAboutPage,
+    showBreadCrumbs
   } = props;
 
   const { featContainerStyle } = styles;
@@ -45,6 +48,7 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
     >
       <Box sx={{ ...featContainerStyle, ...outerFeatContainerStyle }}>
         <TitleSection {...props} isAboutUs={isAboutUs}/>
+        {showBreadCrumbs && <BreadcrumbsComponent />}
         <Typography
           sx={{
             fontSize: "18px",

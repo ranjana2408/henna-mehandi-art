@@ -126,13 +126,18 @@ const styles = {
     mx:'auto',
     marginLeft:'5%',
     boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
-    "@media (min-width:375px) and (max-width:767px)": {
+    "@media (min-width:375px) and (max-width:551px)": {
      marginTop:'-244px',
       width:'96%',
       mx: '2%',
     },
+    "@media (min-width:551px) and (max-width:768px)":{
+      marginTop:'-206px',
+      mx:'2% !important',
+    },
     "@media (min-width:768px) and (max-width:919px)": {
-      marginTop:'-500px',
+      marginTop:'-399px',
+      mx:'2% !important',
      },
     "@media (min-width:919px) and (max-width:1024px)": {
       width:'90%',
