@@ -80,14 +80,14 @@ export default function ClientTestimonials() {
         mx: "auto",
         my: "60px",
         marginTop: "525px",
-        "@media (min-width:375px) and (max-width:768px)": {
+        "@media (min-width:375px) and (max-width:767px)": {
           marginTop: "4654px",
           display: "block",
         },
-        "@media (min-width:768px) and (max-width:1024px)": {
+        "@media (min-width:768px) and (max-width:1023px)": {
           marginTop: "1696px",
         },
-        "@media(max-width:1440px)": {
+        "@media(max-width:1430px)": {
           marginLeft: "auto",
         },
       }}
@@ -96,12 +96,12 @@ export default function ClientTestimonials() {
         sx={{
           display: "flex",
           width: "100%",
-          "@media (min-width:375px) and (max-width:768px)": {
+          "@media (min-width:375px) and (max-width:767px)": {
             display: "block",
             justifyContent: "center",
             alignItems: "center",
           },
-          "@media (min-width:768px) and (max-width:1024px)": {
+          "@media (min-width:768px) and (max-width:1023px)": {
             display: "block",
           },
         }}
@@ -115,15 +115,12 @@ export default function ClientTestimonials() {
             paddingLeft: "150px",
             paddingRight: "100px",
             width: "60%",
-            "@media (min-width:375px) and (max-width:768px)": {
+            "@media (min-width:375px) and (max-width:1023px)": {
               width: "100%",
-              paddingLeft: "10px",
+              paddingLeft: "30px",
               textAlign: "center",
               paddingRight: "10px",
               py: "50px",
-            },
-            "@media (min-width:375px) and (max-width:1024px)": {
-              width: "100%",
             },
           }}
         >
@@ -139,7 +136,7 @@ export default function ClientTestimonials() {
                 display: "flex",
                 flexDirection: "column",
                 gap: "5px",
-                "@media (min-width:375px) and (max-width:768px)": {
+                "@media (min-width:375px) and (max-width:1023px)": {
                   justifyContent: "center",
                   alignItems: "center",
                 },
@@ -165,7 +162,7 @@ export default function ClientTestimonials() {
               <Typography
                 sx={{
                   fontSize: "24px",
-                  "@media (min-width:375px) and (max-width:768px)": {
+                  "@media (min-width:375px) and (max-width:767px)": {
                     fontSize: "18px",
                   },
                   fontFamily: "Open Sans",
@@ -186,7 +183,7 @@ export default function ClientTestimonials() {
                 isIcon
                 sx={{
                   marginTop: "40px",
-                  "@media (min-width:375px) and (max-width:768px)": {
+                  "@media (min-width:375px) and (max-width:767px)": {
                     width: "100%",
                   },
                   mx: "20px",
@@ -200,7 +197,7 @@ export default function ClientTestimonials() {
         <Box
           sx={{
             width: "40%",
-            "@media (min-width:375px) and (max-width:1024px)": {
+            "@media (min-width:375px) and (max-width:1023px)": {
               width: "100%",
             },
           }}

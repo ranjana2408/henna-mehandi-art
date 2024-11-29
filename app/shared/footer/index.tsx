@@ -29,9 +29,9 @@ const Footer = () => {
           position:'relative',
           "@media (min-width:375px) and (max-width:767px)": {
             display: "block",
-            marginTop:pathname === "/about" ?'70px': "212px",
+            marginTop:pathname === "/about" ?'135px': "212px",
           },
-          "@media (min-width:768px) and (max-width:1024px)": {
+          "@media (min-width:768px) and (max-width:1023px)": {
             display: "block",
             marginTop:pathname === "/about" ?'70px': "212px",
           },
@@ -83,7 +83,7 @@ const Footer = () => {
                   <MyStyledButton
                     sx={{
                       ...buttonStyle,
-                      "@media (min-width:375px) and (max-width:1024px)": {
+                      "@media (min-width:375px) and (max-width:1023px)": {
                         display: "flex",
                         alignItems: "center !important",
                         justifyContent: "center !important",
@@ -143,8 +143,11 @@ const Footer = () => {
               marginTop: "30px",
               paddingTop: "30px",
               paddingBottom: "40px",
-              "@media (min-width:375px) and (max-width:767px)": {
+              "@media (min-width:375px) and (max-width:425px)": {
                 paddingBottom: "108px",
+              },
+              "@media (min-width:425px) and (max-width:1024px)": {
+                paddingBottom: "139px",
               },
             }}
           >
@@ -242,7 +245,7 @@ const styles = {
       maxWidth: "90%",
       mx: "5%",
     },
-    "@media (min-width:768px) and (max-width:1024px)": {
+    "@media (min-width:768px) and (max-width:1023px)": {
       width: "80%",
       mx: "10% !important",
       marginTop: "-164px",

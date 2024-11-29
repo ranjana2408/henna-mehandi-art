@@ -56,10 +56,10 @@ const Services = () => {
         alignSelf: "center",
         marginTop: "90px",
         position: "relative",
-        "@media (min-width:375px) and (max-width:768px)": {
+        "@media (min-width:375px) and (max-width:767px)": {
           marginTop: "10px !important",
         },
-        "@media (min-width:768px) and (max-width:1024px)": {
+        "@media (min-width:768px) and (max-width:1023px)": {
           marginTop: "40px !important",
         },
       }}
@@ -93,7 +93,7 @@ const Services = () => {
           position: "relative",
           top: "154px",
           bottom: "0px",
-          "@media (min-width:375px) and (max-width:1024px)": {
+          "@media (min-width:375px) and (max-width:1023px)": {
             height: "min-content",
           },
         }}
@@ -131,7 +131,6 @@ const Services = () => {
                     maxWidth: "100%",
                   }}
                 />
-                {showFeatures === index && (
                   <Box
                     sx={{
                       position: "absolute",
@@ -141,14 +140,14 @@ const Services = () => {
                       bottom:"10px",
                       width: "calc(100% - 20px)",
                       height: "calc(100% - 20px)",
-                      backgroundColor: "rgba(0, 0, 0, 0.7)", // Adjust background opacity
-                      display: "flex",
+                      backgroundColor: "rgba(0, 0, 0, 0.7)", 
                       flexDirection: "column",
                       justifyContent: "center",
                       alignItems: "center",
-                      color: "white", // Adjust text color
+                      color: "white",
                       transition: "opacity 0.3s ease-in-out",
-                      opacity: showFeatures ? 1 : 0,
+                      opacity: showFeatures===index ? 1 : 0,
+                      display:'flex'
                     }}
                   >
                     <Typography variant="h5" sx={{ marginBottom: "10px",fontSize:'25px !important' }}>
@@ -162,7 +161,6 @@ const Services = () => {
                       ))}
                     </ul>
                   </Box>
-                )}
               </ImageListItem>
               <Typography
                 sx={{
@@ -171,7 +169,7 @@ const Services = () => {
                   fontWeight: "400",
                   lineHeight: "1.154em",
                   textAlign: "center",
-                  "@media (min-width:375px) and (max-width:1024px)": {
+                  "@media (min-width:375px) and (max-width:1023px)": {
                     fontSize: "20px",
                   },
                 }}
@@ -214,11 +212,11 @@ const Services = () => {
           "@media (min-width:424px) and (max-width:507px)": {
             bottom:"-4645px",
           },
-          "@media (min-width:507px) and (max-width:768px)": {
+          "@media (min-width:507px) and (max-width:767px)": {
             bottom:"-4621px",
             fontSize: "10px !important",
           },
-          "@media (min-width:768px) and (max-width:1024px)": {
+          "@media (min-width:768px) and (max-width:1023px)": {
             bottom:"-1683px",
           },
         }}

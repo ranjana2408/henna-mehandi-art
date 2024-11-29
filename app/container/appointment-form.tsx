@@ -22,7 +22,7 @@ function AppointmentForm() {
   return (
     <Box ref={ref} sx={fromMainStyle}>
       <Box sx={fomrContainerStyle}>
-        <Typography variant="h6" sx={{fontFamily:'"Lora, Open Sans", Mulish',fontSize:'26px'}}>Book Mehandi Schedule</Typography>
+        <Typography variant="h6" sx={{fontFamily:'"Lora, Open Sans", Mulish',fontSize:'26px',color:'black !important'}}>Book Mehandi Schedule</Typography>
         <Typography sx={{ maxWidth: "74%",fontFamily:'"Lora, Open Sans", Mulish' }}>
           Elevate your special occasion with the art of henna. We’ll be back in
           touch within 24 hours to confirm your booking and to detail next steps
@@ -80,7 +80,7 @@ function AppointmentForm() {
             <Box
               sx={{
                 ...formColum,
-                "@media (min-width:375px) and (max-width:768px)": {
+                "@media (min-width:375px) and (max-width:767px)": {
                   flex: "1 1 100% !important",
                 },
               }}
@@ -88,7 +88,7 @@ function AppointmentForm() {
               <MyStyledButton
                 sx={{
                   ...buttonStyle,
-                  "@media (min-width:375px) and (max-width:1024px)": {
+                  "@media (min-width:375px) and (max-width:1023px)": {
                     display: "flex",
                     alignItems: "center !important",
                     justifyContent: "center !important",
@@ -122,7 +122,7 @@ const styles = {
     zIndex: "999",
     width: "95%",
     maxWidth:'1050px',
-    marginTop:'-351px',
+    marginTop:'-408px',
     mx:'auto',
     marginLeft:'5%',
     boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
@@ -131,7 +131,7 @@ const styles = {
       width:'96%',
       mx: '2%',
     },
-    "@media (min-width:551px) and (max-width:768px)":{
+    "@media (min-width:551px) and (max-width:767px)":{
       marginTop:'-206px',
       mx:'2% !important',
     },
@@ -139,10 +139,10 @@ const styles = {
       marginTop:'-399px',
       mx:'2% !important',
      },
-    "@media (min-width:919px) and (max-width:1024px)": {
+    "@media (min-width:919px) and (max-width:1023px)": {
       width:'90%',
       mx:'2% !important',
-      marginTop:'-466px',
+      marginTop:'-384px',
       maxWidth:'100%',
     },
   },
@@ -187,7 +187,7 @@ const styles = {
     "@media (min-width:414px) and (max-width:767px)": {
       flex: "1 1 40% !important",
     },
-    "@media (min-width:768px) and (max-width:1024px)": {
+    "@media (min-width:768px) and (max-width:1023px)": {
       flex: "1 1 20% !important",
     },
   },

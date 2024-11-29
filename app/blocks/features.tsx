@@ -20,7 +20,7 @@ interface FeaturesBlockProps {
   height?: string;
   whyChooseUs?: boolean;
   isAboutPage?: boolean;
-  showBreadCrumbs?:boolean;
+  showBreadCrumbs?: boolean;
 }
 
 const Features: React.FC<FeaturesBlockProps> = (props) => {
@@ -32,11 +32,11 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
     outerFeatContainerStyle,
     whyChooseUs,
     isAboutPage,
-    showBreadCrumbs
+    showBreadCrumbs,
   } = props;
 
   const { featContainerStyle } = styles;
-  const isAboutUs=Boolean(isAboutPage&&whyChooseUs)
+  const isAboutUs = Boolean(isAboutPage && whyChooseUs);
 
   return (
     <Slide
@@ -47,15 +47,17 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
       easing={{ enter: "ease-in", exit: "ease-out" }}
     >
       <Box sx={{ ...featContainerStyle, ...outerFeatContainerStyle }}>
-        <TitleSection {...props} isAboutUs={isAboutUs}/>
-        {showBreadCrumbs && <BreadcrumbsComponent />}
+        <Box>
+          <TitleSection {...props} isAboutUs={isAboutUs} />
+          {showBreadCrumbs && <BreadcrumbsComponent />}
+        </Box>
         <Typography
           sx={{
             fontSize: "18px",
             fontFamily: "Open Sans",
             fontWeight: "400",
             paddingTop: "24px",
-            textAlign:isAboutUs?'center':'start',
+            textAlign: isAboutUs ? "center" : "start",
             "@media (min-width:375px) and (max-width:620px)": {
               fontSize: "14px",
             },
@@ -90,9 +92,9 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
                   display: "flex",
                   gap: "10px",
                   alignItems: "center",
-                  flex: isAboutUs ? "1 1 calc(50% - 10px)" : "1 1 100%", 
+                  flex: isAboutUs ? "1 1 calc(50% - 10px)" : "1 1 100%",
                   "@media (min-width:375px) and (max-width:767px)": {
-                    flex:  "1 1 100%", 
+                    flex: "1 1 100%",
                   },
                 }}
               >
@@ -156,10 +158,10 @@ const styles = {
       padding: "40px",
       paddingTop: "20px",
     },
-    "@media (min-width:620px) and (max-width:1024px)": {
+    "@media (min-width:620px) and (max-width:1023px)": {
       paddingLeft: "32px",
     },
-    "@media (min-width:768px) and (max-width:1024px)": {
+    "@media (min-width:768px) and (max-width:1023px)": {
       padding: "60px",
       paddingLeft: "32px",
       paddingTop: "20px",

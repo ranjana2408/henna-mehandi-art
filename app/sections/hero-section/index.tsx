@@ -38,63 +38,74 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
           height: props?.isAboutSection ? "36rem" : "47rem !important",
           marginTop: props?.isAboutSection ? "185px" : "226px",
           "@media (min-width:375px) and (max-width:426px)": {
-            height: props?.isAboutSection ? "38rem" : "66rem !important",
+            height: props?.isAboutSection ? "min-content" : "66rem !important",
           },
           "@media (min-width:426px) and (max-width:551px)": {
-            height: props?.isAboutSection ? "42rem" : "68rem !important",
+            height: props?.isAboutSection ? "min-content" : "68rem !important",
           },
           "@media (min-width:551px) and (max-width:767px)": {
-            height: props?.isAboutSection ? "42rem" : "78rem !important",
+            height: props?.isAboutSection ? "min-content" : "78rem !important",
           },
-          "@media (min-width:768px) and (max-width:1024px)": {
-            height: props?.isAboutSection ? "36rem" : "45rem !important",
+          "@media (min-width:768px) and (max-width:1023px)": {
+            height: props?.isAboutSection ? "min-content" : "45rem !important",
+            paddingLeft: "0px !important",
+            marginTop: "239px",
+          },
+          "@media (min-width:1024px) and (max-width:1439px)": {
+            height: props?.isAboutSection ? "min-content" : "45rem !important",
             paddingLeft: "0px !important",
             marginTop: "239px",
           },
         }}
         outerContainerStyle={{
           "@media (min-width:375px) and (max-width:767px)": {
-            flexDirection: props.isAboutSection ? "column !important" : "column-reverse",
+            flexDirection: props.isAboutSection
+              ? "row !important"
+              : "column-reverse",
           },
         }}
         outerFeatContainerStyle={{
           minHeight: "200px",
           position: props?.isAboutSection ? "relative" : "",
-          "@media (min-width:375px) and (max-width:767px)":{
-            flexDirection:props?.isAboutSection? "row !important":'column',
+          "@media (min-width:375px) and (max-width:767px)": {
+            flexDirection: props?.isAboutSection ? "row !important" : "column",
+            padding: "20px",
           },
           "@media (min-width:620px) and (max-width:767px)": {
             width: "100%",
-            paddingTop: "7px !important",
+            paddingTop: props?.isAboutSection ? "130px" : "7px !important",
           },
-          "@media (min-width:768px) and (max-width:1024px)": {
+          "@media (min-width:768px) and (max-width:1023px)": {
             marginTop: "-35px",
             paddingTop: "110px !important",
           },
         }}
         outerImageContainerStyle={{
           paddingTop: props?.isAboutSection ? "0px" : "185px",
-          paddingLeft:'200px',
-          "& img":{
+          paddingLeft: "200px",
+          "& img": {
             maxWidth: "1005px !important",
             maxHeight: "96%",
           },
-          "@media (min-width:374px) and (max-width:768px)": {
-            paddingTop: "0px !important",
-            paddingLeft:'0px',
-            maxWidth:'768px',
-            mx:'auto',
-            left:'none',
+          "@media (min-width:374px) and (max-width:767px)": {
+            paddingTop: props?.isAboutSection ? "8px" : "0px !important",
+            paddingLeft: "0px",
+            maxWidth: "768px",
+            mx: "auto",
+            left: "none",
             "& img": {
               maxWidth: "768px !important",
               maxHeight: "auto",
-              width:'100%',
+              width: "100%",
             },
           },
-          "@media (min-width:768px) and (max-width:1024px)":{
-            paddingTop:'100px !important',
-            paddingLeft:'0px !important'
-          }
+          "@media (min-width:768px) and (max-width:1023px)": {
+            paddingTop: "100px !important",
+            paddingLeft: "0px !important",
+          },
+          "@media (min-width:1024px) and (max-width:1440px)": {
+            paddingLeft: "64px",
+          },
         }}
         isHeroHome
         showTobBorder

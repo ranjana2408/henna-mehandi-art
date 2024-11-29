@@ -17,11 +17,8 @@ export default function BottomFooter() {
         padding: "10px 20px",
         flexDirection: 'column-reverse'
       },
-      "@media (min-width:425px) and (max-width:768px)": {
+      "@media (min-width:425px) and (max-width:1023px)": {
         padding: "10px 40px",
-      },
-      "@media (min-width:769px) and (max-width:1024px)": {
-        padding: "10px 60px",
       },
       maxWidth: "1440px",
       margin: "auto",

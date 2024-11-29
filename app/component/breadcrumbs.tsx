@@ -17,7 +17,7 @@ const BreadcrumbsComponent = () => {
       sx={{
         display: "flex",
         gap: "15px",
-        marginTop:'100px'
+        marginTop:'20px'
       }}
     >
       {Object.values(ROUTES).map((item, index) => (

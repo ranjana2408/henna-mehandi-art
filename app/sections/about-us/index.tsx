@@ -25,6 +25,9 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
           "@media (min-width:375px) and (max-width:425px)": {
             marginTop: "5px !important",
           },
+          "@media (min-width:425px) and (max-width:768px)": {
+            marginTop: "10px !important",
+          },
         }}
         outerContainerStyle={{
           "@media (min-width:375px) and (max-width:767px)": {
@@ -42,7 +45,7 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
             py: "30px !important",
             marginTop: "20px",
           },
-          "@media (min-width:768px) and (max-width:1024px)": {
+          "@media (min-width:768px) and (max-width:1023px)": {
             paddingLeft: "30px !important",
             marginTop: "0px",
             py: "70px !important",
@@ -53,13 +56,13 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
         outerImageContainerStyle={{
           marginTop: isAboutPage ? "110px" : "250px",
           "@media (min-width:375px) and (max-width:481px)": {
-            marginTop: "151px !important",
+            marginTop: isAboutPage ? "25px !important" : "151px !important",
           },
           "@media (min-width:481px) and (max-width:507px)": {
-            marginTop: "204px !important",
+            marginTop: isAboutPage ? "30px !important" :"204px !important",
           },
-          "@media (min-width:507px) and (max-width:1024px)": {
-            marginTop: "161px !important",
+          "@media (min-width:507px) and (max-width:1023px)": {
+            marginTop: isAboutPage ? "30px !important" :"117px !important",
           },
         }}
         bgColor="white"

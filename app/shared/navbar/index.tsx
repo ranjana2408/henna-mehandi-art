@@ -264,10 +264,10 @@ const styles = {
   navListStyle: {
     display: "flex",
     marginLeft: "200px",
-    "@media (min-width:375px) and (max-width:768px)": {
+    "@media (min-width:375px) and (max-width:767px)": {
       marginLeft: "-18px",
     },
-    "@media (min-width:768px) and (max-width:1024px)": {
+    "@media (min-width:768px) and (max-width:1023px)": {
       marginLeft: "100px",
     },
     flexWrap: "nowrap",

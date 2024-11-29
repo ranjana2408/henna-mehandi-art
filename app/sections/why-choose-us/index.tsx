@@ -17,25 +17,29 @@ export default function WhyChooseUs({
           paddingLeft: "0px",
           height: isAboutPage ? "61rem !important" : "",
           backgroundColor: "white",
-          "@media (min-width:375px) and (max-width:425px)": {
-            marginTop: "278px !important",
+          "@media (min-width:375px) and (max-width:424px)": {
+            marginTop: isAboutPage ? "180px" : "278px !important",
             height: isAboutPage ? "53rem !important" : "",
           },
-          "@media (min-width:424px) and (max-width:481px)": {
-            marginTop:'300px !important',
+          "@media (min-width:425px) and (max-width:481px)": {
+            marginTop: isAboutPage ? "230px" : "300px !important",
             height: isAboutPage ? "53rem !important" : "50rem !important",
           },
           "@media (min-width:481px) and (max-width:586px)": {
-            marginTop:'360px !important',
+            marginTop: isAboutPage ? "295px" : "360px !important",
             height: isAboutPage ? "53rem !important" : "50rem !important",
           },
-          "@media (min-width:586px) and (max-width:768px)": {
-            marginTop:'400px !important',
+          "@media (min-width:586px) and (max-width:620px)": {
+            marginTop: isAboutPage ? "295px" : "400px !important",
             height: isAboutPage ? "53rem !important" : "50rem !important",
           },
-          "@media (min-width:768px) and (max-width:1024px)": {
-            height: "54rem !important",
-            marginTop: "0px !important",
+          "@media (min-width:620px) and (max-width:767px)": {
+            marginTop: isAboutPage ? "392px" : "500px !important",
+            height: isAboutPage ? "53rem !important" : "50rem !important",
+          },
+          "@media (min-width:768px) and (max-width:1023px)": {
+            height: "55rem !important",
+            marginTop: isAboutPage ? "295px !important" : "0px !important",
             px: "32px !important",
           },
         }}
@@ -47,7 +51,7 @@ export default function WhyChooseUs({
           background: isAboutPage ? "#F8F8F8" : "none",
           paddingBottom: isAboutPage ? "50px" : "",
           paddingTop: isAboutPage ? "238px !important" : "0px",
-          "@media (min-width:375px) and (max-width:768px)": {
+          "@media (min-width:375px) and (max-width:767px)": {
             width: "100%",
             paddingTop: "20px",
           },
@@ -65,11 +69,10 @@ export default function WhyChooseUs({
           flexDirection: isAboutPage
             ? "column-reverse !important"
             : "row-reverse",
-          "@media (min-width:375px) and (max-width:1024px)": {
+          "@media (min-width:375px) and (max-width:1023px)": {
             backgroundSize: "340px",
             flexDirection: "column-reverse !important",
           },
-           
         }}
         outerImageContainerStyle={{
           width: isAboutPage ? "100% !important" : "50%",
@@ -83,23 +86,31 @@ export default function WhyChooseUs({
             maxWidth: "734px !important",
             maxHeight: isAboutPage ? "600px" : "466px  !important",
           },
-          "@media(min-width:375px) and (max-width:768px)": {
+          "@media(min-width:375px) and (max-width:767px)": {
             "& img": {
               height: "323px !important",
               width: "100% !important",
               px: "10px !important",
               maxWidth: "100%!important",
             },
+            position: isAboutPage ? "absolute" : "relative",
+            bottom: isAboutPage ? "568px" : "0",
             height: "323px !important",
             width: "100% !important",
+            paddingLeft: isAboutPage ? "0px" : "0px",
           },
-          "@media (min-width:768px) and (max-width:1024px)": {
+          "@media (min-width:768px) and (max-width:1023px)": {
             "& img": {
               width: "1020px !important",
               maxWidth: "1020px !important",
-               },
-              top:"0px !important",
-            right:'0px !important'
+            },
+            top: "0px !important",
+            right: "0px !important",
+          },
+          "@media (min-width:1024px) and (max-width:1439px)": {
+            "& img": {
+              width: "597px !important",
+            },
           },
         }}
         bgColor="white"

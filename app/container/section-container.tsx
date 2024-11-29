@@ -53,7 +53,7 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
           marginTop: "90px",
           paddingLeft: "0px !important",
         },
-        "@media (min-width:768px) and (max-width:1024px)": {
+        "@media (min-width:768px) and (max-width:1023px)": {
           paddingLeft: "32px",
         },
         ...outerMainContainerStyle,
@@ -81,12 +81,12 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
                 ...imageContainerStyle,
                 right: isImageLeft ? 0 : "",
                 left: isImageLeft ? "" : "50px",
-                "@media (min-width:375px) and (max-width:768px)": {
+                "@media (min-width:375px) and (max-width:767px)": {
                   position: "relative",
                   width: "100%",
                   left: isImageLeft ? "" : "0%",
                 },
-                "@media (min-width:767px) and (max-width:1024px)": {
+                "@media (min-width:768px) and (max-width:1023px)": {
                   top: "200px",
                   right: "70px",
                 },
@@ -147,7 +147,7 @@ const styles = {
       justifyContent: "center",
       alignItmes: "center",
     },
-    "@media (min-width:767px) and (max-width:1024px)": {
+    "@media (min-width:767px) and (max-width:1023px)": {
       alignItmes: "center",
     },
     display: "flex",
