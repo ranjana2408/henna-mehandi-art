@@ -24,9 +24,7 @@ function AppointmentForm() {
       <Box sx={fomrContainerStyle}>
         <Typography variant="h6" sx={{fontFamily:'"Lora, Open Sans", Mulish',fontSize:'26px',color:'black !important'}}>Book Mehandi Schedule</Typography>
         <Typography sx={{ maxWidth: "74%",fontFamily:'"Lora, Open Sans", Mulish' }}>
-          Elevate your special occasion with the art of henna. We’ll be back in
-          touch within 24 hours to confirm your booking and to detail next steps
-          needed.
+          Elevate your special occasion with the art of henna.
         </Typography>
       </Box>
       <Form method="post" action="/">

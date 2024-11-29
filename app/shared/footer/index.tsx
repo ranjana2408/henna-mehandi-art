@@ -1,19 +1,15 @@
 import React from "react";
-import { buttonStyle } from "mui/mui-styles";
 import {
   Box,
   Typography,
   Container,
   Grid,
-  TextField,
   Link,
 } from "@mui/material";
 import BottomFooter from "./bottom-footer";
-import { Form, useLocation } from "@remix-run/react";
-import MyStyledButton from "~/component/my-styled-button";
+import {  useLocation } from "@remix-run/react";
 
 const Footer = () => {
-  const { fromMainStyle, formStyle, formRow, formColum } = styles;
   const { pathname } = useLocation();
   return (
     <>
@@ -25,11 +21,11 @@ const Footer = () => {
           mt: "auto",
           backgroundImage: "url(/pattern-footer.png)",
           backgroundSize: "auto",
-          marginTop:pathname === "/about" ?'100px': "212px",
+          marginTop:"100px",
           position:'relative',
           "@media (min-width:375px) and (max-width:767px)": {
             display: "block",
-            marginTop:pathname === "/about" ?'135px': "212px",
+            marginTop:pathname === "/about" ?'135px': "112px",
           },
           "@media (min-width:768px) and (max-width:1023px)": {
             display: "block",
@@ -37,72 +33,6 @@ const Footer = () => {
           },
         }}
       >
-        <Box sx={fromMainStyle}>
-          <Box>
-            <Typography
-              sx={{ color: "black", textAlign: "center" }}
-              variant="h6"
-            >
-              Book Mehandi Schedule
-            </Typography>
-            <Typography sx={{ color: "black", textAlign: "center" }}>
-              Elevate your special occasion with the art of henna. We’ll be back
-              in touch within 24 hours to confirm your booking and to detail
-              next steps needed.
-            </Typography>
-          </Box>
-          <Form method="post" action="/">
-            <Box sx={formStyle}>
-              <Box sx={formRow}>
-                <TextField
-                  multiline
-                  variant="outlined"
-                  fullWidth
-                  placeholder="Email..."
-                  minRows={1}
-                  maxRows={6}
-                  sx={{
-                    ...formColum,
-                    overflow: "hidden", // Hide scrollbar
-                    "& .MuiOutlinedInput-root": {
-                      "& textarea": {
-                        overflow: "hidden", // Hide scrollbar for textarea
-                      },
-                    },
-                  }}
-                />
-                <Box
-                  sx={{
-                    ...formColum,
-                    flex: "1 1 25% !important",
-                    "@media (min-width:375px) and (max-width:768px)": {
-                      flex: "1 1 100% !important",
-                    },
-                  }}
-                >
-                  <MyStyledButton
-                    sx={{
-                      ...buttonStyle,
-                      "@media (min-width:375px) and (max-width:1023px)": {
-                        display: "flex",
-                        alignItems: "center !important",
-                        justifyContent: "center !important",
-                        alignSelf: "center !important",
-                        padding: "10px",
-                        width: "100% ",
-                        fontSize: "14px !important",
-                        transition: "bounce",
-                      },
-                    }}
-                    isIcon
-                  >
-                    Book Now
-                  </MyStyledButton>
-                </Box>
-              </Box>
-            </Box>
-          </Form>
-        </Box>
         <Container sx={{ maxWidth: "1110px !important" }}>
           <Box
             sx={{
@@ -226,48 +156,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-const styles = {
-  fromMainStyle: {
-    padding: "30px",
-    backgroundColor: "white",
-    opacity: "0.9",
-    position: "absolute",
-    zIndex: "999",
-    width: "60%",
-    marginTop: "-195px",
-    maxWidth: "45%",
-    mx: "25%",
-    boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
-    "@media (min-width:375px) and (max-width:767px)": {
-      marginTop: "-217px",
-      width: "90%",
-      maxWidth: "90%",
-      mx: "5%",
-    },
-    "@media (min-width:768px) and (max-width:1023px)": {
-      width: "80%",
-      mx: "10% !important",
-      marginTop: "-164px",
-      maxWidth: "100%",
-    },
-  },
-  formStyle: {
-    display: "flex",
-    gap: "20px",
-    flexGrow: "1",
-    marginTop: "25px",
-  },
-  formRow: {
-    display: "flex",
-    justifyContent: "space-between",
-    gap: "5px",
-    width: "798px",
-    "@media (min-width:375px) and (max-width:767px)": {
-      display: "block",
-    },
-  },
-  formColum: {
-    flex: "1 1 75% !important",
-  },
-};

@@ -103,6 +103,7 @@ const Services = () => {
             maxWidth: "1040px",
             position: "absolute",
             top: "-150px",
+            rowGap:"23px",
           }}
           cols={cols}
         >

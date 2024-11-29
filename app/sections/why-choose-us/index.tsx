@@ -61,10 +61,10 @@ export default function WhyChooseUs({
           background: isAboutPage
             ? "transeparent"
             : "url(/why-choose-us-bg-image.png)",
-          backgroundSize: "900px 500px",
+          backgroundSize: "900px 584px",
           height: "100%",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+          backgroundPosition: "bottom -13px right 50%",
           justifyContent: isAboutPage ? "center" : "start",
           flexDirection: isAboutPage
             ? "column-reverse !important"
