@@ -8,7 +8,7 @@ const buttonStyle= {
     fontFamily:"Open Sans",
     fontSize:'14px',
     letterSpacing:'2px',
-    "@media (min-width:375px) and (max-width:1023px)": {
+    "@media (min-width:319px) and (max-width:1026px)": {
       fontSize: "10px !important",
       marginTop: "10px",
       padding: "10px",

@@ -26,7 +26,7 @@ interface OutletContext {
 }
 
 const Navbar: React.FC = () => {
-  const isMobile = useMediaQuery("(min-width:375px) and (max-width:767px)");
+  const isMobile = useMediaQuery("(min-width:319px) and (max-width:769px)");
   const [showMenu, setShowMenu] = useState(false);
   const { routeRef, setExact, exact } = useOutletContext<OutletContext>();
 
@@ -126,7 +126,7 @@ const Navbar: React.FC = () => {
             <List
               sx={{
                 ...navListStyle,
-                "@media (min-width:320px) and (max-width:767px)": {
+                "@media (min-width:319px) and (max-width:769px)": {
                   gap: "10px",
                   display: "none",
                 },
@@ -183,7 +183,7 @@ const Navbar: React.FC = () => {
               <List
                 sx={{
                   ...navListStyle,
-                  "@media (min-width:320px) and (max-width:767px)": {
+                  "@media (min-width:319px) and (max-width:769px)": {
                     gap: "0px",
                     display: "block",
                     justifyContent: "start",
@@ -228,7 +228,7 @@ const Navbar: React.FC = () => {
             <MyStyledButton
               sx={{
                 display: "none",
-                "@media (min-width:320px) and (max-width:767px)": {
+                "@media (min-width:319px) and (max-width:769px)": {
                   display: "flex",
                 },
               }}
@@ -250,10 +250,10 @@ const styles = {
     backgroundColor: "white",
     maxWidth: "1440px",
     margin: "auto",
-    "@media (min-width:375px) and (max-width:425px)": {
+    "@media (min-width:319px) and (max-width:426px)": {
       padding: "5px 20px",
     },
-    "@media (min-width:425px) and (max-width:768px)": {
+    "@media (min-width:426px) and (max-width:769px)": {
       padding: "5px 40px",
       paddingLeft: "20px",
     },
@@ -264,16 +264,16 @@ const styles = {
   navListStyle: {
     display: "flex",
     marginLeft: "200px",
-    "@media (min-width:375px) and (max-width:767px)": {
+    "@media (min-width:319px) and (max-width:769px)": {
       marginLeft: "-18px",
     },
-    "@media (min-width:768px) and (max-width:1023px)": {
+    "@media (min-width:769px) and (max-width:1026px)": {
       marginLeft: "100px",
     },
     flexWrap: "nowrap",
   },
   navMenuIconStyle: {
-    "@media (min-width:375px) and (max-width:767px)": {
+    "@media (min-width:319px) and (max-width:769px)": {
       display: "block",
     },
     display: "none",

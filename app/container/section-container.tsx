@@ -49,11 +49,11 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
         ...mainContainerStyle,
         backgroundColor: bgColor,
         paddingLeft: "173px",
-        "@media (min-width:375px) and (max-width:767px)": {
+        "@media (min-width:319px) and (max-width:769px)": {
           marginTop: "90px",
           paddingLeft: "0px !important",
         },
-        "@media (min-width:768px) and (max-width:1023px)": {
+        "@media (min-width:769px) and (max-width:1026px)": {
           paddingLeft: "32px",
         },
         ...outerMainContainerStyle,
@@ -81,12 +81,12 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
                 ...imageContainerStyle,
                 right: isImageLeft ? 0 : "",
                 left: isImageLeft ? "" : "50px",
-                "@media (min-width:375px) and (max-width:767px)": {
+                "@media (min-width:319px) and (max-width:769px)": {
                   position: "relative",
                   width: "100%",
                   left: isImageLeft ? "" : "0%",
                 },
-                "@media (min-width:768px) and (max-width:1023px)": {
+                "@media (min-width:769px) and (max-width:1026px)": {
                   top: "200px",
                   right: "70px",
                 },
@@ -134,7 +134,7 @@ const styles = {
     position: "relative",
     marginTop: "240px",
     overFlow: "hidden !important",
-    "@media (min-width:620px) and (max-width:1023px)": {
+    "@media (min-width:620px) and (max-width:1026px)": {
       marginTop: "80px",
     },
   },
@@ -142,12 +142,12 @@ const styles = {
     maxWidth: "1440px",
     margin: "auto",
     position: "relative",
-    "@media (min-width:375px) and (max-width:767px)": {
+    "@media (min-width:319px) and (max-width:769px)": {
       flexDirection: "column-reverse",
       justifyContent: "center",
       alignItmes: "center",
     },
-    "@media (min-width:767px) and (max-width:1023px)": {
+    "@media (min-width:769px) and (max-width:1026px)": {
       alignItmes: "center",
     },
     display: "flex",

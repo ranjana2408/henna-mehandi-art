@@ -6,7 +6,7 @@ export default function TopNavbar() {
     <Box sx={{ backgroundColor: '#212121' }}>
       <AppBar
         sx={{
-          "@media (min-width:375px) and (max-width:767px)": {
+          "@media (min-width:319px) and (max-width:769px)": {
             display: "none",
           },
           display: "flex",
@@ -16,10 +16,10 @@ export default function TopNavbar() {
             backgroundColor: '#212121',
           },
           padding: "10px 182px",
-          "@media (min-width:375px) and (max-width:425px)": {
+          "@media (min-width:319px) and (max-width:426px)": {
             padding: "10px 20px",
           },
-          "@media (min-width:425px) and (max-width:1440px)": {
+          "@media (min-width:426px) and (max-width:1440px)": {
             padding: "10px 40px !important",
           },
           maxWidth: "1440px",

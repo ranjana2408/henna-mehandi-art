@@ -22,8 +22,19 @@ function AppointmentForm() {
   return (
     <Box ref={ref} sx={fromMainStyle}>
       <Box sx={fomrContainerStyle}>
-        <Typography variant="h6" sx={{fontFamily:'"Lora, Open Sans", Mulish',fontSize:'26px',color:'black !important'}}>Book Mehandi Schedule</Typography>
-        <Typography sx={{ maxWidth: "74%",fontFamily:'"Lora, Open Sans", Mulish' }}>
+        <Typography
+          variant="h6"
+          sx={{
+            fontFamily: '"Lora, Open Sans", Mulish',
+            fontSize: "26px",
+            color: "black !important",
+          }}
+        >
+          Book Mehandi Schedule
+        </Typography>
+        <Typography
+          sx={{ maxWidth: "74%", fontFamily: '"Lora, Open Sans", Mulish' }}
+        >
           Elevate your special occasion with the art of henna.
         </Typography>
       </Box>
@@ -78,7 +89,7 @@ function AppointmentForm() {
             <Box
               sx={{
                 ...formColum,
-                "@media (min-width:375px) and (max-width:767px)": {
+                "@media (min-width:319px) and (max-width:769px)": {
                   flex: "1 1 100% !important",
                 },
               }}
@@ -86,7 +97,7 @@ function AppointmentForm() {
               <MyStyledButton
                 sx={{
                   ...buttonStyle,
-                  "@media (min-width:375px) and (max-width:1023px)": {
+                  "@media (min-width:319px) and (max-width:1026px)": {
                     display: "flex",
                     alignItems: "center !important",
                     justifyContent: "center !important",
@@ -119,35 +130,40 @@ const styles = {
     position: "absolute",
     zIndex: "999",
     width: "95%",
-    maxWidth:'1050px',
-    marginTop:'-408px',
-    mx:'auto',
-    marginLeft:'5%',
+    maxWidth: "1050px",
+    marginTop: "-408px",
+    mx: "auto",
+    marginLeft: "5%",
     boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
+    "@media (min-width:319px) and (max-width:375px)": {
+      marginTop: "-217px",
+      width: "96%",
+      mx: "2%",
+    },
     "@media (min-width:375px) and (max-width:551px)": {
-     marginTop:'-244px',
-      width:'96%',
-      mx: '2%',
+      marginTop: "-244px",
+      width: "96%",
+      mx: "2%",
     },
-    "@media (min-width:551px) and (max-width:767px)":{
-      marginTop:'-206px',
-      mx:'2% !important',
+    "@media (min-width:551px) and (max-width:769px)": {
+      marginTop: "-206px",
+      mx: "2% !important",
     },
-    "@media (min-width:768px) and (max-width:919px)": {
-      marginTop:'-399px',
-      mx:'2% !important',
-     },
-    "@media (min-width:919px) and (max-width:1023px)": {
-      width:'90%',
-      mx:'2% !important',
-      marginTop:'-384px',
-      maxWidth:'100%',
+    "@media (min-width:769px) and (max-width:919px)": {
+      marginTop: "-399px",
+      mx: "2% !important",
+    },
+    "@media (min-width:919px) and (max-width:1026px)": {
+      width: "90%",
+      mx: "2% !important",
+      marginTop: "-384px",
+      maxWidth: "100%",
     },
   },
   fomrContainerStyle: {
     gap: "20px",
     alignItems: "center",
-    "@media (min-width:375px) and (max-width:1023px)": {
+    "@media (min-width:319px) and (max-width:1026px)": {
       display: "block",
     },
     display: "flex",
@@ -164,28 +180,22 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    flexWrap:'wrap',
+    flexWrap: "wrap",
     gap: "5px",
-    width:'100%',
-    "@media (min-width:375px) and (max-width:1023px)": {
-      flexWrap: "wrap",
-    },
+    width: "100%",
   },
   formColum: {
-   '& .MuiOutlinedInput-root': {
-          border: '1px #F72585 !important', 
-    },
-    '& .MuiOutlinedInput-root::placeholder': {
-          fontFamily: '', 
+    "& .MuiOutlinedInput-root": {
+      border: "1px #F72585 !important",
     },
     flex: "1 1 10% !important",
-    "@media (min-width:375px) and (max-width:414px)": {
-      flex: "1 1 38% !important",
+    "@media (min-width:319px) and (max-width:414px)": {
+      minWidth:'38% !important'
     },
-    "@media (min-width:414px) and (max-width:767px)": {
+    "@media (min-width:414px) and (max-width:769px)": {
       flex: "1 1 40% !important",
     },
-    "@media (min-width:768px) and (max-width:1023px)": {
+    "@media (min-width:769px) and (max-width:1026px)": {
       flex: "1 1 20% !important",
     },
   },

@@ -37,28 +37,28 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
         outerMainContainerStyle={{
           height: props?.isAboutSection ? "36rem" : "47rem !important",
           marginTop: props?.isAboutSection ? "185px" : "226px",
-          "@media (min-width:375px) and (max-width:426px)": {
-            height: props?.isAboutSection ? "min-content" : "66rem !important",
+          "@media (min-width:319px) and (max-width:426px)": {
+            height: props?.isAboutSection ? "min-content" : "61rem !important",
           },
           "@media (min-width:426px) and (max-width:551px)": {
-            height: props?.isAboutSection ? "min-content" : "68rem !important",
+            height: props?.isAboutSection ? "min-content" : "73rem !important",
           },
-          "@media (min-width:551px) and (max-width:767px)": {
-            height: props?.isAboutSection ? "min-content" : "78rem !important",
+          "@media (min-width:551px) and (max-width:769px)": {
+            height: props?.isAboutSection ? "min-content" : "90rem !important",
           },
-          "@media (min-width:768px) and (max-width:1023px)": {
+          "@media (min-width:769px) and (max-width:1026px)": {
             height: props?.isAboutSection ? "min-content" : "45rem !important",
             paddingLeft: "0px !important",
             marginTop: "239px",
           },
-          "@media (min-width:1024px) and (max-width:1439px)": {
+          "@media (min-width:1026px) and (max-width:1439px)": {
             height: props?.isAboutSection ? "min-content" : "45rem !important",
             paddingLeft: "0px !important",
             marginTop: "239px",
           },
         }}
         outerContainerStyle={{
-          "@media (min-width:375px) and (max-width:767px)": {
+          "@media (min-width:319px) and (max-width:767px)": {
             flexDirection: props.isAboutSection
               ? "row !important"
               : "column-reverse",
@@ -67,15 +67,15 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
         outerFeatContainerStyle={{
           minHeight: "200px",
           position: props?.isAboutSection ? "relative" : "",
-          "@media (min-width:375px) and (max-width:767px)": {
+          "@media (min-width:319px) and (max-width:769px)": {
             flexDirection: props?.isAboutSection ? "row !important" : "column",
             padding: "20px",
           },
-          "@media (min-width:620px) and (max-width:767px)": {
+          "@media (min-width:620px) and (max-width:769px)": {
             width: "100%",
             paddingTop: props?.isAboutSection ? "130px" : "7px !important",
           },
-          "@media (min-width:768px) and (max-width:1023px)": {
+          "@media (min-width:769px) and (max-width:1026px)": {
             marginTop: "-35px",
             paddingTop: "110px !important",
           },
@@ -87,10 +87,11 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             maxWidth: "1005px !important",
             maxHeight: "96%",
           },
-          "@media (min-width:374px) and (max-width:767px)": {
+          "@media (min-width:319px) and (max-width:769px)": {
             paddingTop: props?.isAboutSection ? "8px" : "0px !important",
             paddingLeft: "0px",
             maxWidth: "768px",
+            width: "100%",
             mx: "auto",
             left: "none",
             "& img": {
@@ -99,11 +100,11 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
               width: "100%",
             },
           },
-          "@media (min-width:768px) and (max-width:1023px)": {
+          "@media (min-width:769px) and (max-width:1026px)": {
             paddingTop: "100px !important",
             paddingLeft: "0px !important",
           },
-          "@media (min-width:1024px) and (max-width:1440px)": {
+          "@media (min-width:1026px) and (max-width:1440px)": {
             paddingLeft: "64px",
           },
         }}

@@ -39,15 +39,15 @@ export default function TitleSection({
           lineHeight: "1.059em",
           textTransform:'captilized',
           textAlign:isAboutUs?'center':'start',
-          "@media (min-width:375px) and (max-width:425px)": {
+          "@media (min-width:319px) and (max-width:426px)": {
             fontSize: isHeroHome ? "32px !important" : "28px !important",
             lineHeight: "40px",
           },
-          "@media (min-width:425px) and (max-width:767px)": {
+          "@media (min-width:426px) and (max-width:769px)": {
             fontSize: isHeroHome ? "42px !important" : "28px !important",
             lineHeight: "50px",
           },
-          "@media (min-width:768px) and (max-width:1439px)": {
+          "@media (min-width:769px) and (max-width:1439px)": {
             fontSize: isHeroHome ? "48px !important" : "28px !important",
             lineHeight: "57px",
           },

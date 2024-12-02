@@ -1,7 +1,6 @@
 import React from "react";
 import { AppBar, Box, Typography } from "@mui/material";
 
-
 export default function BottomFooter() {
   
   const styles = {
@@ -13,11 +12,11 @@ export default function BottomFooter() {
         backgroundColor: '#212121',
       },
       padding: "10px 182px",
-      "@media (min-width:375px) and (max-width:426px)": {
+      "@media (min-width:319px) and (max-width:426px)": {
         padding: "10px 20px",
         flexDirection: 'column-reverse'
       },
-      "@media (min-width:425px) and (max-width:1023px)": {
+      "@media (min-width:426px) and (max-width:1026px)": {
         padding: "10px 40px",
       },
       maxWidth: "1440px",

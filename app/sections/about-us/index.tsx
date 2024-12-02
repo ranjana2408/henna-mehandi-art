@@ -22,30 +22,35 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
         outerMainContainerStyle={{
           marginTop: "0px",
           height: isAboutPage ? "30rem" : "34rem !important",
-          "@media (min-width:375px) and (max-width:425px)": {
+          '@media (min-width: 319px) and (max-width: 376px)': {
+              marginTop: '-41px !important',
+              height: '32rem !important',
+            },
+          "@media (min-width:376px) and (max-width:426px)": {
             marginTop: "5px !important",
+            height: isAboutPage ? "30rem" : "46rem !important",
           },
-          "@media (min-width:425px) and (max-width:768px)": {
+          "@media (min-width:426px) and (max-width:769px)": {
             marginTop: "10px !important",
           },
         }}
         outerContainerStyle={{
-          "@media (min-width:375px) and (max-width:767px)": {
+          "@media (min-width:319px) and (max-width:769px)": {
             flexDirection: isAboutPage ? "column !important" : "column-reverse",
           },
         }}
         outerFeatContainerStyle={{
           width: "100%",
           backgroundColor: "#F8F8F8",
-          paddingTop: isAboutPage ? "100px" : "250px",
-          paddingBottom: isAboutPage ? "130px" : "100px",
+          paddingTop: isAboutPage ? "100px" : "213px",
+          paddingBottom: isAboutPage ? "130px" : "200px",
           boxShadow: "0 2px 2px rgba(0, 0, 0, 5%)",
-          "@media (min-width:375px) and (max-width:767px)": {
+          "@media (min-width:319px) and (max-width:769px)": {
             paddingLeft: "32px !important",
             py: "30px !important",
             marginTop: "20px",
           },
-          "@media (min-width:768px) and (max-width:1023px)": {
+          "@media (min-width:769px) and (max-width:1026px)": {
             paddingLeft: "30px !important",
             marginTop: "0px",
             py: "70px !important",
@@ -54,14 +59,14 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
           },
         }}
         outerImageContainerStyle={{
-          marginTop: isAboutPage ? "110px" : "250px",
-          "@media (min-width:375px) and (max-width:481px)": {
+          marginTop: isAboutPage ? "110px" : "213px",
+          "@media (min-width:319px) and (max-width:481px)": {
             marginTop: isAboutPage ? "25px !important" : "151px !important",
           },
           "@media (min-width:481px) and (max-width:507px)": {
             marginTop: isAboutPage ? "30px !important" :"204px !important",
           },
-          "@media (min-width:507px) and (max-width:1023px)": {
+          "@media (min-width:507px) and (max-width:1026px)": {
             marginTop: isAboutPage ? "30px !important" :"117px !important",
           },
         }}

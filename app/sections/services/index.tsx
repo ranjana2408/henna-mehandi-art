@@ -25,7 +25,7 @@ interface OutletContext {
 
 const Services = () => {
   const isSmallScreen = useMediaQuery(
-    "(min-width:375px) and (max-width:767px)"
+    "(min-width:319px) and (max-width:769px)"
   );
 
   const { setRouteRef } = useOutletContext<OutletContext>();
@@ -56,10 +56,10 @@ const Services = () => {
         alignSelf: "center",
         marginTop: "90px",
         position: "relative",
-        "@media (min-width:375px) and (max-width:767px)": {
+        "@media (min-width:319px) and (max-width:769px)": {
           marginTop: "10px !important",
         },
-        "@media (min-width:768px) and (max-width:1023px)": {
+        "@media (min-width:769px) and (max-width:1026px)": {
           marginTop: "40px !important",
         },
       }}
@@ -93,7 +93,7 @@ const Services = () => {
           position: "relative",
           top: "154px",
           bottom: "0px",
-          "@media (min-width:375px) and (max-width:1023px)": {
+          "@media (min-width:319px) and (max-width:1026px)": {
             height: "min-content",
           },
         }}
@@ -103,7 +103,7 @@ const Services = () => {
             maxWidth: "1040px",
             position: "absolute",
             top: "-150px",
-            rowGap:"23px",
+            rowGap:"100px",
           }}
           cols={cols}
         >
@@ -170,7 +170,7 @@ const Services = () => {
                   fontWeight: "400",
                   lineHeight: "1.154em",
                   textAlign: "center",
-                  "@media (min-width:375px) and (max-width:1023px)": {
+                  "@media (min-width:319px) and (max-width:1026px)": {
                     fontSize: "20px",
                   },
                 }}
@@ -206,18 +206,18 @@ const Services = () => {
           width: "max-content",
           position: "absolute",
           bottom: "-513px",
-          "@media (min-width:375px) and (max-width:425px)": {
+          "@media (min-width:319px) and (max-width:426px)": {
             bottom:"-4632px",
             fontSize: "10px !important",
           },
           "@media (min-width:424px) and (max-width:507px)": {
             bottom:"-4645px",
           },
-          "@media (min-width:507px) and (max-width:767px)": {
+          "@media (min-width:507px) and (max-width:769px)": {
             bottom:"-4621px",
             fontSize: "10px !important",
           },
-          "@media (min-width:768px) and (max-width:1023px)": {
+          "@media (min-width:769px) and (max-width:1026px)": {
             bottom:"-1683px",
           },
         }}

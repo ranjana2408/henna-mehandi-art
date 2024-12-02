@@ -21,15 +21,14 @@ const Footer = () => {
           mt: "auto",
           backgroundImage: "url(/pattern-footer.png)",
           backgroundSize: "auto",
-          marginTop:"100px",
           position:'relative',
-          "@media (min-width:375px) and (max-width:767px)": {
+          "@media (min-width:319px) and (max-width:769px)": {
             display: "block",
-            marginTop:pathname === "/about" ?'135px': "112px",
+            marginTop:pathname === "/about" ?'-39px':"-31px",
           },
-          "@media (min-width:768px) and (max-width:1023px)": {
+          "@media (min-width:769px) and (max-width:1026px)": {
             display: "block",
-            marginTop:pathname === "/about" ?'70px': "212px",
+            marginTop:pathname === "/about" ?'70px': "-41px",
           },
         }}
       >
@@ -40,9 +39,8 @@ const Footer = () => {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              paddingTop: "80px",
-              "@media (min-width:375px) and (max-width:768px)": {
-                paddingTop: "151px",
+              "@media (min-width:319px) and (max-width:769px)": {
+                paddingTop: "15px",
               },
             }}
           >
@@ -73,11 +71,11 @@ const Footer = () => {
               marginTop: "30px",
               paddingTop: "30px",
               paddingBottom: "40px",
-              "@media (min-width:375px) and (max-width:425px)": {
+              "@media (min-width:319px) and (max-width:426px)": {
                 paddingBottom: "108px",
               },
-              "@media (min-width:425px) and (max-width:1024px)": {
-                paddingBottom: "139px",
+              "@media (min-width:426px) and (max-width:1026px)": {
+                paddingBottom: "55px",
               },
             }}
           >
