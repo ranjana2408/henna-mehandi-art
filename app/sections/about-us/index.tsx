@@ -33,11 +33,14 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
           "@media (min-width:426px) and (max-width:769px)": {
             marginTop: "10px !important",
           },
+          "@media (min-width:620px) and (max-width:1026px)":{
+            marginTop:isAboutPage?'0px !important':"10px !important",
+          },
         }}
         outerContainerStyle={{
           "@media (min-width:319px) and (max-width:769px)": {
             flexDirection: isAboutPage ? "column !important" : "column-reverse",
-          },
+          }
         }}
         outerFeatContainerStyle={{
           width: "100%",
@@ -50,9 +53,10 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
             py: "30px !important",
             marginTop: "20px",
           },
+
           "@media (min-width:769px) and (max-width:1026px)": {
             paddingLeft: "30px !important",
-            marginTop: "0px",
+            marginTop: isAboutPage? "0px !important":"",
             py: "70px !important",
             paddingTop: "130px",
             maxWidth: "493px",
@@ -67,7 +71,7 @@ const AboutUs = ({ isAboutPage }: { isAboutPage: boolean }) => {
             marginTop: isAboutPage ? "30px !important" :"204px !important",
           },
           "@media (min-width:507px) and (max-width:1026px)": {
-            marginTop: isAboutPage ? "30px !important" :"117px !important",
+            marginTop: isAboutPage ? "141px !important" :"117px !important",
           },
         }}
         bgColor="white"

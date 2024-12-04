@@ -181,14 +181,7 @@ const Navbar: React.FC = () => {
               }}
             >
               <List
-                sx={{
-                  ...navListStyle,
-                  "@media (min-width:319px) and (max-width:769px)": {
-                    gap: "0px",
-                    display: "block",
-                    justifyContent: "start",
-                  },
-                }}
+                sx={navListStyle}
                 component="nav"
                 aria-label="navigation"
               >
@@ -265,7 +258,10 @@ const styles = {
     display: "flex",
     marginLeft: "200px",
     "@media (min-width:319px) and (max-width:769px)": {
-      marginLeft: "-18px",
+      gap: "0px",
+      display: "block",
+      justifyContent: "start",
+      marginLeft: "-18px !important",
     },
     "@media (min-width:769px) and (max-width:1026px)": {
       marginLeft: "100px",

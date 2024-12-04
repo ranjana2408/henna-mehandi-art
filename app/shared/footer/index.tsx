@@ -28,7 +28,7 @@ const Footer = () => {
           },
           "@media (min-width:769px) and (max-width:1026px)": {
             display: "block",
-            marginTop:pathname === "/about" ?'70px': "-41px",
+            marginTop:pathname === "/about" ?'0px': "-41px",
           },
         }}
       >

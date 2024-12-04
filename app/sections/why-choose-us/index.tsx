@@ -39,7 +39,7 @@ export default function WhyChooseUs({
           },
           "@media (min-width:769px) and (max-width:1026px)": {
             height: "55rem !important",
-            marginTop: isAboutPage ? "295px !important" : "0px !important",
+            marginTop: isAboutPage ? "74px !important" : "0px !important",
             px: "32px !important",
           },
         }}

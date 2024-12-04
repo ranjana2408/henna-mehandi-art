@@ -41,7 +41,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             height: props?.isAboutSection ? "min-content" : "61rem !important",
           },
           "@media (min-width:426px) and (max-width:551px)": {
-            height: props?.isAboutSection ? "min-content" : "73rem !important",
+            height: props?.isAboutSection ? "min-content" : "68rem !important",
           },
           "@media (min-width:551px) and (max-width:769px)": {
             height: props?.isAboutSection ? "min-content" : "90rem !important",
@@ -77,7 +77,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
           },
           "@media (min-width:769px) and (max-width:1026px)": {
             marginTop: "-35px",
-            paddingTop: "110px !important",
+            paddingTop: "185px !important",
           },
         }}
         outerImageContainerStyle={{
