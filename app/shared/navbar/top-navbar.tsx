@@ -19,7 +19,7 @@ export default function TopNavbar() {
           "@media (min-width:319px) and (max-width:426px)": {
             padding: "10px 20px",
           },
-          "@media (min-width:426px) and (max-width:1440px)": {
+          "@media (min-width:426px) and (max-width:1441px)": {
             padding: "10px 40px !important",
           },
           maxWidth: "1440px",

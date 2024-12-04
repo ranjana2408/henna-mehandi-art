@@ -79,7 +79,7 @@ export default function ClientTestimonials() {
         justifyContent: "center",
         mx: "auto",
         my: "60px",
-        marginTop: "545px",
+        marginTop: "585px",
         "@media (min-width:319px) and (max-width:769px)": {
           marginTop: "4918px",
           display: "block",

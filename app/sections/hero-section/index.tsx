@@ -104,7 +104,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             paddingTop: "100px !important",
             paddingLeft: "0px !important",
           },
-          "@media (min-width:1026px) and (max-width:1440px)": {
+          "@media (min-width:1026px) and (max-width:1441px)": {
             paddingLeft: "64px",
           },
         }}

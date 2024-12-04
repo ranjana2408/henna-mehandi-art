@@ -205,7 +205,7 @@ const Services = () => {
           height: "max-content",
           width: "max-content",
           position: "absolute",
-          bottom: "-513px",
+          bottom: "-572px",
           "@media (min-width:319px) and (max-width:426px)": {
             bottom:"-4895px",
             fontSize: "10px !important",

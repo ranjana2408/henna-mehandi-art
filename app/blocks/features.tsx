@@ -21,13 +21,13 @@ interface FeaturesBlockProps {
   whyChooseUs?: boolean;
   isAboutPage?: boolean;
   showBreadCrumbs?: boolean;
+  showTitleSlide?:boolean;
 }
 
 const Features: React.FC<FeaturesBlockProps> = (props) => {
   const {
     description,
     features,
-    isImageLeft,
     button,
     outerFeatContainerStyle,
     whyChooseUs,
@@ -39,37 +39,38 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
   const isAboutUs = Boolean(isAboutPage && whyChooseUs);
 
   return (
-    <Slide
-      timeout={2000}
-      direction={isImageLeft ? "left" : "right"}
-      in={true}
-      appear={true}
-      easing={{ enter: "ease-in", exit: "ease-out" }}
-    >
       <Box sx={{ ...featContainerStyle, ...outerFeatContainerStyle }}>
-        <Box>
-          <TitleSection {...props} isAboutUs={isAboutUs} />
-          {showBreadCrumbs && <BreadcrumbsComponent />}
-        </Box>
-        <Typography
-          sx={{
-            fontSize: "18px",
-            fontFamily: "Open Sans",
-            fontWeight: "400",
-            paddingTop: "24px",
-            textAlign: isAboutUs ? "center" : "start",
-            "@media (min-width:319px) and (max-width:620px)": {
-              fontSize: "14px",
-            },
-            color:
-              outerFeatContainerStyle?.backgroundColor === "#222222"
-                ? "white"
-                : "#222222",
-            paddingBottom: "12px",
-          }}
+        <Slide
+          timeout={2000}
+          direction={"up"}
+          in={true}
+          appear={true}
+          easing={{ enter: "ease-in", exit: "ease-out" }}
         >
-          {description}
-        </Typography>
+          <Box>
+            <TitleSection {...props} isAboutUs={isAboutUs} />
+            {showBreadCrumbs && <BreadcrumbsComponent />}
+            <Typography
+              sx={{
+                fontSize: "18px",
+                fontFamily: "Open Sans",
+                fontWeight: "400",
+                paddingTop: "24px",
+                textAlign: isAboutUs ? "center" : "start",
+                "@media (min-width:319px) and (max-width:620px)": {
+                  fontSize: "14px",
+                },
+                color:
+                  outerFeatContainerStyle?.backgroundColor === "#222222"
+                    ? "white"
+                    : "#222222",
+                paddingBottom: "12px",
+              }}
+            >
+              {description}
+            </Typography>
+          </Box>
+        </Slide>
         <Box
           sx={{
             display: "flex",
@@ -137,7 +138,6 @@ const Features: React.FC<FeaturesBlockProps> = (props) => {
           </MyStyledButton>
         )}
       </Box>
-    </Slide>
   );
 };
 

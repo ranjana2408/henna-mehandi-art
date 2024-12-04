@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Box, Slide } from "@mui/material";
 import AppointmentForm from "~/container/appointment-form";
 import { useOutletContext } from "@remix-run/react";
@@ -43,8 +43,30 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
 
   const { exact } = useOutletContext<OutletContext>();
 
+  const sectionRef = useRef<HTMLDivElement>(null); // Create a ref for the section
+  const [showTitleSlide,setShowTitleSlide]=useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setShowTitleSlide(true); 
+          observer.disconnect(); 
+        }
+      });
+    });
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current); // Observe the section
+    }
+
+    return () => {
+      observer.disconnect(); // Cleanup observer on unmount
+    };
+  }, [sectionRef]);
+
   return (
-    <Box
+    <Box ref={sectionRef}
       sx={{
         ...mainContainerStyle,
         backgroundColor: bgColor,
@@ -67,7 +89,7 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
           ...outerContainerStyle,
         }}
       >
-        <Features {...props} />
+        <Features {...props} showTitleSlide={showTitleSlide} />
         {image && (
           <Slide
             timeout={2000}
@@ -108,7 +130,7 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
         <Slide
           timeout={2000}
           direction={"up"}
-          in={true}
+          in={showTitleSlide}
           mountOnEnter
           unmountOnExit
         >
