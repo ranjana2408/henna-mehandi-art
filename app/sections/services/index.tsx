@@ -103,7 +103,7 @@ const Services = () => {
             maxWidth: "1040px",
             position: "absolute",
             top: "-150px",
-            rowGap:"100px",
+            rowGap:"32px !important",
           }}
           cols={cols}
         >
@@ -207,7 +207,7 @@ const Services = () => {
           position: "absolute",
           bottom: "-513px",
           "@media (min-width:319px) and (max-width:426px)": {
-            bottom:"-4632px",
+            bottom:"-4895px",
             fontSize: "10px !important",
           },
           "@media (min-width:424px) and (max-width:507px)": {

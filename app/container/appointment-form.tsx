@@ -25,7 +25,7 @@ function AppointmentForm() {
         <Typography
           variant="h6"
           sx={{
-            fontFamily: '"Lora, Open Sans", Mulish',
+            fontFamily: "Open Sans",
             fontSize: "26px",
             color: "black !important",
           }}
@@ -33,7 +33,7 @@ function AppointmentForm() {
           Book Mehandi Schedule
         </Typography>
         <Typography
-          sx={{ maxWidth: "74%", fontFamily: '"Lora, Open Sans", Mulish' }}
+          sx={{ maxWidth: "74%", fontFamily:"Open Sans" }}
         >
           Elevate your special occasion with the art of henna.
         </Typography>
