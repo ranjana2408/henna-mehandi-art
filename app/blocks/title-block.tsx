@@ -47,7 +47,7 @@ export default function TitleSection({
             fontSize: isHeroHome ? "42px !important" : "28px !important",
             lineHeight: "50px",
           },
-          "@media (min-width:769px) and (max-width:1439px)": {
+          "@media (min-width:769px) and (max-width:1440px)": {
             fontSize: isHeroHome ? "48px !important" : "28px !important",
             lineHeight: "57px",
           },

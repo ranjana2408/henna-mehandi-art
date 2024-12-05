@@ -7,6 +7,7 @@ import {
   useMediaQuery,
   AppBar,
   Drawer,
+  Typography,
 } from "@mui/material";
 import TopNavbar from "./top-navbar";
 import data from "../../../utils/data.json";
@@ -68,16 +69,45 @@ const Navbar: React.FC = () => {
     <AppBar elevation={0} sx={{ backgroundColor: "white", padding: "0px" }}>
       <TopNavbar />
       <Box sx={{ display: isMobile ? "none" : "flex", alignSelf: "center" }}>
-        <img
-          src={data?.navbar?.logo}
-          alt="Logo"
-          style={{
-            width: isMobile ? "100px" : "196px",
-            height: "62",
-            maxWidth: "200px",
-            padding: "25px 0",
+        <Typography
+          sx={{
+            fontSize: "32px",
+            fontFamily: "Lora",
+            fontWeight: "700",
+            paddingTop: "24px",
+            color: "#222222",
+            paddingBottom: "12px",
+            textAlign: "center",
+            maxWidth: "900px",
+            padding: "0.5rem",
+            position: "relative",
+            my: "20px",
+            "&::after": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: "-8px",
+              width: "60%",
+              height: "32px",
+              border: "1px solid #F72585",
+              borderBottom: "none",
+              borderRight: "none",
+            },
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              bottom: 0,
+              left: "97px",
+              width: "62%",
+              height: "21px",
+              border: "1px solid #F72585",
+              borderLeft: "none",
+              borderTop: "none",
+            },
           }}
-        />
+        >
+          {"Janki's mehndi"}
+        </Typography>
       </Box>
       <Box sx={{ backgroundColor: "white", borderTop: "1px solid #FDE2E4" }}>
         <Box position="static" sx={navStyle}>
@@ -110,17 +140,45 @@ const Navbar: React.FC = () => {
                 />
               </Box>
               <Box sx={{ display: isMobile ? "block" : "none" }}>
-                <img
-                  src={data?.navbar?.logo}
-                  alt="Logo"
-                  style={{
-                    width: isMobile ? "100px" : "150px",
-                    height: "auto",
-                    display: "flex",
-                    alignSelf: "center",
-                    padding: "25px 0",
+                <Typography
+                  sx={{
+                    fontSize: "12px",
+                    fontFamily: "Lora",
+                    fontWeight: "700",
+                    paddingTop: "24px",
+                    color: "#222222",
+                    paddingBottom: "12px",
+                    textAlign: "center",
+                    maxWidth: "900px",
+                    padding: "0.5rem",
+                    position: "relative",
+                    my: "20px",
+                    "&::after": {
+                      content: '""',
+                      position: "absolute",
+                      top: 0,
+                      left: "0px",
+                      width: "56%",
+                      height: "26px",
+                      border: "1px solid #F72585",
+                      borderBottom: "none",
+                      borderRight: "none",
+                    },
+                    "&::before": {
+                      content: '""',
+                      position: "absolute",
+                      bottom: 0,
+                      left: "62px",
+                      width: "40%",
+                      height: "21px",
+                      border: "1px solid #F72585",
+                      borderLeft: "none",
+                      borderTop: "none",
+                    },
                   }}
-                />
+                >
+                  {"Janki's mehndi"}
+                </Typography>
               </Box>
             </Box>
             <List
@@ -130,16 +188,16 @@ const Navbar: React.FC = () => {
                   gap: "10px",
                   display: "none",
                 },
-                "a":{
-                  textDecoration:'none'
-                }
+                a: {
+                  textDecoration: "none",
+                },
               }}
               component="nav"
               aria-label="navigation"
             >
-              {data?.navbar?.links?.map(({ label,url }) => (
-                <Link to={url??"#"} key={label}>
-                  <ListItem  onClick={() => handleClick(label)}>
+              {data?.navbar?.links?.map(({ label, url }) => (
+                <Link to={url ?? "#"} key={label}>
+                  <ListItem onClick={() => handleClick(label)}>
                     <ListItemText
                       sx={{
                         color: `${exact === label ? "#F72585" : "black"}`,
@@ -180,11 +238,7 @@ const Navbar: React.FC = () => {
                 },
               }}
             >
-              <List
-                sx={navListStyle}
-                component="nav"
-                aria-label="navigation"
-              >
+              <List sx={navListStyle} component="nav" aria-label="navigation">
                 {data?.navbar?.links?.map(({ label }) => (
                   <ListItem
                     sx={{

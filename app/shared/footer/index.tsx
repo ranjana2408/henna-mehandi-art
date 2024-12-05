@@ -1,13 +1,7 @@
 import React from "react";
-import {
-  Box,
-  Typography,
-  Container,
-  Grid,
-  Link,
-} from "@mui/material";
+import { Box, Typography, Container, Grid, Link } from "@mui/material";
 import BottomFooter from "./bottom-footer";
-import {  useLocation } from "@remix-run/react";
+import { useLocation } from "@remix-run/react";
 
 const Footer = () => {
   const { pathname } = useLocation();
@@ -21,14 +15,14 @@ const Footer = () => {
           mt: "auto",
           backgroundImage: "url(/pattern-footer.png)",
           backgroundSize: "auto",
-          position:'relative',
+          position: "relative",
           "@media (min-width:319px) and (max-width:769px)": {
             display: "block",
-            marginTop:pathname === "/about" ?'-39px':"-31px",
+            marginTop: pathname === "/about" ? "-39px" : "-31px",
           },
           "@media (min-width:769px) and (max-width:1026px)": {
             display: "block",
-            marginTop:pathname === "/about" ?'0px': "-41px",
+            marginTop: pathname === "/about" ? "0px" : "-41px",
           },
         }}
       >
@@ -44,7 +38,44 @@ const Footer = () => {
               },
             }}
           >
-            <img src="/logo.png" alt="Logo" />
+            <Typography
+              sx={{
+                fontSize: "32px",
+                fontFamily: "Lora",
+                fontWeight: "700",
+                paddingTop: "24px",
+                color: "#222222",
+                paddingBottom: "12px",
+                textAlign: "center",
+                maxWidth: "900px",
+                padding: "0.5rem",
+                position: "relative",
+                "&::after": {
+                  content: '""',
+                  position: "absolute",
+                  top: 0,
+                  left: "-8px",
+                  width: "60%",
+                  height: "32px",
+                  border: "1px solid #F72585",
+                  borderBottom:'none',
+                  borderRight:'none'
+                },
+                "&::before": {
+                  content: '""',
+                  position: "absolute",
+                  bottom: 0,
+                  left: "97px",
+                  width: "62%",
+                  height: "21px",
+                  border: "1px solid #F72585",
+                  borderLeft:"none",
+                  borderTop:"none"
+                },
+              }}
+            >
+              {"Janki's mehndi"}
+            </Typography>
             <Typography
               sx={{
                 fontSize: "18px",
@@ -56,6 +87,7 @@ const Footer = () => {
                 textAlign: "center",
                 maxWidth: "900px",
               }}
+              variant="h6"
             >
               Orcinteger faucibus odio cursus facilisi sitenim egestas ele
               imperdiet etiam situ eltrices vestibulum sit. Orcinteger faucibus

@@ -44,7 +44,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             height: props?.isAboutSection ? "min-content" : "68rem !important",
           },
           "@media (min-width:551px) and (max-width:769px)": {
-            height: props?.isAboutSection ? "min-content" : "90rem !important",
+            height: props?.isAboutSection ? "min-content" : "83rem !important",
           },
           "@media (min-width:769px) and (max-width:1026px)": {
             height: props?.isAboutSection ? "min-content" : "45rem !important",

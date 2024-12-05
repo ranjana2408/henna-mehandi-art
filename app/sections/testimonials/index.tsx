@@ -79,15 +79,18 @@ export default function ClientTestimonials() {
         justifyContent: "center",
         mx: "auto",
         my: "60px",
-        marginTop: "585px",
-        "@media (min-width:319px) and (max-width:769px)": {
-          marginTop: "4918px",
+        marginTop: "640px",
+        "@media (min-width:319px) and (max-width:426px)": {
+          marginTop: "4906px",
+        },
+        "@media (min-width:426px) and (max-width:769px)": {
+          marginTop: "4866px",
           display: "block",
         },
         "@media (min-width:769px) and (max-width:1026px)": {
-          marginTop: "1696px",
+          marginTop: "1717px",
         },
-        "@media(max-width:1430px)": {
+        "@media(max-width:1441px)": {
           marginLeft: "auto",
         },
       }}

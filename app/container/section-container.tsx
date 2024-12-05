@@ -128,7 +128,7 @@ const SectionContainer: React.FC<SectionContainerProps> = (props) => {
       </Box>
       {showForm && (
         <Slide
-          timeout={2000}
+          timeout={1000}
           direction={"up"}
           in={showTitleSlide}
           mountOnEnter

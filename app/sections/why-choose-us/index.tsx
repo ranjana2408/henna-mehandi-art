@@ -18,7 +18,7 @@ export default function WhyChooseUs({
           height: isAboutPage ? "61rem !important" : "",
           backgroundColor: "white",
           "@media (min-width:319px) and (max-width:424px)": {
-            marginTop: isAboutPage ? "180px" : "278px !important",
+            marginTop: isAboutPage ? "180px" : "85px !important",
             height: isAboutPage ? "53rem !important" : "",
           },
           "@media (min-width:426px) and (max-width:481px)": {
@@ -107,7 +107,7 @@ export default function WhyChooseUs({
             top: "0px !important",
             right: "0px !important",
           },
-          "@media (min-width:1026px) and (max-width:1439px)": {
+          "@media (min-width:1026px) and (max-width:1441px)": {
             "& img": {
               width: "597px !important",
             },

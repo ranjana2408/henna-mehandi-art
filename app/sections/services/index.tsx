@@ -54,7 +54,7 @@ const Services = () => {
         flexDirection: "column",
         alignItems: "center",
         alignSelf: "center",
-        marginTop: "90px",
+        marginTop: "53px",
         position: "relative",
         "@media (min-width:319px) and (max-width:769px)": {
           marginTop: "10px !important",
@@ -205,20 +205,20 @@ const Services = () => {
           height: "max-content",
           width: "max-content",
           position: "absolute",
-          bottom: "-572px",
+          bottom: "-594px",
           "@media (min-width:319px) and (max-width:426px)": {
-            bottom:"-4895px",
+            bottom:"-4882px",
             fontSize: "10px !important",
           },
           "@media (min-width:424px) and (max-width:507px)": {
-            bottom:"-4645px",
+            bottom:"-4834px",
           },
           "@media (min-width:507px) and (max-width:769px)": {
-            bottom:"-4621px",
+            bottom:"-4829px",
             fontSize: "10px !important",
           },
           "@media (min-width:769px) and (max-width:1026px)": {
-            bottom:"-1683px",
+            bottom:"-1697px",
           },
         }}
       >
