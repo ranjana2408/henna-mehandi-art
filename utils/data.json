@@ -191,38 +191,7 @@
             },
             {
                 "label": "About",
-                "url": "/about",
-                "childContent": [
-                    "Blog With No Sidebar",
-                    "Blog Left Sidebar",
-                    "Blog Right Sidebar",
-                    "Blog Left – Right Sidebar"
-                ]
-            },
-            {
-                "label": "Services",
-                "url": "",
-                "childContent": [
-                    "Page With No Sidebar",
-                    "Page Left Sidebar",
-                    "Page Right Sidebar",
-                    "Page Right Sidebar",
-                    "Testimonials"
-                ]
-            },
-            {
-                "label": "Appointment",
-                "url": "",
-                "childContent": [
-                    "Get in touch with us"
-                ]
-            },
-            {
-                "label": "Contact",
-                "url": "",
-                "childContent": [
-                    "Get in touch with us"
-                ]
+                "url": "/about"
             }
         ],
         "contact": {

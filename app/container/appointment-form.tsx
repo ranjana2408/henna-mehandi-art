@@ -25,7 +25,7 @@ function AppointmentForm() {
         <Typography
           variant="h6"
           sx={{
-            fontFamily: "Open Sans",
+            fontFamily: "Lora",
             fontSize: "26px",
             color: "black !important",
           }}

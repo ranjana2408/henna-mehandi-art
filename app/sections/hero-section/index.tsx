@@ -37,7 +37,10 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
         outerMainContainerStyle={{
           height: props?.isAboutSection ? "36rem" : "47rem !important",
           marginTop: props?.isAboutSection ? "185px" : "226px",
-          "@media (min-width:319px) and (max-width:426px)": {
+          "@media (min-width:319px) and (max-width:375px)": {
+            height: props?.isAboutSection ? "min-content" : "68rem !important",
+          },
+          "@media (min-width:375px) and (max-width:426px)": {
             height: props?.isAboutSection ? "min-content" : "61rem !important",
           },
           "@media (min-width:426px) and (max-width:551px)": {

@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Typography, Container, Grid, Link } from "@mui/material";
+import { Box, Typography, Container, Grid, Link, ImageList, ImageListItem } from "@mui/material";
 import BottomFooter from "./bottom-footer";
 import { useLocation } from "@remix-run/react";
+import data from '../../../utils/data.json'
 
 const Footer = () => {
   const { pathname } = useLocation();
@@ -58,8 +59,8 @@ const Footer = () => {
                   width: "60%",
                   height: "32px",
                   border: "1px solid #F72585",
-                  borderBottom:'none',
-                  borderRight:'none'
+                  borderBottom: "none",
+                  borderRight: "none",
                 },
                 "&::before": {
                   content: '""',
@@ -69,8 +70,8 @@ const Footer = () => {
                   width: "62%",
                   height: "21px",
                   border: "1px solid #F72585",
-                  borderLeft:"none",
-                  borderTop:"none"
+                  borderLeft: "none",
+                  borderTop: "none",
                 },
               }}
             >
@@ -118,43 +119,23 @@ const Footer = () => {
               <Box
                 sx={{ display: "flex", gap: "9px", flexDirection: "column" }}
               >
-                <Link sx={{ textDecoration: "none" }} href="/">
-                  <Typography color="black" variant="body2">
-                    Home
-                  </Typography>
-                </Link>
-                <Link sx={{ textDecoration: "none" }} href="/about">
-                  <Typography color="black" variant="body2">
-                    About
-                  </Typography>
-                </Link>
-                <Typography color="black" variant="body2">
-                  Services
-                </Typography>
-                <Typography color="black" variant="body2">
-                  Portfolio
-                </Typography>
-                <Typography color="black" variant="body2">
-                  Contact Us
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Typography color="black" variant="h6" gutterBottom>
-                Support
-              </Typography>
-              <Box
-                sx={{ display: "flex", gap: "9px", flexDirection: "column" }}
-              >
-                <Typography color="black" variant="body2">
-                  Help Center
-                </Typography>
-                <Typography color="black" variant="body2">
-                  Privacy Policy
-                </Typography>
-                <Typography color="black" variant="body2">
-                  Terms of Service
-                </Typography>
+                {["Home", "About"].map((item, index) =>
+                  index < 2 ? (
+                    <Link
+                      key={item}
+                      sx={{ textDecoration: "none" }}
+                      href={`/${item.toLowerCase()}`}
+                    >
+                      <Typography color="black" variant="body2">
+                        {item}
+                      </Typography>
+                    </Link>
+                  ) : (
+                    <Typography key={item} color="black" variant="body2">
+                      {item}
+                    </Typography>
+                  )
+                )}
               </Box>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
@@ -174,6 +155,33 @@ const Footer = () => {
                   Instagram
                 </Typography>
               </Box>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <Typography color="black" variant="h6" gutterBottom>
+                Gallary
+              </Typography>
+              <ImageList
+              cols={4}
+              >
+              {data.services.items.slice(0,8)?.map((image) => (
+                <Box key={image.id} sx={{ maxHeight: "800px" }}>
+                  <ImageListItem
+                  sx={{border:'5px solid gray'}}
+                  >
+                    <img
+                      alt={image.title}
+                      src={image.img}
+                      loading="lazy"
+                      style={{
+                        height: "100px",
+                        width: "200px",
+                        maxWidth: "100%",
+                      }}
+                    />
+                  </ImageListItem>
+                </Box>
+              ))}
+            </ImageList>
             </Grid>
           </Grid>
         </Container>
